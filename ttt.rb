@@ -4,9 +4,9 @@ require_relative 'tttview'
 class TicTacToe
 
   def initialize
-    @board = [ "   ", "   ", "   ",
-               "   ", "   ", "   ",
-               "   ", "   ", "   "]
+    @board = [["   ","   ","   "],
+              ["   ","   ","   "],
+              ["   ","   ","   "]]
     @token = "pc_turn"
     @pc = ComputerAI.new
     @view = TicTacToeView.new
@@ -14,7 +14,7 @@ class TicTacToe
 
   def pc_turn
     pc = @pc.assess(@board)
-    @board[pc] = " X "
+    @board[pc[0]][pc[1]] = " X "
     @token = "hooman_turn"
     play
   end
@@ -27,7 +27,7 @@ class TicTacToe
   end
 
   def play
-    @view.display_board(@board)
+    @view.display_board(@board.flatten)
     self.send(@token)
   end
 

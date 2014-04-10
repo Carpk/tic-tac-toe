@@ -7,6 +7,8 @@ class TicTacToeView
   end
 
   def display_board(board)
+    puts
+    puts
     print <<-EOS
     #{board[0]}|#{board[1]}|#{board[2]}
     ---|---|---

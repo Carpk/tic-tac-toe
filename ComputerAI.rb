@@ -13,14 +13,14 @@ class ComputerAI
         first_roll.last
       else 
         bs = @past_rolls.last
-        op = grid.index(" O ")
-        if grid[bs[0]-1][bs[1]] || grid[bs[0]][bs[1]-1] || grid[bs[0]][bs[1]+1] || grid[bs[0]][bs[1]+1]== " O "
+        # op = grid.index(" O ")
+        if grid[bs[0]-1][bs[1]] || grid[bs[0]][bs[1]-1] || grid[bs[0]][bs[1]+1] || grid[bs[0]-1][bs[1]]==" O "
           puts "sidestep"
         elsif grid[0][0] || grid[0][2] || grid[2][0] || grid[2][2] == " O "
           puts "cornerhugger"
-        elsif grid[][] || grid[][] == " O "
+        elsif grid[bs[0]-2][bs[1]-1] || grid[bs[0]-1][bs[1]-2] || grid[bs[0]+1][bs[1]+2] || grid[bs[0]+2][bs[1]+1]==" O "
           puts "middlelane" 
-        elsif op == 4
+        elsif grid[1][1] == " O "
           puts "cats-tie"
         end
       end

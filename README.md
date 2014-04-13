@@ -8,11 +8,11 @@ The first working version, the computer AI starts on the same spot at the beginn
 
 #### Master_refactor
 
-The same logic as Master, but some refactoring where the strategies are broken down after 1 of the initial 5 are broken down.
+The same logic as Master, but some refactoring where the strategies are broken down after 1 of the initial 5 are choosen.
 
 #### Rand_start
 
-The first version of the game, which set the foundation on how the logic would be implemented. Each strategy will have a sepriate file. And the computer AI will choose a random starting point from certain key positions, on the board at each game start.
+The first version of the game, which set the foundation on how the logic would be implemented. Each strategy will have a separate file. And the computer AI will choose a random starting point from certain key positions, on the board at each game start.
 
 ## Getting Started
 

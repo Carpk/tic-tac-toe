@@ -10,19 +10,19 @@ class TicTacToe
     @token = "pc_turn"
     @pc = ComputerAI.new
     @view = TicTacToeView.new
-    @CONVERT =  [ "00", "01", "02", "10", "11", "12", "20", "21", "22"]
+    @CONVERT =  [ [0,0], [0,1], [0,2], [1,0], [1,1], [1,2], [2,0], [2,1], [2,2]]
   end
 
   def pc_turn
     pc = @pc.assess(@board)
     @board[pc[0]][pc[1]] = " X "
-    @token = "hooman_turn"
+    @token = "player_turn"
     play
   end
 
-  def hooman_turn
+  def player_turn
     indices = @CONVERT[@view.prompt_player.to_i - 1]
-    @board[indices[0].to_i][indices[1].to_i] = " O "
+    @board[indices[0]][indices[1]] = " O "
     @token = "pc_turn"
     play
   end

@@ -13,18 +13,18 @@
  */
 
  body {
-    background-image: -webkit-gradient(
+  background-image: -webkit-gradient(
     linear,
     left top,
     left bottom,
     color-stop(0, #000000),
-    color-stop(1, #FFFFFF)
+    color-stop(0.56, #FFFFFF)
   );
-  background-image: -o-linear-gradient(bottom, #000000 0%, #FFFFFF 100%);
-  background-image: -moz-linear-gradient(bottom, #000000 0%, #FFFFFF 100%);
-  background-image: -webkit-linear-gradient(bottom, #000000 0%, #FFFFFF 100%);
-  background-image: -ms-linear-gradient(bottom, #000000 0%, #FFFFFF 100%);
-  background-image: linear-gradient(to bottom, #000000 0%, #FFFFFF 100%);
+  background-image: -o-linear-gradient(bottom, #000000 0%, #FFFFFF 56%);
+  background-image: -moz-linear-gradient(bottom, #000000 0%, #FFFFFF 56%);
+  background-image: -webkit-linear-gradient(bottom, #000000 0%, #FFFFFF 56%);
+  background-image: -ms-linear-gradient(bottom, #000000 0%, #FFFFFF 56%);
+  background-image: linear-gradient(to bottom, #000000 0%, #FFFFFF 56%);
   background-repeat:no-repeat;
  }
 
@@ -65,34 +65,8 @@
 }
 
 .header {
-  /*top: 0;*/
   color: white;
   height: 125px;
-  /*background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(0, #000000),
-    color-stop(1, #FFFFFF)
-  );
-  background-image: -o-linear-gradient(bottom, #000000 0%, #FFFFFF 100%);
-  background-image: -moz-linear-gradient(bottom, #000000 0%, #FFFFFF 100%);
-  background-image: -webkit-linear-gradient(bottom, #000000 0%, #FFFFFF 100%);
-  background-image: -ms-linear-gradient(bottom, #000000 0%, #FFFFFF 100%);
-  background-image: linear-gradient(to bottom, #000000 0%, #FFFFFF 100%);*/
-
-/*  background-image: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    color-stop(0, #FFFFFF),
-    color-stop(0.57, #000000)
-  );
-  background-image: -o-linear-gradient(top, #FFFFFF 0%, #000000 57%);
-  background-image: -moz-linear-gradient(top, #FFFFFF 0%, #000000 57%);
-  background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #000000 57%);
-  background-image: -ms-linear-gradient(top, #FFFFFF 0%, #000000 57%);
-  background-image: linear-gradient(to top, #FFFFFF 0%, #000000 57%);*/
 }
 
 .header h1 {

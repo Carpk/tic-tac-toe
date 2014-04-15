@@ -70,26 +70,33 @@ class ComputerAI
       @rolls << 0
     when 0
       if @grid[4] == "   "
-        @rolls << 4
+        @rolls << 4 # ends game, from upper left
       elsif @grid[2] == "   "
         @rolls << 2
+        @strategy = "cornerhugger_top"
       elsif @grid[6] == "   "
         @rolls << 6
+        @strategy = "cornerhugger_bottom"
       end
-    when 2
-      if @grid[1] == "   "
-        @rolls << 1
-      elsif @grid[5] == "   "
-        @rolls << 5
-      end
-    when 6
-      if @grid[3] == "   "
-        @rolls << 3
-      elsif @grid[7] == "   "
-        @rolls << 7
-      end
-    end 
+    end
   end
+
+  def cornerhugger_top
+    if @grid[1] == "   "
+      @rolls << 1
+    elsif @grid[5] == "   "
+      @rolls << 5
+    end
+  end
+
+  def cornerhugger_bottom
+    if @grid[3] == "   "
+      @rolls << 3
+    elsif @grid[7] == "   "
+      @rolls << 7
+    end
+  end
+
 
   def cornerjumper
     case @rolls.last

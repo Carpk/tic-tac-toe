@@ -16,14 +16,38 @@
   float:left;
   border-top: solid;
   border-left: solid;
-  width: 163px;
-  height: 163px;
-  background: pink;
+  width: 130px;
+  height: 130px;
+  /*background: pink;*/
 }
 
 .container {
-  background: blue;
-  width: 500px;
+  width: 400px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.container div:first-child {
+  border-top: none;
+  border-left: none;
+}
+
+.container div:nth-child(2) {
+  border-top: none;
+}
+
+.container div:nth-child(3) {
+  border-top: none;
+}
+
+.container div:nth-child(4) {
+  border-left: none;
+}
+
+.container div:nth-child(7) {
+  border-left: none;
+}
+
+.header {
+
 }

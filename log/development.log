@@ -355,3 +355,678 @@ Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-15 13:28:20 -050
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-15 13:28:20 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-15 13:32:28 -0500
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game.css?body=1" for 127.0.0.1 at 2014-04-15 13:32:28 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-15 13:32:28 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-15 13:32:28 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-15 13:32:28 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-15 13:32:28 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-15 13:32:28 -0500
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2014-04-15 13:32:28 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-15 13:32:41 -0500
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-15 13:32:41 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-15 13:32:41 -0500
+
+
+Started GET "/assets/game.css?body=1" for 127.0.0.1 at 2014-04-15 13:32:41 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-15 13:32:41 -0500
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2014-04-15 13:32:41 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-15 13:32:41 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-15 13:32:41 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-15 13:32:50 -0500
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-15 13:32:50 -0500
+
+
+Started GET "/assets/game.css?body=1" for 127.0.0.1 at 2014-04-15 13:32:50 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-15 13:32:50 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-15 13:32:50 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-15 13:32:50 -0500
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2014-04-15 13:32:50 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-15 13:32:50 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-15 13:33:02 -0500
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-15 13:33:02 -0500
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2014-04-15 13:33:02 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-15 13:33:02 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-15 13:33:02 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-15 13:33:02 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-15 13:33:02 -0500
+
+
+Started GET "/assets/game.css?body=1" for 127.0.0.1 at 2014-04-15 13:33:02 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-15 13:33:04 -0500
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-15 13:33:04 -0500
+
+
+Started GET "/assets/game.css?body=1" for 127.0.0.1 at 2014-04-15 13:33:04 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-15 13:33:04 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-15 13:33:04 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-15 13:33:04 -0500
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2014-04-15 13:33:04 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-15 13:33:04 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-15 13:33:24 -0500
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-15 13:33:24 -0500
+
+
+Started GET "/assets/game.css?body=1" for 127.0.0.1 at 2014-04-15 13:33:24 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-15 13:33:24 -0500
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2014-04-15 13:33:24 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-15 13:33:24 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-15 13:33:24 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-15 13:33:24 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-15 13:33:46 -0500
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game.css?body=1" for 127.0.0.1 at 2014-04-15 13:33:46 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-15 13:33:46 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-15 13:33:46 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-15 13:33:46 -0500
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2014-04-15 13:33:46 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-15 13:33:46 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-15 13:33:46 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-15 13:33:57 -0500
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game.css?body=1" for 127.0.0.1 at 2014-04-15 13:33:57 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-15 13:33:57 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-15 13:33:57 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-15 13:33:57 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-15 13:33:57 -0500
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2014-04-15 13:33:57 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-15 13:33:57 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-15 13:34:15 -0500
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-15 13:34:15 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-15 13:34:15 -0500
+
+
+Started GET "/assets/game.css?body=1" for 127.0.0.1 at 2014-04-15 13:34:15 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-15 13:34:15 -0500
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2014-04-15 13:34:15 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-15 13:34:15 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-15 13:34:15 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-15 13:34:25 -0500
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-15 13:34:25 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-15 13:34:25 -0500
+
+
+Started GET "/assets/game.css?body=1" for 127.0.0.1 at 2014-04-15 13:34:25 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-15 13:34:25 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-15 13:34:25 -0500
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2014-04-15 13:34:25 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-15 13:34:25 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-15 13:34:44 -0500
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game.css?body=1" for 127.0.0.1 at 2014-04-15 13:34:44 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-15 13:34:44 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-15 13:34:44 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-15 13:34:44 -0500
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2014-04-15 13:34:44 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-15 13:34:44 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-15 13:34:44 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-15 13:35:29 -0500
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-15 13:35:30 -0500
+
+
+Started GET "/assets/game.css?body=1" for 127.0.0.1 at 2014-04-15 13:35:30 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-15 13:35:30 -0500
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2014-04-15 13:35:30 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-15 13:35:30 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-15 13:35:30 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-15 13:35:30 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-15 13:35:39 -0500
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game.css?body=1" for 127.0.0.1 at 2014-04-15 13:35:39 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-15 13:35:39 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-15 13:35:39 -0500
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2014-04-15 13:35:39 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-15 13:35:39 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-15 13:35:39 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-15 13:35:39 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-15 13:35:46 -0500
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game.css?body=1" for 127.0.0.1 at 2014-04-15 13:35:46 -0500
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2014-04-15 13:35:46 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-15 13:35:46 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-15 13:35:46 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-15 13:35:46 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-15 13:35:46 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-15 13:35:46 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-15 13:35:54 -0500
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-15 13:35:55 -0500
+
+
+Started GET "/assets/game.css?body=1" for 127.0.0.1 at 2014-04-15 13:35:55 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-15 13:35:55 -0500
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2014-04-15 13:35:55 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-15 13:35:55 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-15 13:35:55 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-15 13:35:55 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-15 13:36:12 -0500
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-15 13:36:12 -0500
+
+
+Started GET "/assets/game.css?body=1" for 127.0.0.1 at 2014-04-15 13:36:12 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-15 13:36:12 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-15 13:36:12 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-15 13:36:12 -0500
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2014-04-15 13:36:12 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-15 13:36:12 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-15 13:36:24 -0500
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game.css?body=1" for 127.0.0.1 at 2014-04-15 13:36:24 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-15 13:36:24 -0500
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2014-04-15 13:36:24 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-15 13:36:24 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-15 13:36:24 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-15 13:36:24 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-15 13:36:24 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-15 13:37:31 -0500
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-15 13:37:31 -0500
+
+
+Started GET "/assets/game.css?body=1" for 127.0.0.1 at 2014-04-15 13:37:31 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-15 13:37:31 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-15 13:37:31 -0500
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2014-04-15 13:37:31 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-15 13:37:31 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-15 13:37:31 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-15 13:40:42 -0500
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game.css?body=1" for 127.0.0.1 at 2014-04-15 13:40:42 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-15 13:40:42 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-15 13:40:42 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-15 13:40:42 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-15 13:40:42 -0500
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2014-04-15 13:40:42 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-15 13:40:42 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-15 13:40:43 -0500
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-15 13:40:43 -0500
+
+
+Started GET "/assets/game.css?body=1" for 127.0.0.1 at 2014-04-15 13:40:43 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-15 13:40:43 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-15 13:40:43 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-15 13:40:43 -0500
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2014-04-15 13:40:43 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-15 13:40:43 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-15 13:42:04 -0500
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-15 13:42:04 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-15 13:42:04 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-15 13:42:04 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-15 13:42:04 -0500
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2014-04-15 13:42:04 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-15 13:42:04 -0500
+
+
+Started GET "/assets/game.css?body=1" for 127.0.0.1 at 2014-04-15 13:42:04 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-15 13:44:19 -0500
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-15 13:44:19 -0500
+
+
+Started GET "/assets/game.css?body=1" for 127.0.0.1 at 2014-04-15 13:44:19 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-15 13:44:19 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-15 13:44:19 -0500
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2014-04-15 13:44:19 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-15 13:44:19 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-15 13:44:19 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-15 13:44:47 -0500
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game.css?body=1" for 127.0.0.1 at 2014-04-15 13:44:47 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-15 13:44:47 -0500
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2014-04-15 13:44:47 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-15 13:44:47 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-15 13:44:47 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-15 13:44:47 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-15 13:44:47 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-15 13:45:47 -0500
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game.css?body=1" for 127.0.0.1 at 2014-04-15 13:45:47 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-15 13:45:47 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-15 13:45:47 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-15 13:45:47 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-15 13:45:47 -0500
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2014-04-15 13:45:47 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-15 13:45:47 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-15 13:46:39 -0500
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-15 13:46:39 -0500
+
+
+Started GET "/assets/game.css?body=1" for 127.0.0.1 at 2014-04-15 13:46:39 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-15 13:46:39 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-15 13:46:39 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-15 13:46:39 -0500
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2014-04-15 13:46:39 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-15 13:46:39 -0500

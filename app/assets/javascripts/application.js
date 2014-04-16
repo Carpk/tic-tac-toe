@@ -14,3 +14,16 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+$( document ).ready(function() {
+
+  $( ".box" ).mouseover(function() {
+    $( this ).css( "background-color", "blue" );
+  });
+
+  $(".box").click(function() {
+    window.location = "http://google.com";
+  });
+
+});

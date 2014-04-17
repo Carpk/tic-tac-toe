@@ -2,12 +2,12 @@ class GameController < ApplicationController
 
   def new
     @pc = ComputerAi.new
-    session[:pc] = []
+    session[:pc] = [9]
     render :nothing => true
   end
 
   def create
-    puts params
+    puts params[:positions].last
 
     position = 3
     data = {:position => position }

@@ -17,18 +17,23 @@
 
 
 $( document ).ready(function() {
-  var humanTurn = false;
-  var playerTurns = [];
+  humanTurn = false;
+  playerTurns = [];
 
   $(".box").click(function() {
     // if empty and player's turn, do this...
-    playerTurns.push(this.id)
-    var data = {positions: playerTurns}
-    $( this ).append( '<span class="letter">O</span>' );
-    $.post( "/game", data, function( data ) {
-      // console.log(data)
-      // $( ".result" ).html( data );
-    });
+    if (humanTurn) {
+      humanTurn = false;
+      playerTurns.push(this.id) // may not need array, position into session once on controller
+      var data = {positions: playerTurns}
+      $( this ).append( '<span class="letter">O</span>' );
+      $.post( "/game", data, function( data ) {
+        $( "#" + data.position ).append( '<span class="letter">X</span>' );
+        humanTurn = true;
+        console.log(data)
+        // $( ".result" ).html( data );
+      });
+    }
   });
 
   $(".button").click(function(e) {

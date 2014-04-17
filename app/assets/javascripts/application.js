@@ -20,13 +20,15 @@ $( document ).ready(function() {
 
 
   $(".box").click(function() {
+    // if empty, do this...
+    var data = this.id
     $( this ).append( '<span class="letter">O</span>' );
-    var data = $(this.id).serialize();
     console.log(data)
     $.post( "/game", data, function( data ) {
       // console.log(data)
       // $( ".result" ).html( data );
     });
   });
+
 
 });

@@ -3,7 +3,8 @@ class GameController < ApplicationController
   def create
     puts params
     puts "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
-    @value = [3]
-    render :nothing => true
+    position = 3
+    data = {:cell => position }
+    render :json => data, :status => :ok
   end
 end

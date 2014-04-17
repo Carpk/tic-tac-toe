@@ -20,10 +20,11 @@ $( document ).ready(function() {
 
 
   $(".box").click(function() {
-    console.log(this)
     $( this ).append( '<span class="letter">O</span>' );
-    $.post( "/game", function( data ) {
-      console.log(data)
+    var data = $(this.id).serialize();
+    console.log(data)
+    $.post( "/game", data, function( data ) {
+      // console.log(data)
       // $( ".result" ).html( data );
     });
   });

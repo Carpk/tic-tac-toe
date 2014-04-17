@@ -2,6 +2,7 @@ class GameController < ApplicationController
 
   def new
     @pc = ComputerAi.new
+    session[:pc] = []
     render :nothing => true
   end
 

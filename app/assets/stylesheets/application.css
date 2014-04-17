@@ -83,6 +83,13 @@
   font-size: 8em;
 }
 
+.message {
+  height: 4em;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
 .selected {
   width: 110px;
   height: 110px;

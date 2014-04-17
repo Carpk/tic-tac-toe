@@ -17,7 +17,8 @@
 
 
 $( document ).ready(function() {
-  var playerTurns = []
+  var humanTurn = false;
+  var playerTurns = [];
 
   $(".box").click(function() {
     // if empty and player's turn, do this...
@@ -30,5 +31,12 @@ $( document ).ready(function() {
     });
   });
 
+  $(".button").click(function(e) {
+    e.preventDefault()
+    $(this).fadeOut("slow")
+
+    $( "#9" ).append( '<span class="letter">X</span>' );
+    humanTurn = true;
+  })
 
 });

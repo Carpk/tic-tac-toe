@@ -1,10 +1,15 @@
 class GameController < ApplicationController
 
+  def new
+    @pc = ComputerAi.new
+    render :nothing => true
+  end
+
   def create
     puts params
-    puts "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+
     position = 3
-    data = {:cell => position }
+    data = {:position => position }
     render :json => data, :status => :ok
   end
 end

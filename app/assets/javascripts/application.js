@@ -17,13 +17,13 @@
 
 
 $( document ).ready(function() {
-
+  var playerTurns = []
 
   $(".box").click(function() {
-    // if empty, do this...
-    var data = this.id
+    // if empty and player's turn, do this...
+    playerTurns.push(this.id)
+    var data = {positions: playerTurns}
     $( this ).append( '<span class="letter">O</span>' );
-    console.log(data)
     $.post( "/game", data, function( data ) {
       // console.log(data)
       // $( ".result" ).html( data );

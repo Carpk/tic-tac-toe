@@ -18,12 +18,14 @@
 
 $( document ).ready(function() {
 
-  $( ".box" ).mouseover(function() {
-    $( this ).css( "background-color", "blue" );
-  });
 
   $(".box").click(function() {
-    window.location = "http://google.com";
+    console.log(this)
+    $( this ).append( '<span class="letter">O</span>' );
+    $.post( "/game", function( data ) {
+      console.log(data)
+      // $( ".result" ).html( data );
+    });
   });
 
 });

@@ -26,13 +26,14 @@ class ComputerAi < ActiveRecord::Base
     case @user_position
     when 1
       @strategy = "cornerjumper"
-    when 2 || 4
+    when 2 && 4
       @strategy = "middlelane" 
-    when 3 || 7 
+    when 3 && 7 
+      puts "cornerhugger"
       @strategy = "cornerhugger"
     when 5
       @strategy = "catstie"
-    when 6 || 8
+    when 6 && 8
       @strategy = "sidestep"
     end
     self.send(@strategy)

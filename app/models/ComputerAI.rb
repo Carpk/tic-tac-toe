@@ -98,24 +98,24 @@ class ComputerAI
   # end
 
 
-  def cornerjumper
-    case @rolls.last
-    when 8
-      @rolls << 2
-    when 2
-      if @grid[5] == "   "
-        @rolls << 5
-      else
-        @rolls << 6
-      end
-    when 6
-      if @grid[4] == "   "
-        @rolls << 4
-      elsif @grid[7] == "   "
-        @rolls << 7
-      end
-    end 
-  end
+  # def cornerjumper
+  #   case @rolls.last
+  #   when 8
+  #     @rolls << 2
+  #   when 2
+  #     if @grid[5] == "   "
+  #       @rolls << 5
+  #     else
+  #       @rolls << 6
+  #     end
+  #   when 6
+  #     if @grid[4] == "   "
+  #       @rolls << 4
+  #     elsif @grid[7] == "   "
+  #       @rolls << 7
+  #     end
+  #   end 
+  # end
 
   def middlelane
     case @rolls.last

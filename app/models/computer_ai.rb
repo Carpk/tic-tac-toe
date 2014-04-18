@@ -44,12 +44,31 @@ class ComputerAi < ActiveRecord::Base
     self.send(@strategy)
   end
 
+  def cornerjumper # user at 1
+    case @pc_position.last
+    when 9
+      @pc_position << 3
+    when 3
+      if @human_position.include?(6) == false # end game early
+        @pc_position << 6
+      else
+        @pc_position << 7
+      end
+    when 7
+      if @human_position.include?(5) == false
+        @pc_position << 5
+      elsif @human_position.include?(8) == false
+        @pc_position << 8
+      end
+    end 
+  end
+
   def cornerhugger # user can only be at 3 or 7
     case @pc_position.last
     when 9
       @pc_position << 1
     when 1
-      if @human_position.include?(5) == false  # @user_position != 5
+      if @human_position.include?(5) == false
         @pc_position << 5 # ends game, from upper left
       elsif @human_position.include?(3) == false
         @pc_position << 3

@@ -29,7 +29,6 @@ class ComputerAi < ActiveRecord::Base
     when 2 && 4
       @strategy = "middlelane" 
     when 3 && 7 
-      puts "cornerhugger"
       @strategy = "cornerhugger"
     when 5
       @strategy = "catstie"
@@ -39,13 +38,14 @@ class ComputerAi < ActiveRecord::Base
     self.send(@strategy)
   end
 
-  def cornerhugger
+  def cornerhugger # user can only be at 3 or 7
     case @pc_position.last
     when 9
       @pc_position << 1
     when 1
-      if @grid[4] == "   "
-        @pc_position << 4 # ends game, from upper left
+      puts "List of users positions: #{@human_position}"
+      if @human_position.include?(5) == false  # @user_position != 5
+        @pc_position << 5 # ends game, from upper left
       elsif @grid[2] == "   "
         @pc_position << 2
         @strategy = "cornerhugger_top"

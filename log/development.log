@@ -25381,3 +25381,740 @@ Started POST "/game" for 127.0.0.1 at 2014-04-18 11:58:20 -0500
 Processing by GameController#create as */*
   Parameters: {"positions"=>["7"]}
 Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-18 11:59:16 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 69ms (Views: 44.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game.css?body=1" for 127.0.0.1 at 2014-04-18 11:59:16 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-18 11:59:16 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-18 11:59:16 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-18 11:59:16 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-18 11:59:16 -0500
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2014-04-18 11:59:16 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-18 11:59:16 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-18 12:00:39 -0500
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-18 12:00:39 -0500
+
+
+Started GET "/assets/game.css?body=1" for 127.0.0.1 at 2014-04-18 12:00:39 -0500
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2014-04-18 12:00:39 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-18 12:00:39 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-18 12:00:39 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-18 12:00:39 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-18 12:00:39 -0500
+
+
+Started GET "/game/new" for 127.0.0.1 at 2014-04-18 12:00:41 -0500
+Processing by GameController#new as */*
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-18 12:03:41 -0500
+Processing by GameController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+SyntaxError (/home/vinco/projects/tic_tac_toe/app/models/computer_ai.rb:48: syntax error, unexpected keyword_elsif, expecting keyword_end
+      elsif @grid[2] == "   "
+           ^
+/home/vinco/projects/tic_tac_toe/app/models/computer_ai.rb:51: syntax error, unexpected keyword_elsif, expecting keyword_end
+      elsif @grid[6] == "   "
+           ^):
+  activesupport (4.0.4) lib/active_support/dependencies.rb:424:in `load'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:424:in `block in load_file'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:616:in `new_constants_in'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:423:in `load_file'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:324:in `require_or_load'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:463:in `load_missing_constant'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.4) lib/active_support/core_ext/string/inflections.rb:66:in `constantize'
+  activesupport (4.0.4) lib/active_support/core_ext/marshal.rb:10:in `rescue in load_with_autoloading'
+  activesupport (4.0.4) lib/active_support/core_ext/marshal.rb:6:in `load_with_autoloading'
+  activesupport (4.0.4) lib/active_support/message_encryptor.rb:93:in `_decrypt'
+  activesupport (4.0.4) lib/active_support/message_encryptor.rb:63:in `decrypt_and_verify'
+  actionpack (4.0.4) lib/action_dispatch/middleware/cookies.rb:461:in `decrypt_and_verify'
+  actionpack (4.0.4) lib/action_dispatch/middleware/cookies.rb:443:in `[]'
+  actionpack (4.0.4) lib/action_dispatch/middleware/session/cookie_store.rb:113:in `get_cookie'
+  actionpack (4.0.4) lib/action_dispatch/middleware/session/cookie_store.rb:89:in `block in unpacked_cookie_data'
+  actionpack (4.0.4) lib/action_dispatch/middleware/session/abstract_store.rb:51:in `stale_session_check!'
+  actionpack (4.0.4) lib/action_dispatch/middleware/session/cookie_store.rb:88:in `unpacked_cookie_data'
+  actionpack (4.0.4) lib/action_dispatch/middleware/session/cookie_store.rb:82:in `block in extract_session_id'
+  actionpack (4.0.4) lib/action_dispatch/middleware/session/abstract_store.rb:51:in `stale_session_check!'
+  actionpack (4.0.4) lib/action_dispatch/middleware/session/cookie_store.rb:81:in `extract_session_id'
+  actionpack (4.0.4) lib/action_dispatch/request/session.rb:46:in `block in []'
+  actionpack (4.0.4) lib/action_dispatch/request/session.rb:45:in `fetch'
+  actionpack (4.0.4) lib/action_dispatch/request/session.rb:45:in `[]'
+  actionpack (4.0.4) lib/action_dispatch/request/session.rb:67:in `id'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:282:in `current_session_id'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:288:in `session_exists?'
+  actionpack (4.0.4) lib/action_dispatch/request/session.rb:140:in `exists?'
+  actionpack (4.0.4) lib/action_dispatch/request/session.rb:160:in `load_for_read!'
+  actionpack (4.0.4) lib/action_dispatch/request/session.rb:86:in `[]'
+  turbolinks (2.2.2) lib/turbolinks/xhr_headers.rb:35:in `set_xhr_redirected_to'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:387:in `_run__4433450626630233029__process_action__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.4) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.4) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.0.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.4) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.4) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.4) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.4) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:674:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:373:in `_run__992683152236999740__call__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/vinco/.rbenv/versions/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/vinco/.rbenv/versions/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/vinco/.rbenv/versions/2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/vinco/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/vinco/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /home/vinco/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.4ms)
+  Rendered /home/vinco/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-18 12:03:43 -0500
+Processing by GameController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+SyntaxError (/home/vinco/projects/tic_tac_toe/app/models/computer_ai.rb:48: syntax error, unexpected keyword_elsif, expecting keyword_end
+      elsif @grid[2] == "   "
+           ^
+/home/vinco/projects/tic_tac_toe/app/models/computer_ai.rb:51: syntax error, unexpected keyword_elsif, expecting keyword_end
+      elsif @grid[6] == "   "
+           ^):
+  activesupport (4.0.4) lib/active_support/dependencies.rb:424:in `load'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:424:in `block in load_file'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:616:in `new_constants_in'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:423:in `load_file'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:324:in `require_or_load'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:463:in `load_missing_constant'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.4) lib/active_support/core_ext/string/inflections.rb:66:in `constantize'
+  activesupport (4.0.4) lib/active_support/core_ext/marshal.rb:10:in `rescue in load_with_autoloading'
+  activesupport (4.0.4) lib/active_support/core_ext/marshal.rb:6:in `load_with_autoloading'
+  activesupport (4.0.4) lib/active_support/message_encryptor.rb:93:in `_decrypt'
+  activesupport (4.0.4) lib/active_support/message_encryptor.rb:63:in `decrypt_and_verify'
+  actionpack (4.0.4) lib/action_dispatch/middleware/cookies.rb:461:in `decrypt_and_verify'
+  actionpack (4.0.4) lib/action_dispatch/middleware/cookies.rb:443:in `[]'
+  actionpack (4.0.4) lib/action_dispatch/middleware/session/cookie_store.rb:113:in `get_cookie'
+  actionpack (4.0.4) lib/action_dispatch/middleware/session/cookie_store.rb:89:in `block in unpacked_cookie_data'
+  actionpack (4.0.4) lib/action_dispatch/middleware/session/abstract_store.rb:51:in `stale_session_check!'
+  actionpack (4.0.4) lib/action_dispatch/middleware/session/cookie_store.rb:88:in `unpacked_cookie_data'
+  actionpack (4.0.4) lib/action_dispatch/middleware/session/cookie_store.rb:82:in `block in extract_session_id'
+  actionpack (4.0.4) lib/action_dispatch/middleware/session/abstract_store.rb:51:in `stale_session_check!'
+  actionpack (4.0.4) lib/action_dispatch/middleware/session/cookie_store.rb:81:in `extract_session_id'
+  actionpack (4.0.4) lib/action_dispatch/request/session.rb:46:in `block in []'
+  actionpack (4.0.4) lib/action_dispatch/request/session.rb:45:in `fetch'
+  actionpack (4.0.4) lib/action_dispatch/request/session.rb:45:in `[]'
+  actionpack (4.0.4) lib/action_dispatch/request/session.rb:67:in `id'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:282:in `current_session_id'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:288:in `session_exists?'
+  actionpack (4.0.4) lib/action_dispatch/request/session.rb:140:in `exists?'
+  actionpack (4.0.4) lib/action_dispatch/request/session.rb:160:in `load_for_read!'
+  actionpack (4.0.4) lib/action_dispatch/request/session.rb:86:in `[]'
+  turbolinks (2.2.2) lib/turbolinks/xhr_headers.rb:35:in `set_xhr_redirected_to'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:387:in `_run__4433450626630233029__process_action__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.4) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.4) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.0.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.4) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.4) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.4) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.4) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:674:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:373:in `_run__992683152236999740__call__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/vinco/.rbenv/versions/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/vinco/.rbenv/versions/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/vinco/.rbenv/versions/2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/vinco/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/vinco/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /home/vinco/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+  Rendered /home/vinco/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-18 12:03:54 -0500
+Processing by GameController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+SyntaxError (/home/vinco/projects/tic_tac_toe/app/models/computer_ai.rb:48: syntax error, unexpected keyword_elsif, expecting keyword_end
+      elsif @grid[2] == "   "
+           ^
+/home/vinco/projects/tic_tac_toe/app/models/computer_ai.rb:51: syntax error, unexpected keyword_elsif, expecting keyword_end
+      elsif @grid[6] == "   "
+           ^):
+  activesupport (4.0.4) lib/active_support/dependencies.rb:424:in `load'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:424:in `block in load_file'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:616:in `new_constants_in'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:423:in `load_file'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:324:in `require_or_load'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:463:in `load_missing_constant'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.4) lib/active_support/core_ext/string/inflections.rb:66:in `constantize'
+  activesupport (4.0.4) lib/active_support/core_ext/marshal.rb:10:in `rescue in load_with_autoloading'
+  activesupport (4.0.4) lib/active_support/core_ext/marshal.rb:6:in `load_with_autoloading'
+  activesupport (4.0.4) lib/active_support/message_encryptor.rb:93:in `_decrypt'
+  activesupport (4.0.4) lib/active_support/message_encryptor.rb:63:in `decrypt_and_verify'
+  actionpack (4.0.4) lib/action_dispatch/middleware/cookies.rb:461:in `decrypt_and_verify'
+  actionpack (4.0.4) lib/action_dispatch/middleware/cookies.rb:443:in `[]'
+  actionpack (4.0.4) lib/action_dispatch/middleware/session/cookie_store.rb:113:in `get_cookie'
+  actionpack (4.0.4) lib/action_dispatch/middleware/session/cookie_store.rb:89:in `block in unpacked_cookie_data'
+  actionpack (4.0.4) lib/action_dispatch/middleware/session/abstract_store.rb:51:in `stale_session_check!'
+  actionpack (4.0.4) lib/action_dispatch/middleware/session/cookie_store.rb:88:in `unpacked_cookie_data'
+  actionpack (4.0.4) lib/action_dispatch/middleware/session/cookie_store.rb:82:in `block in extract_session_id'
+  actionpack (4.0.4) lib/action_dispatch/middleware/session/abstract_store.rb:51:in `stale_session_check!'
+  actionpack (4.0.4) lib/action_dispatch/middleware/session/cookie_store.rb:81:in `extract_session_id'
+  actionpack (4.0.4) lib/action_dispatch/request/session.rb:46:in `block in []'
+  actionpack (4.0.4) lib/action_dispatch/request/session.rb:45:in `fetch'
+  actionpack (4.0.4) lib/action_dispatch/request/session.rb:45:in `[]'
+  actionpack (4.0.4) lib/action_dispatch/request/session.rb:67:in `id'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:282:in `current_session_id'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:288:in `session_exists?'
+  actionpack (4.0.4) lib/action_dispatch/request/session.rb:140:in `exists?'
+  actionpack (4.0.4) lib/action_dispatch/request/session.rb:160:in `load_for_read!'
+  actionpack (4.0.4) lib/action_dispatch/request/session.rb:86:in `[]'
+  turbolinks (2.2.2) lib/turbolinks/xhr_headers.rb:35:in `set_xhr_redirected_to'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:387:in `_run__4433450626630233029__process_action__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.4) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.4) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.0.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.4) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.4) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.4) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.4) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:674:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:373:in `_run__992683152236999740__call__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/vinco/.rbenv/versions/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/vinco/.rbenv/versions/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/vinco/.rbenv/versions/2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/vinco/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/vinco/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/vinco/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.4ms)
+  Rendered /home/vinco/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-18 12:04:09 -0500
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game.css?body=1" for 127.0.0.1 at 2014-04-18 12:04:09 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-18 12:04:09 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-18 12:04:09 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-18 12:04:09 -0500
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2014-04-18 12:04:09 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-18 12:04:09 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-18 12:04:09 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-18 12:04:35 -0500
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-18 12:04:35 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-18 12:04:35 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-18 12:04:35 -0500
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2014-04-18 12:04:35 -0500
+
+
+Started GET "/assets/game.css?body=1" for 127.0.0.1 at 2014-04-18 12:04:35 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-18 12:04:35 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-18 12:04:35 -0500
+
+
+Started GET "/game/new" for 127.0.0.1 at 2014-04-18 12:04:36 -0500
+Processing by GameController#new as */*
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/game" for 127.0.0.1 at 2014-04-18 12:04:38 -0500
+Processing by GameController#create as */*
+  Parameters: {"positions"=>["7"]}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/game" for 127.0.0.1 at 2014-04-18 12:04:40 -0500
+Processing by GameController#create as */*
+  Parameters: {"positions"=>["7", "4"]}
+Completed 500 Internal Server Error in 7ms
+
+NoMethodError (undefined method `include' for [7, 4]:Array):
+  app/models/computer_ai.rb:46:in `cornerhugger'
+  app/models/computer_ai.rb:14:in `assess'
+  app/controllers/game_controller.rb:11:in `create'
+
+
+  Rendered /home/vinco/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/vinco/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /home/vinco/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/vinco/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-18 12:06:30 -0500
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-18 12:06:31 -0500
+
+
+Started GET "/assets/game.css?body=1" for 127.0.0.1 at 2014-04-18 12:06:31 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-18 12:06:31 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-18 12:06:31 -0500
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2014-04-18 12:06:31 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-18 12:06:31 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-18 12:06:31 -0500
+
+
+Started GET "/game/new" for 127.0.0.1 at 2014-04-18 12:06:32 -0500
+Processing by GameController#new as */*
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/game" for 127.0.0.1 at 2014-04-18 12:06:39 -0500
+Processing by GameController#create as */*
+  Parameters: {"positions"=>["7"]}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/game" for 127.0.0.1 at 2014-04-18 12:06:43 -0500
+Processing by GameController#create as */*
+  Parameters: {"positions"=>["7", "4"]}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/game" for 127.0.0.1 at 2014-04-18 12:06:51 -0500
+Processing by GameController#create as */*
+  Parameters: {"positions"=>["7", "4", "8"]}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/game" for 127.0.0.1 at 2014-04-18 12:07:03 -0500
+Processing by GameController#create as */*
+  Parameters: {"positions"=>["7", "4", "8", "3"]}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-18 12:08:59 -0500
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-18 12:09:00 -0500
+
+
+Started GET "/assets/game.css?body=1" for 127.0.0.1 at 2014-04-18 12:09:00 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-18 12:09:00 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-18 12:09:00 -0500
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2014-04-18 12:09:00 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-18 12:09:00 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-18 12:09:00 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-18 12:09:08 -0500
+Processing by GameController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+SyntaxError (/home/vinco/projects/tic_tac_toe/app/models/computer_ai.rb:49: syntax error, unexpected keyword_elsif, expecting keyword_end
+      elsif @grid[2] == "   "
+           ^
+/home/vinco/projects/tic_tac_toe/app/models/computer_ai.rb:52: syntax error, unexpected keyword_elsif, expecting keyword_end
+      elsif @grid[6] == "   "
+           ^):
+  activesupport (4.0.4) lib/active_support/dependencies.rb:424:in `load'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:424:in `block in load_file'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:616:in `new_constants_in'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:423:in `load_file'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:324:in `require_or_load'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:463:in `load_missing_constant'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.4) lib/active_support/core_ext/string/inflections.rb:66:in `constantize'
+  activesupport (4.0.4) lib/active_support/core_ext/marshal.rb:10:in `rescue in load_with_autoloading'
+  activesupport (4.0.4) lib/active_support/core_ext/marshal.rb:6:in `load_with_autoloading'
+  activesupport (4.0.4) lib/active_support/message_encryptor.rb:93:in `_decrypt'
+  activesupport (4.0.4) lib/active_support/message_encryptor.rb:63:in `decrypt_and_verify'
+  actionpack (4.0.4) lib/action_dispatch/middleware/cookies.rb:461:in `decrypt_and_verify'
+  actionpack (4.0.4) lib/action_dispatch/middleware/cookies.rb:443:in `[]'
+  actionpack (4.0.4) lib/action_dispatch/middleware/session/cookie_store.rb:113:in `get_cookie'
+  actionpack (4.0.4) lib/action_dispatch/middleware/session/cookie_store.rb:89:in `block in unpacked_cookie_data'
+  actionpack (4.0.4) lib/action_dispatch/middleware/session/abstract_store.rb:51:in `stale_session_check!'
+  actionpack (4.0.4) lib/action_dispatch/middleware/session/cookie_store.rb:88:in `unpacked_cookie_data'
+  actionpack (4.0.4) lib/action_dispatch/middleware/session/cookie_store.rb:82:in `block in extract_session_id'
+  actionpack (4.0.4) lib/action_dispatch/middleware/session/abstract_store.rb:51:in `stale_session_check!'
+  actionpack (4.0.4) lib/action_dispatch/middleware/session/cookie_store.rb:81:in `extract_session_id'
+  actionpack (4.0.4) lib/action_dispatch/request/session.rb:46:in `block in []'
+  actionpack (4.0.4) lib/action_dispatch/request/session.rb:45:in `fetch'
+  actionpack (4.0.4) lib/action_dispatch/request/session.rb:45:in `[]'
+  actionpack (4.0.4) lib/action_dispatch/request/session.rb:67:in `id'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:282:in `current_session_id'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:288:in `session_exists?'
+  actionpack (4.0.4) lib/action_dispatch/request/session.rb:140:in `exists?'
+  actionpack (4.0.4) lib/action_dispatch/request/session.rb:160:in `load_for_read!'
+  actionpack (4.0.4) lib/action_dispatch/request/session.rb:86:in `[]'
+  turbolinks (2.2.2) lib/turbolinks/xhr_headers.rb:35:in `set_xhr_redirected_to'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:387:in `_run__4433450626630233029__process_action__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.4) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.4) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.0.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.4) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.4) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.4) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.4) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:674:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:373:in `_run__992683152236999740__call__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/vinco/.rbenv/versions/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/vinco/.rbenv/versions/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/vinco/.rbenv/versions/2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/vinco/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/vinco/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /home/vinco/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+  Rendered /home/vinco/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-18 12:09:23 -0500
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-18 12:09:23 -0500
+
+
+Started GET "/assets/game.css?body=1" for 127.0.0.1 at 2014-04-18 12:09:23 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-18 12:09:23 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-18 12:09:23 -0500
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2014-04-18 12:09:23 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-18 12:09:23 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-18 12:09:23 -0500
+
+
+Started GET "/game/new" for 127.0.0.1 at 2014-04-18 12:09:25 -0500
+Processing by GameController#new as */*
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/game" for 127.0.0.1 at 2014-04-18 12:09:26 -0500
+Processing by GameController#create as */*
+  Parameters: {"positions"=>["7"]}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/game" for 127.0.0.1 at 2014-04-18 12:09:28 -0500
+Processing by GameController#create as */*
+  Parameters: {"positions"=>["7", "8"]}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)

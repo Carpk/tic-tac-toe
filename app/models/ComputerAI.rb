@@ -33,36 +33,36 @@ class ComputerAI
     win
   end
 
-  def sidestep
-    case @rolls.last
-    when 8
-      if @grid[5]=="   "
-        @rolls << 5
-      elsif @grid[7]=="   "
-        @rolls << 7
-      end
-    when 7
-      if @grid[6] == "   "
-        @rolls << 6
-      else
-        @rolls << 4
-      end
-    when 5
-      if @grid[2] == "   "
-        @rolls << 2
-      else
-        @rolls << 4
-      end      
-    when 4
-      if @grid[0] == "   "
-        @rolls << 0
-      elsif @rolls[-2] == 7
-        @rolls << 1
-      elsif @rolls[-2] == 5
-        @rolls << 3
-      end
-    end    
-  end
+  # def sidestep
+  #   case @rolls.last
+  #   when 8
+  #     if @grid[5]=="   "
+  #       @rolls << 5
+  #     elsif @grid[7]=="   "
+  #       @rolls << 7
+  #     end
+  #   when 7
+  #     if @grid[6] == "   "
+  #       @rolls << 6
+  #     else
+  #       @rolls << 4
+  #     end
+  #   when 5
+  #     if @grid[2] == "   "
+  #       @rolls << 2
+  #     else
+  #       @rolls << 4
+  #     end      
+  #   when 4
+  #     if @grid[0] == "   "
+  #       @rolls << 0
+  #     elsif @rolls[-2] == 7
+  #       @rolls << 1
+  #     elsif @rolls[-2] == 5
+  #       @rolls << 3
+  #     end
+  #   end    
+  # end
 
   # def cornerhugger
   #   case @rolls.last

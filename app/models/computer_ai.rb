@@ -129,4 +129,35 @@ class ComputerAi < ActiveRecord::Base
     end
   end
 
+  def sidestep # user at 6 or 8
+    case @pc_position.last
+    when 9
+      if @human_position.include?(6) == false
+        @pc_position << 6
+      elsif @human_position.include?(8) == false
+        @pc_position << 8
+      end
+    when 8
+      if @human_position.include?(7) == false
+        @pc_position << 7
+      else
+        @pc_position << 5
+      end
+    when 6
+      if @human_position.include?(3) == false
+        @pc_position << 3
+      else
+        @pc_position << 5
+      end      
+    when 5
+      if @human_position.include?(1) == false
+        @pc_position << 1
+      elsif @pc_position[-2] == 8
+        @pc_position << 2
+      elsif @pc_position[-2] == 6
+        @pc_position << 4
+      end
+    end    
+  end
+
 end

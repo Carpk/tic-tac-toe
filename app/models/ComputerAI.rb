@@ -1,27 +1,27 @@
 class ComputerAI
   attr_reader :persona
 
-  def initialize
-    @strategy = nil
-    @rolls = []
-    @grid = []
-    @persona = personality
-    @winning_combos = generate_combos
-  end
+  # def initialize
+  #   @strategy = nil
+  #   @rolls = []
+  #   @grid = []
+  #   @persona = personality
+  #   @winning_combos = generate_combos
+  # end
 
-  def assess(grid)
-    @grid = grid
-    unless @strategy == nil
-      self.send(@strategy)
-    else
-      if grid.count(" X ") == 0
-        @rolls << 8
-      else 
-        pull_strategy
-      end
-    end
-    @rolls.last
-  end
+  # def assess(grid)
+  #   @grid = grid
+  #   unless @strategy == nil
+  #     self.send(@strategy)
+  #   else
+  #     if grid.count(" X ") == 0
+  #       @rolls << 8
+  #     else 
+  #       pull_strategy
+  #     end
+  #   end
+  #   @rolls.last
+  # end
 
 
   def win?
@@ -64,22 +64,22 @@ class ComputerAI
     end    
   end
 
-  def cornerhugger
-    case @rolls.last
-    when 8
-      @rolls << 0
-    when 0
-      if @grid[4] == "   "
-        @rolls << 4 # ends game, from upper left
-      elsif @grid[2] == "   "
-        @rolls << 2
-        @strategy = "cornerhugger_top"
-      elsif @grid[6] == "   "
-        @rolls << 6
-        @strategy = "cornerhugger_bottom"
-      end
-    end
-  end
+  # def cornerhugger
+  #   case @rolls.last
+  #   when 8
+  #     @rolls << 0
+  #   when 0
+  #     if @grid[4] == "   "
+  #       @rolls << 4 # ends game, from upper left
+  #     elsif @grid[2] == "   "
+  #       @rolls << 2
+  #       @strategy = "cornerhugger_top"
+  #     elsif @grid[6] == "   "
+  #       @rolls << 6
+  #       @strategy = "cornerhugger_bottom"
+  #     end
+  #   end
+  # end
 
   def cornerhugger_top
     if @grid[1] == "   "
@@ -210,20 +210,20 @@ class ComputerAI
   end       
 
 
-  def pull_strategy
-    if @grid[5]==" O " || @grid[7]==" O "
-      @strategy = "sidestep"
-    elsif @grid[2]==" O " || @grid[6]==" O "
-      @strategy = "cornerhugger"
-    elsif @grid[0]==" O "
-      @strategy = "cornerjumper"
-    elsif @grid[1]==" O " || @grid[3]==" O "
-      @strategy = "middlelane" 
-    elsif @grid[4]==" O "
-      @strategy = "catstie"
-    end
-    self.send(@strategy)
-  end
+  # def pull_strategy
+  #   if @grid[5]==" O " || @grid[7]==" O "
+  #     @strategy = "sidestep"
+  #   elsif @grid[2]==" O " || @grid[6]==" O "
+  #     @strategy = "cornerhugger"
+  #   elsif @grid[0]==" O "
+  #     @strategy = "cornerjumper"
+  #   elsif @grid[1]==" O " || @grid[3]==" O "
+  #     @strategy = "middlelane" 
+  #   elsif @grid[4]==" O "
+  #     @strategy = "catstie"
+  #   end
+  #   self.send(@strategy)
+  # end
 
   def generate_combos
     [[0,1,2],[3,4,5],

@@ -4,11 +4,11 @@ Command line game, only Ruby needs to be installed. Currently, there are 3 diffe
 
 #### Master
 
-Turning the command line game to a full web app.
+Turning the command line game version from master_original to a full web app.
 
-#### Master_original
+#### Master_original (completed)
 
-The first working version, the computer AI starts on the same spot at the beginning of each game every time. 
+The first working version, the computer AI starts on the same spot at the beginning of each game every time.
 
 #### Rand_start
 

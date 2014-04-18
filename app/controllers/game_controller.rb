@@ -2,14 +2,15 @@ class GameController < ApplicationController
 
   def new
     @pc = ComputerAi.new
-    session[:pc] = [9]
-    render :nothing => true
+    puts "This is the pc: #{@pc}"
+    position = 9
+    data = {:position => position }
+    render :json => data, :status => :ok
   end
 
   def create
-    puts params[:positions].last
-
-    position = 3
+    puts "This is the pc: #{@pc}"
+    position = @pc.assess(params[:positions].last)
     data = {:position => position }
     render :json => data, :status => :ok
   end

@@ -39,9 +39,12 @@ $( document ).ready(function() {
   $(".button").click(function(e) {
     e.preventDefault()
     $(this).fadeOut("slow")
-
-    $( "#9" ).append( '<span class="letter">X</span>' );
+    $.get( "/new", function(data) {
+      console.log(data.position)
+    $( "#" + data.position ).append( '<span class="letter">X</span>' );
     humanTurn = true;
+      
+    })
   })
 
 });

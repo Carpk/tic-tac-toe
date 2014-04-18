@@ -81,21 +81,21 @@ class ComputerAI
   #   end
   # end
 
-  def cornerhugger_top
-    if @grid[1] == "   "
-      @rolls << 1
-    elsif @grid[5] == "   "
-      @rolls << 5
-    end
-  end
+  # def cornerhugger_top
+  #   if @grid[1] == "   "
+  #     @rolls << 1
+  #   elsif @grid[5] == "   "
+  #     @rolls << 5
+  #   end
+  # end
 
-  def cornerhugger_bottom
-    if @grid[3] == "   "
-      @rolls << 3
-    elsif @grid[7] == "   "
-      @rolls << 7
-    end
-  end
+  # def cornerhugger_bottom
+  #   if @grid[3] == "   "
+  #     @rolls << 3
+  #   elsif @grid[7] == "   "
+  #     @rolls << 7
+  #   end
+  # end
 
 
   def cornerjumper

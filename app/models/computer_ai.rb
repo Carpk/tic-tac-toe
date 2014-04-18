@@ -26,13 +26,19 @@ class ComputerAi < ActiveRecord::Base
     case @user_position
     when 1
       @strategy = "cornerjumper"
-    when 2 && 4
+    when 2
       @strategy = "middlelane" 
-    when 3 && 7 
+    when 3 
       @strategy = "cornerhugger"
+    when 4
+      @strategy = "middlelane" 
     when 5
       @strategy = "catstie"
-    when 6 && 8
+    when 6
+      @strategy = "sidestep"
+    when 7
+      @strategy = "cornerhugger"
+    when 8
       @strategy = "sidestep"
     end
     self.send(@strategy)
@@ -43,16 +49,31 @@ class ComputerAi < ActiveRecord::Base
     when 9
       @pc_position << 1
     when 1
-      puts "List of users positions: #{@human_position}"
       if @human_position.include?(5) == false  # @user_position != 5
         @pc_position << 5 # ends game, from upper left
-      elsif @grid[2] == "   "
-        @pc_position << 2
+      elsif @human_position.include?(3) == false
+        @pc_position << 3
         @strategy = "cornerhugger_top"
-      elsif @grid[6] == "   "
-        @pc_position << 6
+      elsif @human_position.include?(7) == false
+        @pc_position << 7
         @strategy = "cornerhugger_bottom"
       end
+    end
+  end
+
+  def cornerhugger_top
+    if @human_position.include?(2) == false
+      @pc_position << 2
+    elsif @human_position.include?(6) == false
+      @pc_position << 6
+    end
+  end
+
+  def cornerhugger_bottom
+    if @human_position.include?(4) == false
+      @pc_position << 4
+    elsif @human_position.include?(8) == false
+      @pc_position << 8
     end
   end
 

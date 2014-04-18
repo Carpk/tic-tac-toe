@@ -117,32 +117,32 @@ class ComputerAI
   #   end 
   # end
 
-  def middlelane
-    case @rolls.last
-    when 8
-      @rolls << 4
-    when 4
-      if @grid[0] == "   "
-        @rolls << 0
-      elsif @grid[1] == " O "
-        @rolls << 2
-      elsif @grid[3] == " O "
-        @rolls << 6
-      end
-    when 2
-      if @grid[5] == "   "
-        @rolls << 5
-      elsif @grid[6] == "   "
-        @rolls << 6
-      end
-    when 6
-      if @grid[7] == "   "
-        @rolls << 7
-      elsif @grid[2] == "   "
-        @rolls << 2
-      end
-    end 
-  end
+  # def middlelane
+  #   case @rolls.last
+  #   when 8
+  #     @rolls << 4
+  #   when 4
+  #     if @grid[0] == "   "
+  #       @rolls << 0
+  #     elsif @grid[1] == " O "
+  #       @rolls << 2
+  #     elsif @grid[3] == " O "
+  #       @rolls << 6
+  #     end
+  #   when 2
+  #     if @grid[5] == "   "
+  #       @rolls << 5
+  #     elsif @grid[6] == "   "
+  #       @rolls << 6
+  #     end
+  #   when 6
+  #     if @grid[7] == "   "
+  #       @rolls << 7
+  #     elsif @grid[2] == "   "
+  #       @rolls << 2
+  #     end
+  #   end 
+  # end
 
   def catstie
     case @rolls.last

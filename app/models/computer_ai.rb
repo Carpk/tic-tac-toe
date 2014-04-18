@@ -63,6 +63,39 @@ class ComputerAi < ActiveRecord::Base
     end 
   end
 
+  def middlelane # user at 2 or 4
+    case @pc_position.last
+    when 9
+      @pc_position << 5
+    when 5
+      if @human_position.include?(1) == false # end game early
+        @pc_position << 1
+      elsif @human_position.include?(2) == true
+        @pc_position << 3
+        @strategy = "middlelane_top"
+      elsif @human_position.include?(4) == true
+        @pc_position << 7
+        @strategy = "middlelane_bottom"
+      end
+    end 
+  end
+
+  def middlelane_top
+    if @human_position.include?(6) == false
+      @pc_position << 6
+    elsif @human_position.include?(7) == false
+      @pc_position << 7
+    end   
+  end
+
+  def middlelane_bottom
+    if @human_position.include?(8) == false
+      @pc_position << 8
+    elsif @human_position.include?(3) == false
+      @pc_position << 3
+    end
+  end
+
   def cornerhugger # user can only be at 3 or 7
     case @pc_position.last
     when 9

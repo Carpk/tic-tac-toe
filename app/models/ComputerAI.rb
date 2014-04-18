@@ -144,70 +144,70 @@ class ComputerAI
   #   end 
   # end
 
-  def catstie
-    case @rolls.last
-    when 8
-      @rolls << 0
-    when 0
-      if @grid[6] == " O "
-        @rolls << 2
-      elsif @grid[2] == " O "
-        @rolls << 6
-      elsif @grid[1] == " O "
-        @rolls << 7
-      elsif @grid[5] == " O "
-        @rolls << 3
-      elsif @grid[3] == " O "
-        @rolls << 5
-      elsif @grid[7] == " O "
-        @rolls << 1        
-      end
-    when 1
-      if @grid[2] == "   "
-        @rolls << 2
-      elsif @grid[6] == "   "
-        @rolls << 6
-      end
-    when 5
-      if @grid[2] == "   "
-        @rolls << 2
-      elsif @grid[6] == "   "
-        @rolls << 6
-      end
-    when 3
-      if @grid[6] == "   "
-        @rolls << 6
-      elsif @grid[2] == "   "
-        @rolls << 2
-      end
-    when 7
-      if @grid[6] == "   "
-        @rolls << 6
-      elsif @grid[2] == "   "
-        @rolls << 2
-      end
-    when 2
-      if @grid[1] == "   "
-        @rolls << 1
-      elsif @grid[5] == "   "
-        @rolls << 5
-      elsif @grid[3] == "   "
-        @rolls << 3
-      elsif @grid[7] == "   "
-        @rolls << 7
-      end
-    when 6
-      if @grid[3] == "   "
-        @rolls << 3
-      elsif @grid[7] == "   "
-        @rolls << 7
-      elsif @grid[5] == "   "
-        @rolls << 5
-      elsif @grid[1] == "   "
-        @rolls << 1
-      end
-    end
-  end       
+  # def catstie
+  #   case @rolls.last
+  #   when 8
+  #     @rolls << 0
+  #   when 0
+  #     if @grid[6] == " O "
+  #       @rolls << 2
+  #     elsif @grid[2] == " O "
+  #       @rolls << 6
+  #     elsif @grid[1] == " O "
+  #       @rolls << 7
+  #     elsif @grid[5] == " O "
+  #       @rolls << 3
+  #     elsif @grid[3] == " O "
+  #       @rolls << 5
+  #     elsif @grid[7] == " O "
+  #       @rolls << 1        
+  #     end
+  #   when 1
+  #     if @grid[2] == "   "
+  #       @rolls << 2
+  #     elsif @grid[6] == "   "
+  #       @rolls << 6
+  #     end
+  #   when 5
+  #     if @grid[2] == "   "
+  #       @rolls << 2
+  #     elsif @grid[6] == "   "
+  #       @rolls << 6
+  #     end
+  #   when 3
+  #     if @grid[6] == "   "
+  #       @rolls << 6
+  #     elsif @grid[2] == "   "
+  #       @rolls << 2
+  #     end
+  #   when 7
+  #     if @grid[6] == "   "
+  #       @rolls << 6
+  #     elsif @grid[2] == "   "
+  #       @rolls << 2
+  #     end
+  #   when 2
+  #     if @grid[1] == "   "
+  #       @rolls << 1
+  #     elsif @grid[5] == "   "
+  #       @rolls << 5
+  #     elsif @grid[3] == "   "
+  #       @rolls << 3
+  #     elsif @grid[7] == "   "
+  #       @rolls << 7
+  #     end
+  #   when 6
+  #     if @grid[3] == "   "
+  #       @rolls << 3
+  #     elsif @grid[7] == "   "
+  #       @rolls << 7
+  #     elsif @grid[5] == "   "
+  #       @rolls << 5
+  #     elsif @grid[1] == "   "
+  #       @rolls << 1
+  #     end
+  #   end
+  # end       
 
 
   # def pull_strategy

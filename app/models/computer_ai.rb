@@ -4,6 +4,7 @@ class ComputerAi < ActiveRecord::Base
     @strategy = nil
     @human_position = []
     @pc_position = [9]
+    @winning_combos = generate_combos
   end
 
   def assess(user_position)
@@ -247,4 +248,19 @@ class ComputerAi < ActiveRecord::Base
     end    
   end
 
+  def win?  # This is weird, find a better way!
+    win = false
+    @winning_combos.each do |combo|
+      combo.delete_if { |e| @pc_position.include?(e) }.empty?
+      win = true if combo.empty?
+    end
+    win
+  end
+
+  def generate_combos
+    [[0,1,2],[3,4,5],
+     [6,7,8],[0,3,6],
+     [1,4,7],[2,5,8],
+     [0,4,8],[2,4,6]]
+  end
 end

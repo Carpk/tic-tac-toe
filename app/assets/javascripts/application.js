@@ -18,27 +18,26 @@
 
 $( document ).ready(function() {
   humanTurn = false;
-
+  occupiedBoxes = ["9"]
   $(".box").click(function() {
-    // if empty and player's turn, do this...
-    if (humanTurn) {
+    if (humanTurn && occupiedBoxes.indexOf(this.id) == -1) { 
       humanTurn = false;
+      occupiedBoxes.push(this.id)
       var data = {positions: this.id}
       $( this ).append( '<span class="letter-o">O</span>' );
       $.post( "/game", data, function( data ) {
+        var temp = data.position.toString();
+        occupiedBoxes.push(temp)
         $( "#" + data.position ).append( '<span class="letter-x">X</span>' );
-        console.log(data.win)
         if (data.win == "pc") {
           $( ".gameover" ).show( "slow" );
           $( ".gameover" ).append( "<center>Computer Wins!</center>" );
           // alert("Computer wins!")
-
         }
         else if (data.win == "tie"){
           $( ".gameover" ).show( "slow" );
           $( ".gameover" ).append( "<center>Cat's Tie!</center>" );
           // alert("Cat's tie!")
-
         }
         else {
         humanTurn = true;

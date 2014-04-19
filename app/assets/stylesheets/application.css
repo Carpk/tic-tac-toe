@@ -87,6 +87,11 @@
   padding-top: 10px;
 }
 
+input {
+  border-radius: 5px;
+  background: white;
+}
+
 .letter-o {
   color: #cc0000;
   font-size: 8em;

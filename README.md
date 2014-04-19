@@ -24,11 +24,11 @@ Download master_original branch, and run:
 
 #### Master_original
 
-![command line version]()
+![command line version](https://raw.githubusercontent.com/Carpk/tic-tac-toe/master/app/assets/images/Screenshot%20from%202014-04-18%2019:49:07.png)
 
 #### Master
 
-![colorful app version]()
+![colorful app version](https://raw.githubusercontent.com/Carpk/tic-tac-toe/master/app/assets/images/Screenshot%20from%202014-04-18%2019:42:33.png)
 
 ## Tips
 

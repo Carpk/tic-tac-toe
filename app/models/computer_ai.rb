@@ -20,7 +20,7 @@ class ComputerAi < ActiveRecord::Base
         pull_strategy
       # end
     end
-    sleep(0.5)
+    sleep(rand(0.25..0.75))
     @pc_position.last
   end
 
@@ -252,16 +252,16 @@ class ComputerAi < ActiveRecord::Base
   def win?  # This is weird, find a better way!
     win = false
     @winning_combos.each do |combo|
-      combo.delete_if { |e| @pc_position.include?(e) }.empty?
+      combo.delete_if { |e| @pc_position.include?(e) }
       win = true if combo.empty?
     end
     win
   end
 
   def generate_combos
-    [[0,1,2],[3,4,5],
-     [6,7,8],[0,3,6],
-     [1,4,7],[2,5,8],
-     [0,4,8],[2,4,6]]
+    [[1,2,3],[4,5,6],
+     [7,8,9],[1,4,7],
+     [2,5,8],[3,6,9],
+     [1,5,9],[3,5,7]]
   end
 end

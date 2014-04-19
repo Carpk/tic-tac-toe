@@ -9,8 +9,8 @@ class GameController < ApplicationController
 
   def create
     position = session[:pc].assess(params[:positions].last.to_i)
-    puts "returning position: #{position}"
-    data = {:position => position }
+    status = session[:pc].win?
+    data = {:position => position,:win => status }
     render :json => data, :status => :ok
   end
 end

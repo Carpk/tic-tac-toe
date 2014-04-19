@@ -29,9 +29,14 @@ $( document ).ready(function() {
       $( this ).append( '<span class="letter-o">O</span>' );
       $.post( "/game", data, function( data ) {
         $( "#" + data.position ).append( '<span class="letter-x">X</span>' );
+        console.log(data.win)
+        if (data.win) {
+          alert("you lose!")
+          location.reload();
+        }
+        else {
         humanTurn = true;
-        console.log(data)
-        // $( ".result" ).html( data );
+        }
       });
     }
   });
@@ -40,7 +45,6 @@ $( document ).ready(function() {
     e.preventDefault()
     $(this).fadeOut("slow")
     $.get( "/game/new", function(data) {
-      console.log(data.position)
     $( "#" + data.position ).append( '<span class="letter-x">X</span>' );
     humanTurn = true;
       

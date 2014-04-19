@@ -20,6 +20,7 @@ class ComputerAi < ActiveRecord::Base
         pull_strategy
       # end
     end
+    sleep(0.5)
     @pc_position.last
   end
 

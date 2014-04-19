@@ -35,7 +35,6 @@
   border-left: solid;
   width: 114px;
   height: 114px;
-  /*background: pink;*/
 }
 
 .container {
@@ -76,6 +75,7 @@
   background: #00cc00;
   color: white;
   height: 100px;
+  border: 2px solid black;
 }
 
 .header h1 {

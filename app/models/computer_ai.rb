@@ -253,8 +253,9 @@ class ComputerAi < ActiveRecord::Base
     win = false
     @winning_combos.each do |combo|
       combo.delete_if { |e| @pc_position.include?(e) }
-      win = true if combo.empty?
+      win = "pc" if combo.empty?
     end
+    win = "tie" if @pc_position.length == 5
     win
   end
 

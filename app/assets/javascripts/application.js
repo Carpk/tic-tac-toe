@@ -18,20 +18,24 @@
 
 $( document ).ready(function() {
   humanTurn = false;
-  playerTurns = [];
+  //playerTurns = [];
 
   $(".box").click(function() {
     // if empty and player's turn, do this...
     if (humanTurn) {
       humanTurn = false;
-      playerTurns.push(this.id) // may not need array, position into session once on controller
-      var data = {positions: playerTurns}
+      // playerTurns.push(this.id) // may not need array, position into session once on controller
+      var data = {positions: this.id}
       $( this ).append( '<span class="letter-o">O</span>' );
       $.post( "/game", data, function( data ) {
         $( "#" + data.position ).append( '<span class="letter-x">X</span>' );
         console.log(data.win)
-        if (data.win) {
-          alert("you lose!")
+        if (data.win == "pc") {
+          alert("Computer wins!")
+          location.reload();
+        }
+        else if (data.win == "tie"){
+          alert("Cat's tie!")
           location.reload();
         }
         else {

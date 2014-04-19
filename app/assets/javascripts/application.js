@@ -18,25 +18,27 @@
 
 $( document ).ready(function() {
   humanTurn = false;
-  //playerTurns = [];
 
   $(".box").click(function() {
     // if empty and player's turn, do this...
     if (humanTurn) {
       humanTurn = false;
-      // playerTurns.push(this.id) // may not need array, position into session once on controller
       var data = {positions: this.id}
       $( this ).append( '<span class="letter-o">O</span>' );
       $.post( "/game", data, function( data ) {
         $( "#" + data.position ).append( '<span class="letter-x">X</span>' );
         console.log(data.win)
         if (data.win == "pc") {
-          alert("Computer wins!")
-          location.reload();
+          $( ".gameover" ).show( "slow" );
+          $( ".gameover" ).append( "<center>Computer Wins!</center>" );
+          // alert("Computer wins!")
+          // location.reload();
         }
         else if (data.win == "tie"){
-          alert("Cat's tie!")
-          location.reload();
+          $( ".gameover" ).show( "slow" );
+          $( ".gameover" ).append( "<center>Cat's Tie!</center>" );
+          // alert("Cat's tie!")
+          // location.reload();
         }
         else {
         humanTurn = true;
@@ -50,9 +52,12 @@ $( document ).ready(function() {
     $(this).fadeOut("slow")
     $.get( "/game/new", function(data) {
     $( "#" + data.position ).append( '<span class="letter-x">X</span>' );
-    humanTurn = true;
-      
+    humanTurn = true;     
     })
   })
 
+  $(".gameover").click(function(e) {
+    e.preventDefault()
+    location.reload();
+  })
 });

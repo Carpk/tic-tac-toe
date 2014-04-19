@@ -18,6 +18,10 @@
 </div>
 
 <div class="message">
-  <div class="button"><center><%= link_to 'Start Game', new_game_path %></center></div>
-
+  <div class="button">
+    <center><%= button_to 'Start Game', new_game_path %></center>
+  </div>
+  <div class="gameover">
+    <center><%= button_to 'Ok', root_path %></center>
+  </div>
 </div>

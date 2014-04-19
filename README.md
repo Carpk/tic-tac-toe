@@ -20,6 +20,16 @@ Download master_original branch, and run:
 
 `ruby ttt.rb`
 
+## Screenshots
+
+#### Master_original
+
+![command line version]()
+
+#### Master
+
+![colorful app version]()
+
 ## Tips
 
 Only way to win, is not to play! :D

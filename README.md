@@ -28,7 +28,7 @@ Download master_original branch, and run:
 
 #### Master
 
-![colorful app version](https://raw.githubusercontent.com/Carpk/tic-tac-toe/master/app/assets/images/Screenshot%20from%202014-04-18%2019:42:33.png)
+![colorful app version](https://raw.githubusercontent.com/Carpk/tic-tac-toe/master/app/assets/images/Screenshot%20from%202014-04-18%2022:54:23.png)
 
 ## Tips
 

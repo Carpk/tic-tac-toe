@@ -32,13 +32,13 @@ $( document ).ready(function() {
           $( ".gameover" ).show( "slow" );
           $( ".gameover" ).append( "<center>Computer Wins!</center>" );
           // alert("Computer wins!")
-          // location.reload();
+
         }
         else if (data.win == "tie"){
           $( ".gameover" ).show( "slow" );
           $( ".gameover" ).append( "<center>Cat's Tie!</center>" );
           // alert("Cat's tie!")
-          // location.reload();
+
         }
         else {
         humanTurn = true;

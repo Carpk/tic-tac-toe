@@ -2,17 +2,17 @@
 
 Command line game, only Ruby needs to be installed. Currently, there are 3 differant versions. Each on a seperate branch.
 
-#### Master
+#### Master (in progress)
 
-Turning the command line game version from master_original to a full web app.
+Turning the command line game version from master_original to a full web app. The game is completely functional, however some refactoring and additonal features need to be implemented
 
 #### Master_original (completed)
 
-The first working version, the computer AI starts on the same spot at the beginning of each game every time.
+The first working version. The computer AI starts on the same spot at the beginning of each game, every time.
 
-#### Rand_start
+#### Rand_start (in progress)
 
-The first version of the game, which set the foundation on how the logic would be implemented. Each strategy will have a separate file. And the computer AI will choose a random starting point from certain key positions, on the board at each game start.
+The first version of the game, which set the foundation on how the logic would be implemented. Each strategy will have to have a separate file. And the computer AI will choose a random starting point from certain key positions, on the board at each game start.
 
 ## Getting Started
 

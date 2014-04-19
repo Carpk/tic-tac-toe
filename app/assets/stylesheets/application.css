@@ -13,19 +13,20 @@
  */
 
  body {
-  background-image: -webkit-gradient(
+  /*background: #7f00ff;*/
+  /*background-image: -webkit-gradient(
     linear,
     left top,
     left bottom,
     color-stop(0, #000000),
-    color-stop(0.56, #FFFFFF)
+    color-stop(0.44, #D9D9D9)
   );
-  background-image: -o-linear-gradient(bottom, #000000 0%, #FFFFFF 56%);
-  background-image: -moz-linear-gradient(bottom, #000000 0%, #FFFFFF 56%);
-  background-image: -webkit-linear-gradient(bottom, #000000 0%, #FFFFFF 56%);
-  background-image: -ms-linear-gradient(bottom, #000000 0%, #FFFFFF 56%);
-  background-image: linear-gradient(to bottom, #000000 0%, #FFFFFF 56%);
-  background-repeat:no-repeat;
+  background-image: -o-linear-gradient(bottom, #000000 0%, #D9D9D9 44%);
+  background-image: -moz-linear-gradient(bottom, #000000 0%, #D9D9D9 44%);
+  background-image: -webkit-linear-gradient(bottom, #000000 0%, #D9D9D9 44%);
+  background-image: -ms-linear-gradient(bottom, #000000 0%, #D9D9D9 44%);
+  background-image: linear-gradient(to bottom, #000000 0%, #D9D9D9 44%);
+  background-repeat:no-repeat;*/
  }
 
 .box {
@@ -39,12 +40,13 @@
 
 .container {
   width: 350px;
+  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .container div:hover {
-  background: aqua;
+  background: #ff429a;
   border-radius: 3px;
 }
 
@@ -70,8 +72,10 @@
 }
 
 .header {
+  border-radius: 30px;
+  background: #00cc00;
   color: white;
-  height: 125px;
+  height: 100px;
 }
 
 .header h1 {
@@ -79,7 +83,13 @@
   padding-top: 10px;
 }
 
-.letter {
+.letter-o {
+  color: #cc0000;
+  font-size: 8em;
+}
+
+.letter-x {
+  color: #0000cc;
   font-size: 8em;
 }
 

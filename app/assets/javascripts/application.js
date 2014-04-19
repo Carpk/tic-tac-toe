@@ -26,9 +26,9 @@ $( document ).ready(function() {
       humanTurn = false;
       playerTurns.push(this.id) // may not need array, position into session once on controller
       var data = {positions: playerTurns}
-      $( this ).append( '<span class="letter">O</span>' );
+      $( this ).append( '<span class="letter-o">O</span>' );
       $.post( "/game", data, function( data ) {
-        $( "#" + data.position ).append( '<span class="letter">X</span>' );
+        $( "#" + data.position ).append( '<span class="letter-x">X</span>' );
         humanTurn = true;
         console.log(data)
         // $( ".result" ).html( data );
@@ -41,7 +41,7 @@ $( document ).ready(function() {
     $(this).fadeOut("slow")
     $.get( "/game/new", function(data) {
       console.log(data.position)
-    $( "#" + data.position ).append( '<span class="letter">X</span>' );
+    $( "#" + data.position ).append( '<span class="letter-x">X</span>' );
     humanTurn = true;
       
     })

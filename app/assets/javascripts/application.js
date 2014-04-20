@@ -29,12 +29,11 @@ $( document ).ready(function() {
         if (data.win == "pc") {
           $( ".gameover" ).show( "slow" );
           $( ".gameover" ).append( "<center>Computer Wins!</center>" );
-          // alert("Computer wins!")
         }
         else if (data.win == "tie"){
           $( ".gameover" ).show( "slow" );
           $( ".gameover" ).append( "<center>Cat's Tie!</center>" );
-          // alert("Cat's tie!")
+          // $(".end-img").show();
         }
         else {
         humanTurn = true;

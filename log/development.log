@@ -41747,3 +41747,37 @@ Started POST "/game" for 127.0.0.1 at 2014-04-20 18:38:04 -0500
 Processing by GameController#create as */*
   Parameters: {"positions"=>"7"}
 Completed 200 OK in 289ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-20 18:56:25 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 68ms (Views: 41.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-20 18:56:25 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-20 18:56:25 -0500
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2014-04-20 18:56:25 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-20 18:56:25 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-20 18:56:25 -0500
+
+
+Started GET "/assets/game.css?body=1" for 127.0.0.1 at 2014-04-20 18:56:25 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-20 18:56:25 -0500
+
+
+Started GET "/assets/tie.png" for 127.0.0.1 at 2014-04-20 18:56:25 -0500
+
+
+Started GET "/assets/select.png" for 127.0.0.1 at 2014-04-20 18:56:30 -0500

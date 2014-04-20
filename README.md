@@ -16,9 +16,25 @@ The first version of the game, which set the foundation on how the logic would b
 
 ## Getting Started
 
+#### Master_original
+
 Download master_original branch, and run:
 
 `ruby ttt.rb`
+
+#### Master
+
+Download master branch, and run the following commands:
+
+`bundle`
+
+`rake db:create`
+
+`rake db:migrate`
+
+`rails server`
+
+Open up your browser and navigate to [http://0.0.0.0:3000/](http://0.0.0.0:3000/)
 
 ## Screenshots
 

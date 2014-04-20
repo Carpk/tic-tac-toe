@@ -30,7 +30,7 @@
 
 .container div:hover {
   background: #cbcc00;
-  border-radius: 3px;
+  /*border-radius: 3px;*/
 }
 
 .container div:first-child {
@@ -61,6 +61,17 @@
   display: none;
 }
 
+.footer {
+  margin-bottom: 8px;
+  border-radius: 30px;
+  background: #cc00cb;
+  border: 2px solid black;
+  height: 3em;
+  position: absolute;
+  bottom: 0;
+  width: 98.5%;
+}
+
 .gameover{
   display:none;
 }
@@ -86,8 +97,8 @@ input {
 .letter {
   font-size: 8em;
   position:relative;
-  top: -15px;
-  left: 10px;
+  top: -16px;
+  left: 11px;
 }
 
 #x {
@@ -96,17 +107,6 @@ input {
 
 #o {
   color: #cc0000;
-}
-
-.message {
-  margin-bottom: 8px;
-  border-radius: 30px;
-  background: #cc00cb;
-  border: 2px solid black;
-  height: 3em;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
 }
 
 .selected {

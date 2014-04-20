@@ -29,8 +29,8 @@
 }
 
 .container div:hover {
-  background: #cbcc00;
-  /*border-radius: 3px;*/
+  background-image:url('select.png');
+  /*background: #FFFF1F;*/
 }
 
 .container div:first-child {

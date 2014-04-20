@@ -83,14 +83,19 @@ input {
   background: white;
 }
 
-.letter-o {
-  color: #cc0000;
+.letter {
   font-size: 8em;
+  position:relative;
+  top: -15px;
+  left: 10px;
 }
 
-.letter-x {
+#x {
   color: #0000cc;
-  font-size: 8em;
+}
+
+#o {
+  color: #cc0000;
 }
 
 .message {

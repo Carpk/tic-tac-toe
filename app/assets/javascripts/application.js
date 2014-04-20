@@ -21,11 +21,11 @@ $( document ).ready(function() {
       humanTurn = false;
       occupiedBoxes.push(this.id)
       var data = {positions: this.id}
-      $( this ).append( '<span class="letter-o">O</span>' );
+      $( this ).append( '<span class="letter" id="o">O</span>' );
       $.post( "/game", data, function( data ) {
         var temp = data.position.toString();
         occupiedBoxes.push(temp)
-        $( "#" + data.position ).append( '<span class="letter-x">X</span>' );
+        $( "#" + data.position ).append( '<span class="letter" id="x">X</span>' );
         if (data.win == "pc") {
           $( ".gameover" ).show( "slow" );
           $( ".gameover" ).append( "<center>Computer Wins!</center>" );
@@ -46,7 +46,7 @@ $( document ).ready(function() {
     e.preventDefault()
     $(this).fadeOut("slow")
     $.get( "/game/new", function(data) {
-    $( "#" + data.position ).append( '<span class="letter-x">X</span>' );
+    $( "#" + data.position ).append( '<span class="letter" id="x">X</span>' );
     humanTurn = true;     
     })
   })

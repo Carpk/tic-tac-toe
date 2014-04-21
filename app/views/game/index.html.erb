@@ -20,9 +20,9 @@
 
 <div class="footer">
   <div class="button">
-    <center><%= button_to 'Start Game', new_game_path %></center>
+    <center><%= button_to 'Start Game', new_game_path, method: :get %></center>
   </div>
   <div class="gameover">
-    <center><%= button_to 'Ok', root_path %></center>
+    <center><%= button_to 'Ok', root_path, method: :get %></center>
   </div>
 </div>

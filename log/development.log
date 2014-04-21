@@ -42020,3 +42020,37 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-20 20:03:38
 
 
 Started GET "/assets/tie.png" for 127.0.0.1 at 2014-04-20 20:03:38 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-20 20:13:59 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 77ms (Views: 50.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game.css?body=1" for 127.0.0.1 at 2014-04-20 20:14:00 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-20 20:14:00 -0500
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2014-04-20 20:14:00 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-20 20:14:00 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-20 20:14:00 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-20 20:14:00 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-20 20:14:00 -0500
+
+
+Started GET "/assets/tie.png" for 127.0.0.1 at 2014-04-20 20:14:00 -0500
+
+
+Started GET "/assets/select.png" for 127.0.0.1 at 2014-04-20 20:14:00 -0500

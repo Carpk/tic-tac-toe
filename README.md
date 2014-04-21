@@ -4,7 +4,7 @@ Command line game, only Ruby needs to be installed. Currently, there are 3 diffe
 
 #### Master (in progress)
 
-Turning the command line game version from master_original to a full web app. The game is completely functional, however some refactoring and additonal features need to be implemented
+Turning the command line game version from master_original to a full web app. The game is completely functional, however some refactoring and additonal features need to be implemented. And is deployed on heroku: [http://noughtsandcrosses.herokuapp.com/](http://noughtsandcrosses.herokuapp.com/)
 
 #### Master_original (completed)
 

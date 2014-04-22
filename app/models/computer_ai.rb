@@ -3,7 +3,7 @@ class ComputerAi < ActiveRecord::Base
   def initialize
     @strategy = nil
     @human_position = []
-    @pc_position = [9]
+    @pc_position = []
     @winning_combos = generate_combos
   end
 

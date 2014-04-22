@@ -2,7 +2,7 @@ class GameController < ApplicationController
 
   def new
     session[:pc] = ComputerAi.new
-    position = 9
+    position = session[:pc].assess(0)
     data = {:position => position }
     render :json => data, :status => :ok
   end

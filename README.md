@@ -8,7 +8,7 @@ Turning the command line game version from master_original to a full web app. Th
 
 #### Master_original (completed)
 
-The first working version. The computer AI starts on the same spot at the beginning of each game, every time.
+The first working version. The computer AI starts on the same spot at the beginning of each game, every time. Same code as as found in /Carpk/coding-challenges/tree/master/tic_tac_toe.
 
 #### Rand_start (in progress)
 

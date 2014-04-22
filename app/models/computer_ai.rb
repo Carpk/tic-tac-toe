@@ -14,11 +14,11 @@ class ComputerAi < ActiveRecord::Base
     unless @strategy == nil
       self.send(@strategy)
     else
-      # if user_position.count(" X ") == 0
-      #   @pc_position << 8
-      # else 
+      if user_position == 0
+        @pc_position << 9
+      else 
         pull_strategy
-      # end
+      end
     end
     sleep(rand(0.25..0.75))
     @pc_position.last

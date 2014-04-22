@@ -44,7 +44,7 @@ $( document ).ready(function() {
 
   $(".button").click(function(e) {
     e.preventDefault()
-    $(this).fadeOut("slow")
+    $(this).fadeOut("fast")
     $.get( "/game/new", function(data) {
     $( "#" + data.position ).append( '<span class="letter" id="x">X</span>' );
     humanTurn = true;     

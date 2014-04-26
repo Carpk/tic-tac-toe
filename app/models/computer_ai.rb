@@ -10,7 +10,6 @@ class ComputerAi < ActiveRecord::Base
   def assess(user_position)
     @human_position << user_position
     @user_position = user_position
-    puts @user_position
     unless @strategy == nil
       self.send(@strategy)
     else
@@ -62,7 +61,7 @@ class ComputerAi < ActiveRecord::Base
       elsif @human_position.include?(8) == false
         @pc_position << 8
       end
-    end 
+    end
   end
 
   def middlelane # user at 2 or 4
@@ -79,7 +78,7 @@ class ComputerAi < ActiveRecord::Base
         @pc_position << 7
         @strategy = "middlelane_bottom"
       end
-    end 
+    end
   end
 
   def middlelane_top
@@ -153,7 +152,7 @@ class ComputerAi < ActiveRecord::Base
         @strategy = "catstie_lowerleft"
       elsif @human_position.include?(8) == true
         @pc_position << 2
-        @strategy = "catstie_lowerleft"       
+        @strategy = "catstie_lowerleft"
       end
     end
   end
@@ -163,7 +162,7 @@ class ComputerAi < ActiveRecord::Base
       @pc_position << 2
     elsif @human_position.include?(6) == false
       @pc_position << 6
-    end   
+    end
   end
 
   def cross_split_bottom
@@ -171,7 +170,7 @@ class ComputerAi < ActiveRecord::Base
       @pc_position << 4
     elsif @human_position.include?(8) == false
       @pc_position << 8
-    end   
+    end
   end
 
   def catstie_upperright # user at 2 or 6
@@ -180,6 +179,15 @@ class ComputerAi < ActiveRecord::Base
     elsif @human_position.include?(3) == false
       @pc_position << 3
       @strategy = "catstie_ur_tie"
+    end
+  end
+
+  def catstie_lowerleft # user at 4 or 8
+    if @human_position.include?(3) == false
+      @pc_position << 3
+    elsif @human_position.include?(7) == false
+      @pc_position << 7
+      @strategy = "catstie_ll_tie"
     end
   end
 
@@ -192,16 +200,6 @@ class ComputerAi < ActiveRecord::Base
       @pc_position << 4
     elsif @pc_position.include?(8) == false
       @pc_position << 8
-    end
-  end
-
-
-  def catstie_lowerleft # user at 4 or 8
-    if @human_position.include?(3) == false
-      @pc_position << 3
-    elsif @human_position.include?(7) == false
-      @pc_position << 7
-      @strategy = "catstie_ll_tie"
     end
   end
 
@@ -237,7 +235,7 @@ class ComputerAi < ActiveRecord::Base
         @pc_position << 3
       else
         @pc_position << 5
-      end      
+      end
     when 5
       if @human_position.include?(1) == false
         @pc_position << 1
@@ -246,7 +244,7 @@ class ComputerAi < ActiveRecord::Base
       elsif @pc_position[-2] == 6
         @pc_position << 4
       end
-    end    
+    end
   end
 
   def win?  # This is weird, find a better way!

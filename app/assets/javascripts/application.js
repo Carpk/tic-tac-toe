@@ -17,7 +17,7 @@ $( document ).ready(function() {
   humanTurn = false;
   occupiedBoxes = ["9"]
   $(".box").click(function() {
-    if (humanTurn && occupiedBoxes.indexOf(this.id) == -1) { 
+    if (humanTurn && occupiedBoxes.indexOf(this.id) == -1) {
       humanTurn = false;
       occupiedBoxes.push(this.id)
       var data = {positions: this.id}
@@ -28,11 +28,11 @@ $( document ).ready(function() {
         $( "#" + data.position ).append( '<span class="letter" id="x">X</span>' );
         if (data.win == "pc") {
           $( ".gameover" ).show( "slow" );
-          $( ".gameover" ).append( "<center>Computer Wins!</center>" );
+          $( ".message" ).append( "<center>Computer Wins!</center>" );
         }
         else if (data.win == "tie"){
           $( ".gameover" ).show( "slow" );
-          $( ".gameover" ).append( "<center>Cat's Tie!</center>" );
+          $( ".message" ).append( "<center>Cat's Tie!</center>" );
           // $(".end-img").show();
         }
         else {
@@ -47,7 +47,7 @@ $( document ).ready(function() {
     $(this).fadeOut("fast")
     $.get( "/game/new", function(data) {
     $( "#" + data.position ).append( '<span class="letter" id="x">X</span>' );
-    humanTurn = true;     
+    humanTurn = true;
     })
   })
 

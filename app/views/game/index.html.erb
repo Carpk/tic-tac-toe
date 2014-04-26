@@ -3,8 +3,6 @@
   <h1><center>Tic-Tac-Toe</center></h1>
 </div>
 
-
-
 <div class="container">
   <div class="box boxcorner" id="1"></div>
   <div class="box boxtop" id="2"></div>
@@ -19,10 +17,8 @@
 </div>
 
 <div class="footer">
-  <div class="button">
-    <center><%= button_to 'Start Game', new_game_path, method: :get %></center>
-  </div>
-  <div class="gameover">
-    <center><%= button_to 'Ok', root_path, method: :get %></center>
-  </div>
+    <center class="message">
+      <%= link_to 'Start Game', new_game_path, :class => "button" %>
+      <%= link_to 'Ok', root_path, :class => "gameover" %>
+    </center>
 </div>

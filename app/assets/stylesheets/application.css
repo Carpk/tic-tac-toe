@@ -30,27 +30,18 @@
 
 .container div:hover {
   background-image:url('select.png');
-  /*background: #FFFF1F;*/
 }
 
-.container div:first-child {
+.boxcorner {
   border-top: none;
   border-left: none;
 }
 
-.container div:nth-child(2) {
+.boxtop {
   border-top: none;
 }
 
-.container div:nth-child(3) {
-  border-top: none;
-}
-
-.container div:nth-child(4) {
-  border-left: none;
-}
-
-.container div:nth-child(7) {
+.boxside {
   border-left: none;
 }
 

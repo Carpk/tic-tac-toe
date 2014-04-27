@@ -14,18 +14,18 @@
 
 
 .box {
-  float:left;
-  border-top: solid;
   border-left: solid;
-  width: 114px;
+  border-top: solid;
+  float:left;
   height: 114px;
+  width: 114px;
 }
 
 .container {
-  width: 350px;
-  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 50px;
+  width: 350px;
 }
 
 .container div:hover {
@@ -33,8 +33,8 @@
 }
 
 .boxcorner {
-  border-top: none;
   border-left: none;
+  border-top: none;
 }
 
 .boxtop {
@@ -46,21 +46,21 @@
 }
 
 .end-img {
+  display: none;
+  left: 5px;
   position:relative;
   top: -325px;
-  left: 5px;
-  display: none;
 }
 
 .footer {
-  padding-top: 8px;
-  margin-bottom: 8px;
-  border-radius: 30px;
   background: #cc00cb;
+  border-radius: 30px;
   border: 2px solid black;
-  height: 3em;
-  position: absolute;
   bottom: 0;
+  height: 3em;
+  margin-bottom: 8px;
+  padding-top: 8px;
+  position: absolute;
   width: 98.5%;
 }
 
@@ -69,11 +69,11 @@
 }
 
 .header {
-  border-radius: 30px;
   background: #00cc00;
+  border-radius: 30px;
+  border: 2px solid black;
   color: white;
   height: 100px;
-  border: 2px solid black;
 }
 
 .header h1 {
@@ -82,15 +82,15 @@
 }
 
 input {
-  border-radius: 9px;
   background: white;
+  border-radius: 9px;
 }
 
 .letter {
   font-size: 8em;
+  left: 11px;
   position:relative;
   top: -16px;
-  left: 11px;
 }
 
 #x {
@@ -102,20 +102,20 @@ input {
 }
 
 .selected {
-  width: 110px;
-  height: 110px;
   background: blue;
+  height: 110px;
+  width: 110px;
 }
 
 .button {
-  border-radius: 5px;
-  font: bold 11px Arial;
-  text-decoration: none;
   background-color: #EEEEEE;
-  color: #333333;
-  padding: 2px 6px 2px 6px;
-  border-top: 1px solid #CCCCCC;
-  border-right: 1px solid #333333;
   border-bottom: 1px solid #333333;
   border-left: 1px solid #CCCCCC;
+  border-radius: 5px;
+  border-right: 1px solid #333333;
+  border-top: 1px solid #CCCCCC;
+  color: #333333;
+  font: bold 11px Arial;
+  padding: 2px 6px 2px 6px;
+  text-decoration: none;
 }

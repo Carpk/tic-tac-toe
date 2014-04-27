@@ -15,7 +15,7 @@ class ComputerAi < ActiveRecord::Base
     else
       if user_position == 0
         @pc_position << 9
-      else 
+      else
         pull_strategy
       end
     end
@@ -27,28 +27,33 @@ class ComputerAi < ActiveRecord::Base
     case @user_position
     when 1
       @strategy = "cornerjumper"
+      @pc_position << 3
     when 2
-      @strategy = "middlelane" 
+      @strategy = "middlelane"
+      @pc_position << 5 
     when 3 
       @strategy = "cornerhugger"
+      @pc_position << 1
     when 4
-      @strategy = "middlelane" 
+      @strategy = "middlelane"
+      @pc_position << 5 
     when 5
       @strategy = "cross_split"
+      @pc_position << 1
     when 6
       @strategy = "sidestep"
+      @pc_position << 8
     when 7
       @strategy = "cornerhugger"
+      @pc_position << 1
     when 8
       @strategy = "sidestep"
+      @pc_position << 6
     end
-    self.send(@strategy)
   end
 
   def cornerjumper # user at 1
     case @pc_position.last
-    when 9
-      @pc_position << 3
     when 3
       if @human_position.include?(6) == false # end game early
         @pc_position << 6
@@ -65,19 +70,14 @@ class ComputerAi < ActiveRecord::Base
   end
 
   def middlelane # user at 2 or 4
-    case @pc_position.last
-    when 9
-      @pc_position << 5
-    when 5
-      if @human_position.include?(1) == false # end game early
-        @pc_position << 1
-      elsif @human_position.include?(2) == true
-        @pc_position << 3
-        @strategy = "middlelane_top"
-      elsif @human_position.include?(4) == true
-        @pc_position << 7
-        @strategy = "middlelane_bottom"
-      end
+    if @human_position.include?(1) == false # end game early
+      @pc_position << 1
+    elsif @human_position.include?(2)
+      @pc_position << 3
+      @strategy = "middlelane_top"
+    elsif @human_position.include?(4)
+      @pc_position << 7
+      @strategy = "middlelane_bottom"
     end
   end
 
@@ -86,7 +86,7 @@ class ComputerAi < ActiveRecord::Base
       @pc_position << 6
     elsif @human_position.include?(7) == false
       @pc_position << 7
-    end   
+    end
   end
 
   def middlelane_bottom
@@ -98,19 +98,14 @@ class ComputerAi < ActiveRecord::Base
   end
 
   def cornerhugger # user can only be at 3 or 7
-    case @pc_position.last
-    when 9
-      @pc_position << 1
-    when 1
-      if @human_position.include?(5) == false
-        @pc_position << 5 # ends game, from upper left
-      elsif @human_position.include?(3) == false
-        @pc_position << 3
-        @strategy = "cornerhugger_top"
-      elsif @human_position.include?(7) == false
-        @pc_position << 7
-        @strategy = "cornerhugger_bottom"
-      end
+    if @human_position.include?(5) == false
+      @pc_position << 5 # ends game, from upper left
+    elsif @human_position.include?(3) == false
+      @pc_position << 3
+      @strategy = "cornerhugger_top"
+    elsif @human_position.include?(7) == false
+      @pc_position << 7
+      @strategy = "cornerhugger_bottom"
     end
   end
 
@@ -131,29 +126,24 @@ class ComputerAi < ActiveRecord::Base
   end
 
   def cross_split
-    case @pc_position.last
-    when 9
-      @pc_position << 1
-    when 1
-      if @human_position.include?(7) == true
-        @pc_position << 3
-        @strategy = "cross_split_top"
-      elsif @human_position.include?(3) == true
-        @pc_position << 7
-        @strategy = "cross_split_bottom"
-      elsif @human_position.include?(2) == true
-        @pc_position << 8
-        @strategy = "catstie_upperright"
-      elsif @human_position.include?(6) == true
-        @pc_position << 4
-        @strategy = "catstie_upperright"
-      elsif @human_position.include?(4) == true
-        @pc_position << 6
-        @strategy = "catstie_lowerleft"
-      elsif @human_position.include?(8) == true
-        @pc_position << 2
-        @strategy = "catstie_lowerleft"
-      end
+    if @human_position.include?(7)
+      @pc_position << 3
+      @strategy = "cross_split_top"
+    elsif @human_position.include?(3)
+      @pc_position << 7
+      @strategy = "cross_split_bottom"
+    elsif @human_position.include?(2)
+      @pc_position << 8
+      @strategy = "catstie_upperright"
+    elsif @human_position.include?(6)
+      @pc_position << 4
+      @strategy = "catstie_upperright"
+    elsif @human_position.include?(4)
+      @pc_position << 6
+      @strategy = "catstie_lowerleft"
+    elsif @human_position.include?(8)
+      @pc_position << 2
+      @strategy = "catstie_lowerleft"
     end
   end
 
@@ -215,23 +205,16 @@ class ComputerAi < ActiveRecord::Base
     end
   end
 
-
   def sidestep # user at 6 or 8
     case @pc_position.last
-    when 9
-      if @human_position.include?(6) == false
-        @pc_position << 6
-      elsif @human_position.include?(8) == false
-        @pc_position << 8
-      end
     when 8
-      if @human_position.include?(7) == false
+      unless @human_position.include?(7)
         @pc_position << 7
       else
         @pc_position << 5
       end
     when 6
-      if @human_position.include?(3) == false
+      unless @human_position.include?(3)
         @pc_position << 3
       else
         @pc_position << 5

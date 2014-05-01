@@ -13,7 +13,7 @@ class ComputerAi < ActiveRecord::Base
     unless @strategy == nil
       self.send(@strategy)
     else
-      if user_position == 0
+      if user_position.empty?
         @pc_position << 9
       else
         pull_strategy

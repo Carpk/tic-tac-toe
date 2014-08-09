@@ -1,249 +1,59 @@
 class ComputerAi < ActiveRecord::Base
 
-  def initialize
-    @strategy = nil
-    @human_position = []
-    @pc_position = []
-    @winning_combos = generate_combos
+  def initialize(params)
+    @game_piece = params[:symbol]
+    @enemy_piece = params[:opponent]
   end
 
-  def assess(user_position)
-    @human_position << user_position
-    @user_position = user_position
-    unless @strategy == nil
-      self.send(@strategy)
+  def assert_values(board)
+    position_values = {}
+    board.indexes_of_available_spaces.each do |empty_position|
+      possible_board = Marshal.load( Marshal.dump(board) )
+      possible_board.assign_token_to(@game_piece, empty_position)
+      position_values[empty_position] = evaluate_board(possible_board, @enemy_piece, @game_piece)
+    end
+
+    select_random_index(position_values)
+  end
+
+  def evaluate_board(board, current_player, passing_player, depth=1)
+    return create_value(board) / depth if gameover?(board) || depth > 6
+    board_values = []
+    board.indexes_of_available_spaces.each do |empty_position|
+      played_board = Marshal.load( Marshal.dump(board) )
+      played_board.assign_token_to(current_player, empty_position)
+      board_values << evaluate_board(played_board, passing_player, current_player, depth +1)
+    end
+
+    if current_player == @game_piece
+      board_values.compact.max
     else
-      if user_position.empty?
-        @pc_position << 9
-      else
-        pull_strategy
-      end
-    end
-    sleep(rand(0.25..0.75))
-    @pc_position.last
-  end
-
-  def pull_strategy
-    case @user_position
-    when 1
-      @strategy = "cornerjumper"
-      @pc_position << 3
-    when 2
-      @strategy = "middlelane"
-      @pc_position << 5 
-    when 3 
-      @strategy = "cornerhugger"
-      @pc_position << 1
-    when 4
-      @strategy = "middlelane"
-      @pc_position << 5 
-    when 5
-      @strategy = "cross_split"
-      @pc_position << 1
-    when 6
-      @strategy = "sidestep"
-      @pc_position << 8
-    when 7
-      @strategy = "cornerhugger"
-      @pc_position << 1
-    when 8
-      @strategy = "sidestep"
-      @pc_position << 6
+      board_values.compact.min
     end
   end
 
-  def cornerjumper # user at 1
-    case @pc_position.last
-    when 3
-      if @human_position.include?(6) == false # end game early
-        @pc_position << 6
-      else
-        @pc_position << 7
-      end
-    when 7
-      if @human_position.include?(5) == false
-        @pc_position << 5
-      elsif @human_position.include?(8) == false
-        @pc_position << 8
-      end
+  def select_random_index(position_values)
+    best_positions = []
+    max_value = position_values.each_value.max
+    position_values.each_pair do |index, value|
+      best_positions << index if value == max_value
     end
+    best_positions.sample
   end
 
-  def middlelane # user at 2 or 4
-    if @human_position.include?(1) == false # end game early
-      @pc_position << 1
-    elsif @human_position.include?(2)
-      @pc_position << 3
-      @strategy = "middlelane_top"
-    elsif @human_position.include?(4)
-      @pc_position << 7
-      @strategy = "middlelane_bottom"
-    end
+  def gameover?(board)
+    game = GamePlay.new(board)
+    game.gameover?
   end
 
-  def middlelane_top
-    if @human_position.include?(6) == false
-      @pc_position << 6
-    elsif @human_position.include?(7) == false
-      @pc_position << 7
-    end
+  def create_value(board)
+    game = GamePlay.new(board)
+    returning_value =  0
+    returning_value =  1.0 if game.winner_of == @game_piece
+    returning_value = -1.0 if game.winner_of == @enemy_piece
+    returning_value =  0.0 if game.tie_game?
+    returning_value
   end
 
-  def middlelane_bottom
-    if @human_position.include?(8) == false
-      @pc_position << 8
-    elsif @human_position.include?(3) == false
-      @pc_position << 3
-    end
-  end
-
-  def cornerhugger # user can only be at 3 or 7
-    if @human_position.include?(5) == false
-      @pc_position << 5 # ends game, from upper left
-    elsif @human_position.include?(3) == false
-      @pc_position << 3
-      @strategy = "cornerhugger_top"
-    elsif @human_position.include?(7) == false
-      @pc_position << 7
-      @strategy = "cornerhugger_bottom"
-    end
-  end
-
-  def cornerhugger_top
-    if @human_position.include?(2) == false
-      @pc_position << 2
-    elsif @human_position.include?(6) == false
-      @pc_position << 6
-    end
-  end
-
-  def cornerhugger_bottom
-    if @human_position.include?(4) == false
-      @pc_position << 4
-    elsif @human_position.include?(8) == false
-      @pc_position << 8
-    end
-  end
-
-  def cross_split
-    if @human_position.include?(7)
-      @pc_position << 3
-      @strategy = "cross_split_top"
-    elsif @human_position.include?(3)
-      @pc_position << 7
-      @strategy = "cross_split_bottom"
-    elsif @human_position.include?(2)
-      @pc_position << 8
-      @strategy = "catstie_upperright"
-    elsif @human_position.include?(6)
-      @pc_position << 4
-      @strategy = "catstie_upperright"
-    elsif @human_position.include?(4)
-      @pc_position << 6
-      @strategy = "catstie_lowerleft"
-    elsif @human_position.include?(8)
-      @pc_position << 2
-      @strategy = "catstie_lowerleft"
-    end
-  end
-
-  def cross_split_top
-    if @human_position.include?(2) == false
-      @pc_position << 2
-    elsif @human_position.include?(6) == false
-      @pc_position << 6
-    end
-  end
-
-  def cross_split_bottom
-    if @human_position.include?(4) == false
-      @pc_position << 4
-    elsif @human_position.include?(8) == false
-      @pc_position << 8
-    end
-  end
-
-  def catstie_upperright # user at 2 or 6
-    if @human_position.include?(7) == false
-      @pc_position << 7
-    elsif @human_position.include?(3) == false
-      @pc_position << 3
-      @strategy = "catstie_ur_tie"
-    end
-  end
-
-  def catstie_lowerleft # user at 4 or 8
-    if @human_position.include?(3) == false
-      @pc_position << 3
-    elsif @human_position.include?(7) == false
-      @pc_position << 7
-      @strategy = "catstie_ll_tie"
-    end
-  end
-
-  def catstie_ur_tie
-    if @human_position.include?(2) == false
-      @pc_position << 2
-    elsif @human_position.include?(6) == false
-      @pc_position << 6
-    elsif @pc_position.include?(4) == false
-      @pc_position << 4
-    elsif @pc_position.include?(8) == false
-      @pc_position << 8
-    end
-  end
-
-  def catstie_ll_tie
-    if @human_position.include?(4) == false
-      @pc_position << 4
-    elsif @human_position.include?(8) == false
-      @pc_position << 8
-    elsif @pc_position.include?(6) == false
-      @pc_position << 6
-    elsif @pc_position.include?(2) == false
-      @pc_position << 2
-    end
-  end
-
-  def sidestep # user at 6 or 8
-    case @pc_position.last
-    when 8
-      unless @human_position.include?(7)
-        @pc_position << 7
-      else
-        @pc_position << 5
-      end
-    when 6
-      unless @human_position.include?(3)
-        @pc_position << 3
-      else
-        @pc_position << 5
-      end
-    when 5
-      if @human_position.include?(1) == false
-        @pc_position << 1
-      elsif @pc_position[-2] == 8
-        @pc_position << 2
-      elsif @pc_position[-2] == 6
-        @pc_position << 4
-      end
-    end
-  end
-
-  def win?  # This is weird, find a better way!
-    win = false
-    @winning_combos.each do |combo|
-      combo.delete_if { |e| @pc_position.include?(e) }
-      win = "pc" if combo.empty?
-    end
-    win = "tie" if @pc_position.length == 5
-    win
-  end
-
-  def generate_combos
-    [[1,2,3],[4,5,6],
-     [7,8,9],[1,4,7],
-     [2,5,8],[3,6,9],
-     [1,5,9],[3,5,7]]
-  end
 end
+

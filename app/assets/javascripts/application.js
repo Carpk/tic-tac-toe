@@ -14,18 +14,22 @@
 
 
 $( document ).ready(function() {
-  humanTurn = false;
-  occupiedBoxes = ["9"]
+  humanTurn = true;
+  // occupiedBoxes = []
+  boardArray = ["","","","","","","","",""]
   $(".box").click(function() {
-    if (humanTurn && occupiedBoxes.indexOf(this.id) == -1) {
+    // console.log(this.id - 1)       //TODO remove
+    if (humanTurn && boardArray[this.id - 1] === "") {
       humanTurn = false;
-      occupiedBoxes.push(this.id)
-      var data = {positions: this.id}
-      $( this ).append( '<span class="letter" id="o">O</span>' );
+      boardArray[this.id - 1] = "X"
+      // console.log(boardArray)       //TODO remove
+      // occupiedBoxes.push(this.id)
+      var data = {board: this.id}
+      $( this ).append( '<span class="letter" id="o">X</span>' );
       $.post( "/game", data, function( data ) {
         var temp = data.position.toString();
-        occupiedBoxes.push(temp)
-        $( "#" + data.position ).append( '<span class="letter" id="x">X</span>' );
+        // occupiedBoxes.push(temp)
+        $( "#" + data.position ).append( '<span class="letter" id="x">O</span>' );
         if (data.win == "pc") {
           $( ".gameover" ).show( "slow" );
           $( ".message" ).append( "<center>Computer Wins!</center>" );
@@ -46,8 +50,10 @@ $( document ).ready(function() {
     e.preventDefault()
     $(this).fadeOut("fast")
     $.get( "/game/new", function(data) {
-    $( "#" + data.position ).append( '<span class="letter" id="x">X</span>' );
-    humanTurn = true;
+      boardArray = data.board
+      // console.log(boardArray)       //TODO remove
+      humanTurn = true;
+      newObj.dataToBoard(data);
     })
   })
 
@@ -55,4 +61,20 @@ $( document ).ready(function() {
     e.preventDefault()
     location.reload();
   })
+
+  var newObj = {
+    dataToBoard : function (data) {
+        $( "#" + 1 ).html( '<span class="letter">' + data.board[0] + '</span>' );
+        $( "#" + 2 ).html( '<span class="letter">' + data.board[1] + '</span>' );
+        $( "#" + 3 ).html( '<span class="letter">' + data.board[2] + '</span>' );
+        $( "#" + 4 ).html( '<span class="letter">' + data.board[3] + '</span>' );
+        $( "#" + 5 ).html( '<span class="letter">' + data.board[4] + '</span>' );
+        $( "#" + 6 ).html( '<span class="letter">' + data.board[5] + '</span>' );
+        $( "#" + 7 ).html( '<span class="letter">' + data.board[6] + '</span>' );
+        $( "#" + 8 ).html( '<span class="letter">' + data.board[7] + '</span>' );
+        $( "#" + 9 ).html( '<span class="letter">' + data.board[8] + '</span>' );
+    }
+  }
+
+
 });

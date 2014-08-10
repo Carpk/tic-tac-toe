@@ -44,7 +44,6 @@ class GamePlay
   end
 
   def computer_turn
-    # temp_board = Marshal.load( Marshal.dump(@board) )
     position = @ai.assert_values(@board)
     @board.assign_token_to("O", position)
   end

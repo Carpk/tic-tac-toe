@@ -5,23 +5,21 @@ require_relative '../models/tictactoeboard'
 
 class Game
 
-  def self.play(board)
-    puts "PARAMS PASSED BOARD: #{board}"
-    # binding.pry
+  def self.play(old_board)
 
-    tttboard = TicTacToeBoard.new(board)
-    game = GamePlay.new( tttboard )
+    tttboard = TicTacToeBoard.new(old_board)
+    game = GamePlay.new(tttboard)
+    gameover = game.gameover?
 
-    position = game.computer_turn
+    if gameover
+      {:board => old_board,:win => gameover }
+    else
+      game.computer_turn
+      board = game.display_board
+      status = game.gameover?
 
-    # tttboard[position] = "O"
-
-    # puts "WHAT DOES GAME#COMPUTER_TURN RETURN? #{game.computer_turn}"
-    puts "LOOK FOR COUNTER MOVE!: #{game.display_board}"
-    board = game.display_board
-
-    status = game.gameover?
-
-    {:board => board,:win => status }
+      {:board => board,:win => status }
+    end
   end
+
 end

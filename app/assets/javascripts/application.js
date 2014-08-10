@@ -15,33 +15,26 @@
 
 $( document ).ready(function() {
   humanTurn = true;
-  // occupiedBoxes = []
   boardArray = [ " ", " ", " ", " ", " ", " ", " ", " ", " "]
   $(".box").click(function() {
-    // console.log(this.id - 1)       //TODO remove
+
     if (humanTurn && boardArray[this.id - 1] === " ") {
       humanTurn = false;
+      $(".button").fadeOut("fast")
       boardArray[this.id - 1] = "X"
-      // console.log(boardArray)       //TODO remove
-      // occupiedBoxes.push(this.id)
+
       var data = {board: boardArray}
-      // $( this ).append( '<span class="letter" id="o">X</span>' );
+
       newObj.dataToBoard();
       $.post( "/game", data, function( data ) {
         boardArray = data.board
-        console.log(boardArray)       //TODO remove
+        // console.log(boardArray)       //TODO remove
         newObj.dataToBoard();
-        humanTurn = true;
+        // humanTurn = true;
 
-        $( "#" + data.position ).append( '<span class="letter" id="x">O</span>' );
-        if (data.win == "pc") {
+        if (data.win == true) {
           $( ".gameover" ).show( "slow" );
-          $( ".message" ).append( "<center>Computer Wins!</center>" );
-        }
-        else if (data.win == "tie"){
-          $( ".gameover" ).show( "slow" );
-          $( ".message" ).append( "<center>Cat's Tie!</center>" );
-          // $(".end-img").show();
+          $( ".message" ).append( "<center>Game Over</center>" );
         }
         else {
         humanTurn = true;

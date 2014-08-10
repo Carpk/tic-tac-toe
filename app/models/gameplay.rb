@@ -1,5 +1,3 @@
-puts "HELLO!!!"
-
 class GamePlay
   attr_reader :current_player
 
@@ -35,14 +33,6 @@ class GamePlay
     section.rotate == section.delete_if {|e| " " == e}
   end
 
-  # def create_players(params)
-  #   player1 = Player.new(params[:player1])
-  #   player2 = Player.new(params[:player2])
-  #   @players = {p1: {next: :p2, player: player1},
-  #               p2: {next: :p1, player: player2}}
-  #   @current_player = @players[:p1]
-  # end
-
   def available_spaces
     @board.indexes_of_available_spaces
   end
@@ -54,8 +44,9 @@ class GamePlay
   end
 
   def computer_turn
-    board = @board.clone
-    @ai.assert_values(board)
+    # temp_board = Marshal.load( Marshal.dump(@board) )
+    position = @ai.assert_values(@board)
+    @board.assign_token_to("O", position)
   end
 
   def display_board

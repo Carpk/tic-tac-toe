@@ -1,9 +1,3 @@
-require_relative '../models/computer_ai'
-require_relative '../models/gameplay'
-require_relative '../models/player'
-require_relative '../models/tictactoeboard'
-require 'pry'
-
 class GameController < ApplicationController
 
   def new
@@ -14,15 +8,7 @@ class GameController < ApplicationController
   end
 
   def create
-    puts "PARAMS PASSED BOARD: #{params[:board]}"
-    # binding.pry
-    tttboard = TicTacToeBoard.new(params[:board])
-    game = GamePlay.new( tttboard )
-    game.computer_turn
-    puts "NO WHAMMIES!: #{game.display_board}"
-    board = game.display_board
-    status = game.gameover?
-    data = {:board => board,:win => status }
+    data = Game.play(params[:board])
     render :json => data, :status => :ok
   end
 end

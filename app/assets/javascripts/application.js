@@ -28,8 +28,11 @@ $( document ).ready(function() {
       // $( this ).append( '<span class="letter" id="o">X</span>' );
       newObj.dataToBoard();
       $.post( "/game", data, function( data ) {
-        var temp = data.position.toString();
-        // occupiedBoxes.push(temp)
+        boardArray = data.board
+        console.log(boardArray)       //TODO remove
+        newObj.dataToBoard();
+        humanTurn = true;
+
         $( "#" + data.position ).append( '<span class="letter" id="x">O</span>' );
         if (data.win == "pc") {
           $( ".gameover" ).show( "slow" );

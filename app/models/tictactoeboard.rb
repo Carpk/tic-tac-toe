@@ -3,7 +3,6 @@ class TicTacToeBoard
 
   def initialize(board)
     @grid = board
-    @winner_value = false
   end
 
   def unassigned_positions?

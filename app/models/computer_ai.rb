@@ -1,4 +1,4 @@
-class ComputerAi < ActiveRecord::Base
+class ComputerAi
 
   def initialize(params)
     @game_piece = params[:symbol]

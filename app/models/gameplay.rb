@@ -1,8 +1,11 @@
+puts "HELLO!!!"
+
 class GamePlay
   attr_reader :current_player
 
   def initialize(board)
     @board = board
+    @ai = ComputerAi.new({symbol: "O", opponent: "X"})
   end
 
   def gameover?
@@ -32,13 +35,13 @@ class GamePlay
     section.rotate == section.delete_if {|e| " " == e}
   end
 
-  def create_players(params)
-    player1 = Player.new(params[:player1])
-    player2 = Player.new(params[:player2])
-    @players = {p1: {next: :p2, player: player1},
-                p2: {next: :p1, player: player2}}
-    @current_player = @players[:p1]
-  end
+  # def create_players(params)
+  #   player1 = Player.new(params[:player1])
+  #   player2 = Player.new(params[:player2])
+  #   @players = {p1: {next: :p2, player: player1},
+  #               p2: {next: :p1, player: player2}}
+  #   @current_player = @players[:p1]
+  # end
 
   def available_spaces
     @board.indexes_of_available_spaces
@@ -52,7 +55,7 @@ class GamePlay
 
   def computer_turn
     board = @board.clone
-    @current_player[:player].game_to_ai(board)
+    @ai.assert_values(board)
   end
 
   def display_board

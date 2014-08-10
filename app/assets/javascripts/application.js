@@ -16,16 +16,17 @@
 $( document ).ready(function() {
   humanTurn = true;
   // occupiedBoxes = []
-  boardArray = ["","","","","","","","",""]
+  boardArray = [ " ", " ", " ", " ", " ", " ", " ", " ", " "]
   $(".box").click(function() {
     // console.log(this.id - 1)       //TODO remove
-    if (humanTurn && boardArray[this.id - 1] === "") {
+    if (humanTurn && boardArray[this.id - 1] === " ") {
       humanTurn = false;
       boardArray[this.id - 1] = "X"
       // console.log(boardArray)       //TODO remove
       // occupiedBoxes.push(this.id)
-      var data = {board: this.id}
-      $( this ).append( '<span class="letter" id="o">X</span>' );
+      var data = {board: boardArray}
+      // $( this ).append( '<span class="letter" id="o">X</span>' );
+      newObj.dataToBoard();
       $.post( "/game", data, function( data ) {
         var temp = data.position.toString();
         // occupiedBoxes.push(temp)
@@ -52,8 +53,8 @@ $( document ).ready(function() {
     $.get( "/game/new", function(data) {
       boardArray = data.board
       // console.log(boardArray)       //TODO remove
+      newObj.dataToBoard();
       humanTurn = true;
-      newObj.dataToBoard(data);
     })
   })
 
@@ -63,16 +64,16 @@ $( document ).ready(function() {
   })
 
   var newObj = {
-    dataToBoard : function (data) {
-        $( "#" + 1 ).html( '<span class="letter">' + data.board[0] + '</span>' );
-        $( "#" + 2 ).html( '<span class="letter">' + data.board[1] + '</span>' );
-        $( "#" + 3 ).html( '<span class="letter">' + data.board[2] + '</span>' );
-        $( "#" + 4 ).html( '<span class="letter">' + data.board[3] + '</span>' );
-        $( "#" + 5 ).html( '<span class="letter">' + data.board[4] + '</span>' );
-        $( "#" + 6 ).html( '<span class="letter">' + data.board[5] + '</span>' );
-        $( "#" + 7 ).html( '<span class="letter">' + data.board[6] + '</span>' );
-        $( "#" + 8 ).html( '<span class="letter">' + data.board[7] + '</span>' );
-        $( "#" + 9 ).html( '<span class="letter">' + data.board[8] + '</span>' );
+    dataToBoard : function () {
+        $( "#" + 1 ).html( '<span class="letter">' + boardArray[0] + '</span>' );
+        $( "#" + 2 ).html( '<span class="letter">' + boardArray[1] + '</span>' );
+        $( "#" + 3 ).html( '<span class="letter">' + boardArray[2] + '</span>' );
+        $( "#" + 4 ).html( '<span class="letter">' + boardArray[3] + '</span>' );
+        $( "#" + 5 ).html( '<span class="letter">' + boardArray[4] + '</span>' );
+        $( "#" + 6 ).html( '<span class="letter">' + boardArray[5] + '</span>' );
+        $( "#" + 7 ).html( '<span class="letter">' + boardArray[6] + '</span>' );
+        $( "#" + 8 ).html( '<span class="letter">' + boardArray[7] + '</span>' );
+        $( "#" + 9 ).html( '<span class="letter">' + boardArray[8] + '</span>' );
     }
   }
 

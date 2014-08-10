@@ -13,7 +13,7 @@ Sample::Application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
     resources :game, except: [:edit, :show, :update, :destroy]
-
+  # resources :game, only: [:index, :create]
   # Example resource route with options:
   #   resources :products do
   #     member do

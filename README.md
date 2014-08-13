@@ -4,7 +4,7 @@ An interactive game where you play against an unbeatable computer AI. The game i
 
 ## About
 
-Computer AI uses minimax algorithm for countering user submitted moves. Runs on Ruby 2.1.1 and Rails 4.0.4. Each user submitted move is set to server via Ajax request,
+Runs on Ruby 2.1.1 and Rails 4.0.4. Each user submitted move is sent to the server via Ajax request, Computer AI then uses the minimax algorithm for countering those submitted moves.
 
 ## Getting Started
 

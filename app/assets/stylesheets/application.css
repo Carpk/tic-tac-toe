@@ -119,3 +119,12 @@ input {
   padding: 2px 6px 2px 6px;
   text-decoration: none;
 }
+
+.code-link {
+  position: absolute;
+  bottom: 0;
+  right: 50px;
+  text-decoration: none;
+  color: black;
+  font-size: 10px;
+}

@@ -19,7 +19,10 @@
 <div class="footer">
     <center class="message">
       <%= link_to 'Computer first', new_game_path, :class => "button start" %>
-      <%= link_to 'Ok', root_path, :class => "button gameover" %>
+      <%= link_to 'Ok', root_path, :class => "button new-game" %>
+      <div class="gameover" id="computer-win">Computer Wins!</div>
+      <div class="gameover" id="player-win">Player Wins!</div>
+      <div class="gameover" id="tie-game">Cat's tie!</div>
     </center>
     <span><a href="https://github.com/Carpk/tic-tac-toe" class="code-link">github</a></span>
 </div>

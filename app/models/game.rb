@@ -5,20 +5,23 @@ require_relative '../models/tictactoeboard'
 
 class Game
 
-  def self.play(old_board)
+  def self.play(submitted_raw_board)
 
-    tttboard = TicTacToeBoard.new(old_board)
-    game = GamePlay.new(tttboard)
+    board = TicTacToeBoard.new(submitted_raw_board)
+    game = GamePlay.new(board)
     gameover = game.gameover?
 
     if gameover
-      {:board => old_board,:win => gameover }
+      winning_player = game.winner_of
+      puts "winner of game board is: #{winning_player}"
+      {:board => submitted_raw_board,:gameover => gameover, :winner => winning_player}
     else
       game.computer_turn
-      board = game.display_board
+      finished_raw_board = game.display_board
       status = game.gameover?
+      winning_player = game.winner_of
 
-      {:board => board,:win => status }
+      {:board => finished_raw_board,:gameover => status, :winner => winning_player }
     end
   end
 

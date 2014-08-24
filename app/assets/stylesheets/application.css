@@ -65,7 +65,11 @@
 }
 
 .gameover{
-  display:none;
+  display: none;
+}
+
+.new-game {
+  display: none;
 }
 
 .header {

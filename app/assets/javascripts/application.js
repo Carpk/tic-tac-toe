@@ -30,14 +30,22 @@ $( document ).ready(function() {
         boardArray = data.board
         // console.log(boardArray)       //TODO remove
         newObj.dataToBoard();
-        // humanTurn = true;
 
-        if (data.win == true) {
-          $( ".gameover" ).show( "slow" );
-          $( ".message" ).append( "<center>Game Over</center>" );
+        if (data.gameover == true) {
+          console.log(data.winner)
+          if (data.winner == "X") {
+            $("#player-win").show("slow");
+          }
+          else if (data.winner == "O") {
+            $("#computer-win").show("slow");
+          }
+          else {
+            $("#tie-game").show("slow");
+          }
+          $(".new-game").show("slow");
         }
         else {
-        humanTurn = true;
+          humanTurn = true;
         }
       });
     }
@@ -54,8 +62,9 @@ $( document ).ready(function() {
     })
   })
 
-  $(".gameover").click(function(e) {
+  $(".new-game").click(function(e) {
     e.preventDefault()
+    // $(".gameover").hide("fast")
     location.reload();
   })
 
@@ -72,6 +81,5 @@ $( document ).ready(function() {
         $( "#" + 9 ).html( '<span class="letter">' + boardArray[8] + '</span>' );
     }
   }
-
 
 });

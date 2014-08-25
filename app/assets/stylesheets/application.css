@@ -64,7 +64,7 @@
   width: 98.5%;
 }
 
-.gameover{
+.hidden {
   display: none;
 }
 
@@ -97,11 +97,11 @@ input {
   top: -16px;
 }
 
-#x {
+#X {
   color: #0000cc;
 }
 
-#o {
+#O {
   color: #cc0000;
 }
 
@@ -132,3 +132,4 @@ input {
   color: black;
   font-size: 10px;
 }
+

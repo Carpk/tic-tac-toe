@@ -4,15 +4,42 @@
 </div>
 
 <div class="container">
-  <div class="box boxcorner" id="1"></div>
-  <div class="box boxtop"    id="2"></div>
-  <div class="box boxtop"    id="3"></div>
-  <div class="box boxside"   id="4"></div>
-  <div class="box"           id="5"></div>
-  <div class="box"           id="6"></div>
-  <div class="box boxside"   id="7"></div>
-  <div class="box"           id="8"></div>
-  <div class="box"           id="9"></div>
+  <div class="box boxcorner" id="1">
+    <span class="hidden letter" id="player">X</span>
+    <span class="hidden letter" id="computer">O</span>
+  </div>
+  <div class="box boxtop" id="2">
+    <span class="hidden letter" id="player">X</span>
+    <span class="hidden letter" id="computer">O</span>
+  </div>
+  <div class="box boxtop" id="3">
+    <span class="hidden letter" id="player">X</span>
+    <span class="hidden letter" id="computer">O</span>
+  </div>
+  <div class="box boxside" id="4">
+    <span class="hidden letter" id="player">X</span>
+    <span class="hidden letter" id="computer">O</span>
+  </div>
+  <div class="box" id="5">
+    <span class="hidden letter" id="player">X</span>
+    <span class="hidden letter" id="computer">O</span>
+  </div>
+  <div class="box" id="6">
+    <span class="hidden letter" id="player">X</span>
+    <span class="hidden letter" id="computer">O</span>
+  </div>
+  <div class="box boxside" id="7">
+    <span class="hidden letter" id="player">X</span>
+    <span class="hidden letter" id="computer">O</span>
+  </div>
+  <div class="box" id="8">
+    <span class="hidden letter" id="player">X</span>
+    <span class="hidden letter" id="computer">O</span>
+  </div>
+  <div class="box" id="9">
+    <span class="hidden letter" id="player">X</span>
+    <span class="hidden letter" id="computer">O</span>
+  </div>
   <%= image_tag "tie.png", height: "300", class: "end-img" %>
 </div>
 
@@ -20,9 +47,9 @@
     <center class="message">
       <%= link_to 'Computer first', new_game_path, :class => "button start" %>
       <%= link_to 'Ok', root_path, :class => "button new-game" %>
-      <div class="gameover" id="computer-win">Computer Wins!</div>
-      <div class="gameover" id="player-win">Player Wins!</div>
-      <div class="gameover" id="tie-game">Cat's tie!</div>
+      <div class="hidden" id="computer-win">Computer Wins!</div>
+      <div class="hidden" id="player-win">Player Wins!</div>
+      <div class="hidden" id="tie-game">Cat's tie!</div>
     </center>
     <span><a href="https://github.com/Carpk/tic-tac-toe" class="code-link">github</a></span>
 </div>

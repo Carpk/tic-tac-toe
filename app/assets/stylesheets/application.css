@@ -97,11 +97,11 @@ input {
   top: -16px;
 }
 
-#X {
+.blue {
   color: #0000cc;
 }
 
-#O {
+.red {
   color: #cc0000;
 }
 

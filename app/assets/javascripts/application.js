@@ -67,27 +67,15 @@ $( document ).ready(function() {
 
   var displayData = {
 
-    // dataToBoard : function () {
-    //     $("#" + 1).html('<span class="letter" id=' + boardArray[0] + '>' + boardArray[0] + '</span>');
-    //     $("#" + 2).html('<span class="letter" id=' + boardArray[1] + '>' + boardArray[1] + '</span>');
-    //     $("#" + 3).html('<span class="letter" id=' + boardArray[2] + '>' + boardArray[2] + '</span>');
-    //     $("#" + 4).html('<span class="letter" id=' + boardArray[3] + '>' + boardArray[3] + '</span>');
-    //     $("#" + 5).html('<span class="letter" id=' + boardArray[4] + '>' + boardArray[4] + '</span>');
-    //     $("#" + 6).html('<span class="letter" id=' + boardArray[5] + '>' + boardArray[5] + '</span>');
-    //     $("#" + 7).html('<span class="letter" id=' + boardArray[6] + '>' + boardArray[6] + '</span>');
-    //     $("#" + 8).html('<span class="letter" id=' + boardArray[7] + '>' + boardArray[7] + '</span>');
-    //     $("#" + 9).html('<span class="letter" id=' + boardArray[8] + '>' + boardArray[8] + '</span>');
-    // }
-
-    // showFromArray : function() {
-    //   var num = 2
-    //   var player = "computer"
-    //   $("#" + num + ", ." + player).show("fast");
-    // }
-
     dataToBoard : function() {
       for (var i = 0; i < boardArray.length; i++) {
-      $("#" + i ).html('<span class="letter" id=' + boardArray[i] + '>' + boardArray[i] + '</span>');
+
+      letter = boardArray[i]
+      if (letter == " ") {
+        letter = "blank"
+      }
+      $("#" + i + letter).show("fast");
+
       }
     }
   }

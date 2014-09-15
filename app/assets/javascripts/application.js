@@ -74,6 +74,7 @@ $( document ).ready(function() {
       if (letter == " ") {
         letter = "blank"
       }
+
       $("#" + i + letter).show("fast");
 
       }

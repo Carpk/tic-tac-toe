@@ -1,7 +1,7 @@
-require_relative '../models/computer_ai'
-require_relative '../models/gameplay'
-require_relative '../models/player'
-require_relative '../models/tictactoeboard'
+# require_relative 'computer_ai'
+# require_relative 'gameplay'
+# require_relative 'player'
+# require_relative 'tictactoeboard'
 
 class Game
 

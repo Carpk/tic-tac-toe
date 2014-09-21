@@ -1,8 +1,3 @@
-# require_relative 'computer_ai'
-# require_relative 'gameplay'
-# require_relative 'player'
-# require_relative 'tictactoeboard'
-
 class Game
 
   def self.play(submitted_raw_board)

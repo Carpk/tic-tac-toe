@@ -1,5 +1,4 @@
 class GamePlay
-  attr_reader :current_player
 
   def initialize(board)
     @board = board
@@ -35,12 +34,6 @@ class GamePlay
 
   def available_spaces
     @board.indexes_of_available_spaces
-  end
-
-  def player_move_to(position)
-    token = @current_player[:player].game_piece
-    @board.assign_token_to(token, position)
-    @current_player = @players[@current_player[:next]]
   end
 
   def computer_turn

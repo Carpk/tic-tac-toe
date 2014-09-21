@@ -5,21 +5,21 @@ describe TicTacToeBoard do
   let(:board)  {TicTacToeBoard.new(Array.new(9," "))}
 
   it "should return the correct length of board" do
-    board.grid.length.should eq(9)
+    expect(board.grid.length).to eq(9)
   end
 
   it "should return the correct length when initialized with large board" do
     board = TicTacToeBoard.new(Array.new(20))
-    board.grid.length.should eq(20)
+    expect(board.grid.length).to eq(20)
   end
 
   it "should return the correct length when initialized with small board" do
     board = TicTacToeBoard.new(Array.new(4))
-    board.grid.length.should eq(4)
+    expect(board.grid.length).to eq(4)
   end
 
   it "should return true for having multiple unassigned positions on board" do
-    board.unassigned_positions?.should eq(true)
+    expect(board.unassigned_positions?).to eq(true)
   end
 
   it "should return false for not having unassigned positions on board" do
@@ -27,7 +27,7 @@ describe TicTacToeBoard do
             "x", "o", "x",
             "x", "o", "x"]
     board = TicTacToeBoard.new(grid)
-    board.unassigned_positions?.should eq(false)
+    expect(board.unassigned_positions?).to eq(false)
   end
 
   it "should return true for having a unassigned position on board" do
@@ -35,11 +35,11 @@ describe TicTacToeBoard do
             "x", " ", "x",
             "x", "o", "x"]
     board = TicTacToeBoard.new(grid)
-    board.unassigned_positions?.should eq(true)
+    expect(board.unassigned_positions?).to eq(true)
   end
 
   it "should return false for empty board" do
-    board.board_full?.should eq(false)
+    expect(board.board_full?).to eq(false)
   end
 
   it "should return false for empty position on board" do
@@ -47,7 +47,7 @@ describe TicTacToeBoard do
             "x", " ", "x",
             "x", "o", "x"]
     board = TicTacToeBoard.new(grid)
-    board.board_full?.should eq(false)
+    expect(board.board_full?).to eq(false)
   end
 
   it "should return false for empty board" do
@@ -55,24 +55,24 @@ describe TicTacToeBoard do
             "x", "o", "x",
             "x", "o", "x"]
     board = TicTacToeBoard.new(grid)
-    board.board_full?.should eq(true)
+    expect(board.board_full?).to eq(true)
   end
 
   it "should assign player to board position" do
     token, position = "r", 7
     board.assign_token_to(token, position)
-    board.grid[7].should eq("r")
+    expect(board.grid[7]).to eq("r")
   end
 
   it "should assign player to board position" do
     token, position = "x", 3
     board.assign_token_to(token, position)
-    board.grid[3].should eq("x")
+    expect(board.grid[3]).to eq("x")
   end
 
   it "should return the square root for board of 9" do
 
-    board.board_side_length.should eq(3)
+    expect(board.board_side_length).to eq(3)
   end
 
   it "should return the square root for board of 12" do
@@ -81,7 +81,7 @@ describe TicTacToeBoard do
             "x", "o", "x", " ",
             " ", " ", " ", " "]
     board = TicTacToeBoard.new(grid)
-    board.board_side_length.should eq(4)
+    expect(board.board_side_length).to eq(4)
   end
 
   it "should return the index positions of availible board positions" do
@@ -89,7 +89,7 @@ describe TicTacToeBoard do
             "g"," "," ",
             " ","g"," "]
     board = TicTacToeBoard.new(grid)
-    board.indexes_of_available_spaces.should eq([4,5,6,8])
+    expect(board.indexes_of_available_spaces).to eq([4,5,6,8])
   end
 
   it "should return index positions of availible board positions" do
@@ -97,7 +97,7 @@ describe TicTacToeBoard do
             "g"," ","f",
             " ","g","f"]
     board = TicTacToeBoard.new(grid)
-    board.indexes_of_available_spaces.should eq([1,4,6])
+    expect(board.indexes_of_available_spaces).to eq([1,4,6])
   end
 
   it "should return empty array with full board" do
@@ -105,7 +105,7 @@ describe TicTacToeBoard do
             "g","g","f",
             "f","g","f"]
     board = TicTacToeBoard.new(grid)
-    board.indexes_of_available_spaces.should eq([])
+    expect(board.indexes_of_available_spaces).to eq([])
   end
 
   it "should return all positions with empty board" do
@@ -113,26 +113,26 @@ describe TicTacToeBoard do
             " "," "," ",
             " "," "," "]
     board = TicTacToeBoard.new(grid)
-    board.indexes_of_available_spaces.should eq([0,1,2,3,4,5,6,7,8])
+    expect(board.indexes_of_available_spaces).to eq([0,1,2,3,4,5,6,7,8])
   end
 
   it "should return nested arry of all possible wins" do
-    board.possible_wins.length.should eq(8)
+    expect(board.possible_wins.length).to eq(8)
   end
 
   it "should return nested array for rows" do
-    board.row_sections[2].class.should eq(Array)
+    expect(board.row_sections[2].class).to eq(Array)
   end
 
   it "should return nested array for columns" do
-    board.column_sections[2].class.should eq(Array)
+    expect(board.column_sections[2].class).to eq(Array)
   end
 
   it "should return nested array for forwardslash " do
-    board.forwardslash_section[0].class.should eq(Array)
+    expect(board.forwardslash_section[0].class).to eq(Array)
   end
 
   it "should return nested array for backslash " do
-    board.backslash_section[0].class.should eq(Array)
+    expect(board.backslash_section[0].class).to eq(Array)
   end
 end

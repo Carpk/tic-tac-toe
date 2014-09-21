@@ -6,42 +6,42 @@ describe Player do
   let(:computer) {Player.new({symbol: "o", ai: "y"})}
 
   it "should return correct player game piece" do
-    player.game_piece.should eq("x")
+    expect(player.game_piece).to eq("x")
   end
 
   # it "should create an Ai object" do
-  #   player.create_ai.class.should eq(ComputerAi)
+  #   expect(player.create_ai.class).to eq(ComputerAi)
   # end
 
   it "returns true if creating ai" do
-    player.check_for_ai("y").should eq(true)
+    expect(player.check_for_ai("y")).to eq(true)
   end
 
   it "returns true if creating ai and takes full word" do
-    player.check_for_ai("yes").should eq(true)
+    expect(player.check_for_ai("yes")).to eq(true)
   end
 
   it "returns true if creating ai and is not case sensitive" do
-    player.check_for_ai("Y").should eq(true)
+    expect(player.check_for_ai("Y")).to eq(true)
   end
 
   it "returns false if not creating ai" do
-    player.check_for_ai("n").should eq(false)
+    expect(player.check_for_ai("n")).to eq(false)
   end
 
   it "returns false if not creating ai and takes full word" do
-    player.check_for_ai("no").should eq(false)
+    expect(player.check_for_ai("no")).to eq(false)
   end
 
   it "returns false if not creating ai and is not case sensitive" do
-    player.check_for_ai("N").should eq(false)
+    expect(player.check_for_ai("N")).to eq(false)
   end
 
   it "should create an Ai object" do
-    computer.ai.class.should eq(ComputerAi)
+    expect(computer.ai.class).to eq(ComputerAi)
   end
 
   # it "should return new position" do
-  #   computer.game_to_ai.should eq(4)
+  #   expect(computer.game_to_ai).to eq(4)
   # end
 end

@@ -4,7 +4,6 @@ require File.expand_path('../boot', __FILE__)
 require_relative '../app/models/computer_ai'
 require_relative '../app/models/game'
 require_relative '../app/models/gameplay'
-require_relative '../app/models/inputvalidator'
 require_relative '../app/models/player'
 require_relative '../app/models/tictactoeboard'
 require "action_controller/railtie"

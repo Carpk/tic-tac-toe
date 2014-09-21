@@ -9,7 +9,7 @@ describe GamePlay do
             "o", "x", "o",
             "o", "x", "o"]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    game.gameover?.should eq(true)
+    expect(game.gameover?).to eq(true)
   end
 
   it "should know that a game is over from a winning board" do
@@ -17,7 +17,7 @@ describe GamePlay do
             "o", "x", "o",
             "o", "x", "x"]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    game.gameover?.should eq(true)
+    expect(game.gameover?).to eq(true)
   end
 
   it "should know that a game is not over" do
@@ -25,7 +25,7 @@ describe GamePlay do
             "o", "x", "o",
             "o", "x", " "]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    game.gameover?.should eq(false)
+    expect(game.gameover?).to eq(false)
   end
 
   it "should know that a game is not over with empty board" do
@@ -33,7 +33,7 @@ describe GamePlay do
             " ", " ", " ",
             " ", " ", " "]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    game.gameover?.should eq(false)
+    expect(game.gameover?).to eq(false)
   end
 
   it "should return false if there is no winner" do
@@ -41,7 +41,7 @@ describe GamePlay do
             "o", "x", "o",
             "o", "x", " "]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    game.board_has_winner?.should eq(false)
+    expect(game.board_has_winner?).to eq(false)
   end
 
   it "should return true if there is a matching array" do
@@ -49,7 +49,7 @@ describe GamePlay do
             "o", "x", "o",
             "x", "x", "x"]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    game.board_has_winner?.should eq(true)
+    expect(game.board_has_winner?).to eq(true)
   end
 
   it "should return true if there is a matching array" do
@@ -57,7 +57,7 @@ describe GamePlay do
             "o", "x", "o",
             "x", "o", "x"]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    game.board_has_winner?.should eq(true)
+    expect(game.board_has_winner?).to eq(true)
   end
 
     it "should return true if there is a matching array" do
@@ -65,7 +65,7 @@ describe GamePlay do
             "o", "o", "o",
             "x", "o", "x"]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    game.board_has_winner?.should eq(true)
+    expect(game.board_has_winner?).to eq(true)
   end
 
   it "should return false if only matches are empty cells" do
@@ -73,7 +73,7 @@ describe GamePlay do
             "o", "x", " ",
             "x", "x", " "]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    game.board_has_winner?.should eq(false)
+    expect(game.board_has_winner?).to eq(false)
   end
 
   it "should return false if only matches are empty cells" do
@@ -81,7 +81,7 @@ describe GamePlay do
             " ", " ", " ",
             " ", " ", " "]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    game.board_has_winner?.should eq(false)
+    expect(game.board_has_winner?).to eq(false)
   end
 
   it "should return false if only matches are empty cells" do
@@ -89,7 +89,7 @@ describe GamePlay do
             "x", "x", " ",
             "x", "o", " "]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    game.board_has_winner?.should eq(true)
+    expect(game.board_has_winner?).to eq(true)
   end
 
   it "should return false if only matches are empty cells" do
@@ -97,7 +97,7 @@ describe GamePlay do
             "o", "o", " ",
             "x", "o", " "]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    game.board_has_winner?.should eq(true)
+    expect(game.board_has_winner?).to eq(true)
   end
 
   it "should return false if only matches are empty cells" do
@@ -105,7 +105,7 @@ describe GamePlay do
             "o", "x", "o",
             "x", "o", "o"]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    game.board_has_winner?.should eq(true)
+    expect(game.board_has_winner?).to eq(true)
   end
 
   it "should return false if only matches are empty cells" do
@@ -113,7 +113,7 @@ describe GamePlay do
             "o", "x", " ",
             "x", "o", "x"]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    game.board_has_winner?.should eq(true)
+    expect(game.board_has_winner?).to eq(true)
   end
 
   it "should return false if only matches are empty cells" do
@@ -121,7 +121,7 @@ describe GamePlay do
             "o", "x", " ",
             "x", "x", "o"]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    game.board_has_winner?.should eq(true)
+    expect(game.board_has_winner?).to eq(true)
   end
 
   it "should return correct winner of board" do
@@ -129,7 +129,7 @@ describe GamePlay do
             "x", "x", " ",
             "x", "o", " "]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    game.winner_of.should eq("x")
+    expect(game.winner_of).to eq("x")
   end
 
   it "should return correct winner of board" do
@@ -137,7 +137,7 @@ describe GamePlay do
             "o", "o", " ",
             "x", "o", " "]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    game.winner_of.should eq("o")
+    expect(game.winner_of).to eq("o")
   end
 
   it "should return correct winner of board" do
@@ -145,7 +145,7 @@ describe GamePlay do
             "o", "x", "o",
             "x", "o", "o"]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    game.winner_of.should eq("o")
+    expect(game.winner_of).to eq("o")
   end
 
   it "should return winner of a winning board" do
@@ -153,7 +153,7 @@ describe GamePlay do
             "o", " ", "o",
             "x", "x", "x"]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    game.winner_of.should eq("x")
+    expect(game.winner_of).to eq("x")
   end
 
   it "should return winner of a winning board" do
@@ -161,7 +161,7 @@ describe GamePlay do
             "o", "o", "o",
             "x", " ", "x"]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    game.winner_of.should eq("o")
+    expect(game.winner_of).to eq("o")
   end
 
   it "should return true if there is a matching array" do
@@ -169,7 +169,7 @@ describe GamePlay do
             "o", "x", "o",
             "x", "o", "x"]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    game.winner_of.should eq("o")
+    expect(game.winner_of).to eq("o")
   end
 
     it "should return true if there is a matching array" do
@@ -177,7 +177,7 @@ describe GamePlay do
             "o", "o", "o",
             "x", "o", "x"]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    game.winner_of.should eq("o")
+    expect(game.winner_of).to eq("o")
   end
 
   it "should return true if there is a matching array" do
@@ -185,7 +185,7 @@ describe GamePlay do
             "o", "x", "o",
             "x", "x", "x"]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    game.winner_of.should eq("x")
+    expect(game.winner_of).to eq("x")
   end
 
   it "should return false if only matches are empty cells" do
@@ -193,7 +193,7 @@ describe GamePlay do
             "o", "x", " ",
             "x", "o", "x"]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    game.winner_of.should eq("x")
+    expect(game.winner_of).to eq("x")
   end
 
   it "should return false if only matches are empty cells" do
@@ -201,7 +201,7 @@ describe GamePlay do
             "o", "x", " ",
             "x", "x", "o"]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    game.winner_of.should eq("x")
+    expect(game.winner_of).to eq("x")
   end
 
   it "should return true if board is tied" do
@@ -209,7 +209,7 @@ describe GamePlay do
             "x", "o", "x",
             "o", "x", "o"]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    game.tie_game?.should eq(true)
+    expect(game.tie_game?).to eq(true)
   end
 
   it "should return false if board is not full" do
@@ -217,7 +217,7 @@ describe GamePlay do
             "x", "o", "x",
             "o", "x", "o"]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    game.tie_game?.should eq(false)
+    expect(game.tie_game?).to eq(false)
   end
 
   it "should return false if board has a winner" do
@@ -225,53 +225,46 @@ describe GamePlay do
             "x", "o", "x",
             "o", "x", "o"]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    game.tie_game?.should eq(false)
+    expect(game.tie_game?).to eq(false)
   end
 
   it "should be false if first cell is empty" do
     section = [" ", "g", "g"]
-    game.group_match?(section).should eq(false)
+    expect(game.group_match?(section)).to eq(false)
   end
 
   it "should be false if second cell is empty" do
     section = ["g", " ", "g"]
-    game.group_match?(section).should eq(false)
+    expect(game.group_match?(section)).to eq(false)
   end
 
   it "should be false if last cell is empty" do
     section = ["g", "g", " "]
-    game.group_match?(section).should eq(false)
+    expect(game.group_match?(section)).to eq(false)
   end
 
   it "should be false if argument contains only 2 the same character" do
     section = ["g", "x", "g"]
-    game.group_match?(section).should eq(false)
+    expect(game.group_match?(section)).to eq(false)
   end
 
   it "should be false if argument contains only 2 the same character" do
     section = ["g", "g", "x"]
-    game.group_match?(section).should eq(false)
+    expect(game.group_match?(section)).to eq(false)
   end
 
   it "should be false if section is completely empty" do
     section = [" ", " ", " "]
-    game.group_match?(section).should eq(false)
+    expect(game.group_match?(section)).to eq(false)
   end
 
   it "should be true if argument contains the same character" do
     section = ["g", "g", "g"]
-    game.group_match?(section).should eq(true)
-  end
-
-  it "should create new players from hash" do
-    hash = {player1: {symbol: "x", ai: "n"}, player2: {symbol: "o", ai: "n"}}
-    game.create_players(hash).class.should eq(Hash)
+    expect(game.group_match?(section)).to eq(true)
   end
 
   it "should know game is not over at start of game" do
-    hash = {player1: {symbol: "x", ai: "n"}, player2: {symbol: "o", ai: "n"}}
-    game.create_players(hash)
-    game.gameover?.should eq(false)
+    expect(game.gameover?).to eq(false)
   end
 
   it "should know if game is over with player win" do
@@ -279,7 +272,7 @@ describe GamePlay do
              " ", "o", " ",
              " ", "o", " "]
     game = GamePlay.new(TicTacToeBoard.new(board))
-    game.gameover?.should eq(true)
+    expect(game.gameover?).to eq(true)
   end
 
   it "should know if game is over with a full board" do
@@ -287,7 +280,7 @@ describe GamePlay do
              "o", "x", "o",
              "o", "x", "o"]
     game = GamePlay.new(TicTacToeBoard.new(board))
-    game.gameover?.should eq(true)
+    expect(game.gameover?).to eq(true)
   end
 
   it "should know if game is not over with 1 empty cell" do
@@ -295,23 +288,11 @@ describe GamePlay do
              "o", "x", "o",
              "o", "x", "o"]
     game = GamePlay.new(TicTacToeBoard.new(board))
-    game.gameover?.should eq(false)
+    expect(game.gameover?).to eq(false)
   end
 
   it "display board should be of the correct length" do
-    game.display_board.length.should eq(9)
-  end
-
-  it "game token should occupy position" do
-    hash = {player1: {symbol: "x", ai: "n"}, player2: {symbol: "o", ai: "n"}}
-    game.create_players(hash)
-    game.player_move_to(3)
-    game.display_board[3].should eq("x")
-  end
-
-  it "should create a players hash" do
-    hash = {player1: {symbol: "x", ai: "n"}, player2: {symbol: "o", ai: "n"}}
-    game.create_players(hash).class.should eq(Hash)
+    expect(game.display_board.length).to eq(9)
   end
 
   it "should correctly set player position" do
@@ -319,24 +300,7 @@ describe GamePlay do
              " ", "o", " ",
              " ", " ", " "]
     game = GamePlay.new(TicTacToeBoard.new(board))
-    game.display_board[4].should eq("o")
-  end
-
-  it "should move player to correct position" do
-    hash = {player1: {symbol: "x", ai: "n"}, player2: {symbol: "o", ai: "n"}}
-    game.create_players(hash)
-    game.player_move_to(5)
-    game.display_board[5].should eq("x")
-  end
-
-  it "should get a response from the ai" do
-    board = ["o", " ", "x",
-             " ", "o", " ",
-             " ", " ", "o"]
-    game = GamePlay.new(TicTacToeBoard.new(board))
-    hash = {player1: {symbol: "x", ai: "y"}, player2: {symbol: "o", ai: "n"}}
-    game.create_players(hash)
-    game.current_player[:player].class.should eq(Player)
+    expect(game.display_board[4]).to eq("o")
   end
 
   it "should get a number response from the ai" do
@@ -344,8 +308,6 @@ describe GamePlay do
              " ", "o", " ",
              " ", " ", "o"]
     game = GamePlay.new(TicTacToeBoard.new(board))
-    hash = {player1: {symbol: "x", ai: "y"}, player2: {symbol: "o", ai: "n"}}
-    game.create_players(hash)
-    game.computer_turn.class.should eq(Fixnum)
+    expect(game.computer_turn.class).to eq(String)
   end
 end

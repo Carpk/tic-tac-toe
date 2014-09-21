@@ -66,7 +66,6 @@ $( document ).ready(function() {
   })
 
   var displayData = {
-
     dataToBoard : function() {
       for (var i = 0; i < boardArray.length; i++) {
 
@@ -76,7 +75,6 @@ $( document ).ready(function() {
       }
 
       $("#" + i + letter).show("fast");
-
       }
     }
   }

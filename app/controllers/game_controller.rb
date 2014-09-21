@@ -8,7 +8,7 @@ class GameController < ApplicationController
   end
 
   def create
-    data = Game.play(params[:board])
+    data = TicTacToe.play(params[:board])
     render :json => data, :status => :ok
   end
 end

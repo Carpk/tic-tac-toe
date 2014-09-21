@@ -1,4 +1,4 @@
-class Game
+class TicTacToe
 
   def self.play(submitted_raw_board)
 

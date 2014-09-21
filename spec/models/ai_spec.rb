@@ -44,29 +44,29 @@ describe ComputerAi do
     expect(computer.assert_values(board)).to eq(4)
   end
 
-  xit "should take middle position to counter corner move" do
-    grid = [" ", " ", "o",
-            " ", " ", " ",
-            " ", " ", " "]
-    board = TicTacToeBoard.new(grid)
-    expect(computer.assert_values(board)).to eq(4)
-  end
+  # xit "should take middle position to counter corner move" do
+  #   grid = [" ", " ", "o",
+  #           " ", " ", " ",
+  #           " ", " ", " "]
+  #   board = TicTacToeBoard.new(grid)
+  #   expect(computer.assert_values(board)).to eq(4)
+  # end
 
-  xit "should take mid position to counter middle perimeter move" do
-    grid = [" ", " ", " ",
-            " ", " ", "o",
-            " ", " ", " "]
-    board = TicTacToeBoard.new(grid)
-    expect([2,3,4,8].include?(computer.assert_values(board))).to eq(true)
-  end
+  # xit "should take mid position to counter middle perimeter move" do
+  #   grid = [" ", " ", " ",
+  #           " ", " ", "o",
+  #           " ", " ", " "]
+  #   board = TicTacToeBoard.new(grid)
+  #   expect([2,3,4,8].include?(computer.assert_values(board))).to eq(true)
+  # end
 
-  xit "should evaluate the board and return an integer" do
-    grid = [" ", " ", " ",
-            " ", " ", "o",
-            " ", " ", " "]
-    board = TicTacToeBoard.new(grid)
-    expect(computer.evaluate_board(board, "x", "o")).to eq(0)
-  end
+  # xit "should evaluate the board and return an integer" do
+  #   grid = [" ", " ", " ",
+  #           " ", " ", "o",
+  #           " ", " ", " "]
+  #   board = TicTacToeBoard.new(grid)
+  #   expect(computer.evaluate_board(board, "x", "o")).to eq(0)
+  # end
 
   it "should evaluate the board and return an float" do
     grid = [" ", " ", " ",

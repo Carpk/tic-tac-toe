@@ -18,7 +18,7 @@ Open up your browser and navigate to [http://0.0.0.0:3000/](http://0.0.0.0:3000/
 
 ## Screenshots
 
-![game shown as colorful app](https://raw.githubusercontent.com/Carpk/tic-tac-toe/web_version/app/assets/images/Screenshot%20from%202014-04-20%2018:38:09.png)
+![game shown as colorful app](https://raw.githubusercontent.com/Carpk/tic-tac-toe/master/app/assets/images/Screenshot%20from%202014-04-20%2018:38:09.png)
 
 ## License
 

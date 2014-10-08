@@ -6,6 +6,13 @@ require_relative '../app/models/gameplay'
 require_relative '../app/models/player'
 require_relative '../app/models/tictactoe'
 require_relative '../app/models/tictactoeboard'
+
+# require 'computerai'
+# require 'gameplay'
+# require 'player'
+# require 'tictactoe'
+# require 'tictactoeboard'
+
 require "action_controller/railtie"
 require "action_mailer/railtie"
 require "sprockets/railtie"

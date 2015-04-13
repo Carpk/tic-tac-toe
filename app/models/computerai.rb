@@ -17,23 +17,35 @@ class ComputerAi
     select_random_index(position_values)
   end
 
-  def evaluate_board(board, current_player, passing_player, depth=1)
-    if gameover?(board) || @efficent_value > (32 / depth)
+  def inefficient_return_from(depth)
+    @efficent_value > (32 / depth)
+  end
 
-      return create_value(board) / depth
-    end
+  def assign_efficency_value(value)
+    @efficent_value = value if value > @efficent_value
+  end
+
+  def evaluate_board(board, current_player, passing_player, depth=1)
+    return create_value(board) / depth if gameover?(board) || inefficient_return_from(depth)
+
     board_values = []
 
     board.indexes_of_available_spaces.each do |empty_position|
       played_board = TicTacToeBoard.new(board.grid.clone)
       played_board.assign_token_to(current_player, empty_position)
 
-      board_values << evaluate_board(played_board, passing_player, current_player, depth +1)
+      new_value = evaluate_board(played_board, passing_player, current_player, depth +1)
 
-      @efficent_value = board_values.last if board_values.last > @efficent_value
+      assign_efficency_value(new_value)
+
+      board_values << new_value
     end
 
-    if current_player == @game_piece
+    min_or_max(board_values, current_player)
+  end
+
+  def min_or_max(board_values, player)
+    if player == @game_piece
       board_values.compact.max
     else
       board_values.compact.min

@@ -44,12 +44,12 @@ describe ComputerAi do
     expect(computer.assert_values(board)).to eq(4)
   end
 
-  it "should evaluate the board and return an float" do
+  it "should evaluate the board and return an number" do
     grid = [" ", " ", " ",
             " ", "x", "o",
             " ", " ", " "]
     board = TicTacToeBoard.new(grid)
-    expect(computer.evaluate_board(board, "x", "o")).to eq(0.16666666666666666)
+    expect(computer.evaluate_board(board, "x", "o")).to eq(0)
   end
 
   it "should choose the hash with the highest value" do
@@ -109,7 +109,7 @@ describe ComputerAi do
             "x", " ", "x",
             " ", " ", " "]
     board = TicTacToeBoard.new(grid)
-    expect(computer.create_value(board)).to eq(-1)
+    expect(computer.create_value(board)).to eq(-32)
   end
 
   it "should create a positive value based on incomplete board win" do
@@ -117,7 +117,7 @@ describe ComputerAi do
             "o", "x", "o",
             " ", " ", "x"]
     board = TicTacToeBoard.new(grid)
-    expect(computer.create_value(board)).to eq(1)
+    expect(computer.create_value(board)).to eq(32)
   end
 
   it "returns correct value of last position winning move" do
@@ -125,7 +125,7 @@ describe ComputerAi do
             "x", "x", "x",
             "o", "o", "x"]
     board = TicTacToeBoard.new(grid)
-    expect(computer.create_value(board)).to eq(1)
+    expect(computer.create_value(board)).to eq(32)
   end
 
   it "returns zero value when board is incomplete" do

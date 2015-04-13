@@ -19,6 +19,10 @@ Open up your browser and navigate to [http://0.0.0.0:3000/](http://0.0.0.0:3000/
 ## Screenshots
 
 ![game shown as colorful app](https://raw.githubusercontent.com/Carpk/tic-tac-toe/master/app/assets/images/Screenshot%20from%202014-04-20%2018:38:09.png)
+Game has a fun colorful interface.
+
+![rspec files passing](https://raw.githubusercontent.com/Carpk/tic-tac-toe/master/app/assets/images/Screenshot%20from%202015-04-12%2020:56:38.png)
+RSpec files passing.
 
 ## Refactor
 

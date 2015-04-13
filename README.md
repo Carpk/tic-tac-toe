@@ -30,7 +30,7 @@ Managed to shave of 3 seconds of the AI's initial counter move. From 4.5s down t
 
 -2s  minimax terminated its recursive function if it was not possible to beat a "best case" time.
 
--8ms removed Marshal as a way to create a deep copy of an object.
+-800ms removed Marshal as a way to create a deep copy of an object.
 
 ## License
 

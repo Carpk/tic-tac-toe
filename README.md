@@ -1,5 +1,7 @@
 # Tic-Tac-Toe
 
+[![Build Status](https://travis-ci.org/Carpk/tic-tac-toe.svg?branch=master)](https://travis-ci.org/Carpk/tic-tac-toe)
+
 An interactive game where you play against an unbeatable computer AI. The game is deployed on heroku: [http://noughtsandcrosses.herokuapp.com/](http://noughtsandcrosses.herokuapp.com/)
 
 ## About

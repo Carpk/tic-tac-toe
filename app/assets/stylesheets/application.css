@@ -26,6 +26,7 @@
   margin-right: auto;
   margin-top: 50px;
   width: 350px;
+  min-height: 350px;
 }
 
 .container div:hover {
@@ -132,4 +133,10 @@ input {
   color: black;
   font-size: 10px;
 }
-
+body {
+  margin-bottom: 80px;
+}
+html {
+  position: relative;
+  min-height: 100%;
+}

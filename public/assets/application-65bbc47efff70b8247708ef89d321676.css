@@ -8,10 +8,23 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require_self
- *= require_tree .
+
+
  */
 
+
+@font-face {
+    font-family: 'GROBOLD';
+    src: url(/assets/GROBOLD.ttf) format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+body {
+  font-family: 'GROBOLD';
+  font-size: 32px;
+  letter-spacing: 2px;
+}
 
 .box {
   border-left: solid;
@@ -84,10 +97,10 @@ input {
 }
 
 .letter {
-  font-size: 8em;
-  left: 11px;
+  font-size: 3.5em;
+  left: 14px;
   position:relative;
-  top: -16px;
+  top: 12px;
 }
 
 .blue {
@@ -124,7 +137,7 @@ h1 {
 }
 
 .button{
-border:1px solid #999999; -webkit-border-radius: 42px; -moz-border-radius: 42px;border-radius: 42px;font-size:11px;font-family:arial, helvetica, sans-serif; padding: 5px 15px 5px 15px; text-decoration:none; display:inline-block;text-shadow: 1px 1px 0 rgba(255,255,255,0.3);font-weight:bold; color: #000000;
+border:1px solid #999999; -webkit-border-radius: 42px; -moz-border-radius: 42px;border-radius: 42px;font-size:15px;font-family: 'GROBOLD'; padding: 9px 15px 5px 15px; text-decoration:none; display:inline-block;text-shadow: 1px 1px 0 rgba(255,255,255,0.3);font-weight:bold; color: #000000;
  background-color: #FFFFFF; background-image: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#CFCFCF));
  background-image: -webkit-linear-gradient(top, #FFFFFF, #CFCFCF);
  background-image: -moz-linear-gradient(top, #FFFFFF, #CFCFCF);
@@ -149,4 +162,11 @@ border:1px solid #999999; -webkit-border-radius: 42px; -moz-border-radius: 42px;
 
 .new-game {
   display: none;
+}
+
+h4 {
+  margin-top: 12px;
+  margin-bottom: 0px;
+  color: white;
+  text-shadow: 2px 2px 1px #000000;
 }

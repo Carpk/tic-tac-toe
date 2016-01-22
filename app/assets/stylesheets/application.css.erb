@@ -1,0 +1,171 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+@font-face {
+    font-family: 'GROBOLD';
+    src: url(<%= asset_path('GROBOLD.ttf') %>) format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+body {
+  font-family: 'GROBOLD';
+  font-size: 32px;
+  letter-spacing: 2px;
+}
+
+.box {
+  border-left: solid;
+  border-top: solid;
+  float:left;
+  height: 114px;
+  width: 114px;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  width: 350px;
+  min-height: 350px;
+}
+
+.container div:hover {
+  background-image:url('select.png');
+}
+
+.boxcorner {
+  border-left: none;
+  border-top: none;
+}
+
+.boxtop {
+  border-top: none;
+}
+
+.boxside {
+  border-left: none;
+}
+
+.end-img {
+  display: none;
+  left: 5px;
+  position:relative;
+  top: -325px;
+}
+
+.footer {
+  background: #cc00cb;
+  border-radius: 30px;
+  border: 2px solid black;
+  bottom: 0;
+  height: 3em;
+  margin-bottom: 8px;
+  padding-top: 8px;
+  position: absolute;
+  width: 98.5%;
+}
+
+.header {
+  background: #00cc00;
+  border-radius: 30px;
+  border: 2px solid black;
+  color: white;
+  height: 100px;
+}
+
+.header h1 {
+  margin-top: 0;
+  padding-top: 10px;
+}
+
+input {
+  background: white;
+  border-radius: 9px;
+}
+
+.letter {
+  font-size: 3.5em;
+  left: 14px;
+  position:relative;
+  top: 12px;
+}
+
+.blue {
+  color: #0000cc;
+}
+
+.red {
+  color: #cc0000;
+}
+
+.selected {
+  background: blue;
+  height: 110px;
+  width: 110px;
+}
+
+.code-link {
+  position: absolute;
+  bottom: 0;
+  right: 50px;
+  text-decoration: none;
+  color: black;
+  font-size: 10px;
+}
+body {
+  margin-bottom: 80px;
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+h1 {
+  text-shadow: 2px 2px 1px #000000;
+}
+
+.button{
+border:1px solid #999999; -webkit-border-radius: 42px; -moz-border-radius: 42px;border-radius: 42px;font-size:15px;font-family: 'GROBOLD'; padding: 9px 15px 5px 15px; text-decoration:none; display:inline-block;text-shadow: 1px 1px 0 rgba(255,255,255,0.3);font-weight:bold; color: #000000;
+ background-color: #FFFFFF; background-image: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#CFCFCF));
+ background-image: -webkit-linear-gradient(top, #FFFFFF, #CFCFCF);
+ background-image: -moz-linear-gradient(top, #FFFFFF, #CFCFCF);
+ background-image: -ms-linear-gradient(top, #FFFFFF, #CFCFCF);
+ background-image: -o-linear-gradient(top, #FFFFFF, #CFCFCF);
+ background-image: linear-gradient(to bottom, #FFFFFF, #CFCFCF);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFFFFF, endColorstr=#CFCFCF);
+}
+
+.button:hover{
+ border:1px solid #7A7A7A;
+ background-color: #EEEEEE; background-image: -webkit-gradient(linear, left top, left bottom, from(#EEEEEE), to(#C7C7C7));
+ background-image: -webkit-linear-gradient(top, #EEEEEE, #C7C7C7);
+ background-image: -moz-linear-gradient(top, #EEEEEE, #C7C7C7);
+ background-image: -ms-linear-gradient(top, #EEEEEE, #C7C7C7);
+ background-image: -o-linear-gradient(top, #EEEEEE, #C7C7C7);
+ background-image: linear-gradient(to bottom, #EEEEEE, #C7C7C7);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#EEEEEE, endColorstr=#C7C7C7);
+}
+
+.hidden {
+  display: none;
+}
+
+.new-game {
+  display: none;
+}
+
+h4 {
+  margin-top: 12px;
+  margin-bottom: 0px;
+  color: white;
+  text-shadow: 2px 2px 1px #000000;
+}

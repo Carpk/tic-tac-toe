@@ -26,7 +26,7 @@ class TicTacToeBoard
   end
 
   def possible_wins
-    row_sections + column_sections + [ forwardslash_section, backslash_section ]
+    row_sections + column_sections << forwardslash_section << backslash_section
   end
 
   def row_sections
@@ -34,12 +34,7 @@ class TicTacToeBoard
   end
 
   def column_sections
-    column_values = []
-    board_divisor = board_side_length
-    board_divisor.times do |index|
-      column_values << [@grid[index], @grid[index + board_divisor], @grid[index + board_divisor * 2]]
-    end
-    column_values
+    @grid.each_slice(board_side_length).map {|slice| slice}.transpose
   end
 
   def forwardslash_section

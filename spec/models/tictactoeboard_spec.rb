@@ -129,10 +129,10 @@ describe TicTacToeBoard do
   end
 
   it "should return nested array for forwardslash " do
-    expect(board.forwardslash_section[0].class).to eq(Array)
+    expect(board.forwardslash_section.class).to eq(Array)
   end
 
   it "should return nested array for backslash " do
-    expect(board.backslash_section[0].class).to eq(Array)
+    expect(board.backslash_section.class).to eq(Array)
   end
 end

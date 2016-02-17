@@ -26,7 +26,7 @@ class TicTacToeBoard
   end
 
   def possible_wins
-    row_sections + column_sections + forwardslash_section + backslash_section
+    row_sections + column_sections + [ forwardslash_section, backslash_section ]
   end
 
   def row_sections
@@ -43,11 +43,10 @@ class TicTacToeBoard
   end
 
   def forwardslash_section
-    [ @grid.each_slice(board_side_length).map.with_index {|slice, i| slice[-1-i]} ]
+    @grid.each_slice(board_side_length).map.with_index {|slice, i| slice[-1-i]}
   end
 
   def backslash_section
-    [ @grid.each_slice(board_side_length).map.with_index {|slice, i| slice[i]} ]
+    @grid.each_slice(board_side_length).map.with_index {|slice, i| slice[i]}
   end
-
 end

@@ -45,34 +45,22 @@ class ComputerAi
   end
 
   def min_or_max(board_values, player)
-    if player == @game_piece
-      board_values.compact.max
-    else
-      board_values.compact.min
-    end
+    player == @game_piece ? board_values.compact.max : board_values.compact.min
   end
 
   def select_random_index(position_values)
-    best_positions = []
     max_value = position_values.each_value.max
-    position_values.each_pair do |index, value|
-      best_positions << index if value == max_value
-    end
-    best_positions.sample
+
+    position_values.delete_if {|k,v| v < max_value }.keys.sample
   end
 
   def gameover?(board)
-    game = GamePlay.new(board)
-    game.gameover?
+    GamePlay.new(board).gameover?
   end
 
   def create_value(board)
-    game = GamePlay.new(board)
-    returning_value =  0
-    returning_value =  32 if game.winner_of == @game_piece
-    returning_value = -32 if game.winner_of == @enemy_piece
-    returning_value =  0 if game.tie_game?
-    returning_value
+    winner = GamePlay.new(board).winner_of
+    { @game_piece => 32, @enemy_piece => -32, nil => 0 }[winner]
   end
 
 end

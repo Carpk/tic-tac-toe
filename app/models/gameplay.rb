@@ -6,20 +6,20 @@ class GamePlay
   end
 
   def gameover?
-    @board.board_full? ||
-    board_has_winner?
+    @board.board_full? || board_has_winner?
   end
 
   def tie_game?
-    @board.board_full? && board_has_winner? == false
+    @board.board_full? && board_has_no_winner?
+  end
+
+  def board_has_no_winner?
+    !board_has_winner?
   end
 
   def board_has_winner?
-    value = false
-    @board.possible_wins.each do |section|
-      value = true if self.group_match?(section)
-    end
-    value
+    matches = @board.possible_wins.map {|section| self.group_match?(section)}
+    matches.include?(true)
   end
 
   def winner_of
@@ -29,7 +29,7 @@ class GamePlay
   end
 
   def group_match?(section)
-    section.rotate == section.delete_if {|e| " " == e}
+    section.rotate == section.delete_if {|e| e.strip.empty?}
   end
 
   def available_spaces

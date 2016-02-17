@@ -50,4 +50,6 @@ gem 'pry'
 
 # Use rspec
 # gem 'rspec-core'
-gem "rspec-rails", :group => [:development, :test]
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0'
+end

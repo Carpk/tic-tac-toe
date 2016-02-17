@@ -23,9 +23,11 @@ class GamePlay
   end
 
   def winner_of
-    @board.possible_wins.each do |section|
-      return section.first if group_match?(section)
-    end
+    # @board.possible_wins.each do |section|
+    #   return section.first if group_match?(section)
+    # end
+    matches = @board.possible_wins.map {|section| self.group_match?(section)}
+    @board.possible_wins[matches.index(true)].sample if matches.include?(true)
   end
 
   def group_match?(section)

@@ -6,7 +6,7 @@ class TicTacToeBoard
   end
 
   def unassigned_positions?
-    @grid.include?(" ")
+    @grid.map {|e| e.strip.empty? }.include?(true)
   end
 
   def board_full?
@@ -22,28 +22,15 @@ class TicTacToeBoard
   end
 
   def indexes_of_available_spaces
-    available_indexes = []
-    @grid.each_with_index do |value, index|
-      available_indexes << index if value == " "
-    end
-    available_indexes
+    @grid.each_index.select {|e| @grid[e].strip.empty? }
   end
 
   def possible_wins
-    all_combos = []
-    all_combos.concat(row_sections)
-    all_combos.concat(column_sections)
-    all_combos.concat(forwardslash_section)
-    all_combos.concat(backslash_section)
-    all_combos
+    row_sections + column_sections + forwardslash_section + backslash_section
   end
 
   def row_sections
-    rows_values = []
-    @grid.each_slice(board_side_length) do |win_attempt|
-      rows_values << win_attempt
-    end
-    rows_values
+    @grid.each_slice(board_side_length).map {|slice| slice}
   end
 
   def column_sections
@@ -56,23 +43,11 @@ class TicTacToeBoard
   end
 
   def forwardslash_section
-    index_offset = 0
-    forwardslash = []
-    @grid.each_slice(board_side_length) do |row|
-      forwardslash << row[-1 - index_offset]
-      index_offset += 1
-    end
-    [forwardslash]
+    [ @grid.each_slice(board_side_length).map.with_index {|slice, i| slice[-1-i]} ]
   end
 
   def backslash_section
-    index_offset = 0
-    backslash = []
-    @grid.each_slice(board_side_length) do |row|
-      backslash << row[0 + index_offset]
-      index_offset += 1
-    end
-    [backslash]
+    [ @grid.each_slice(board_side_length).map.with_index {|slice, i| slice[i]} ]
   end
 
 end

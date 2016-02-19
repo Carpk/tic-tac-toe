@@ -59,9 +59,9 @@ class ComputerAi
   end
 
   def create_value(board)
-    # winner = GamePlay.new(board).winner_of
-    # { @game_piece => 2520, @enemy_piece => -2520, nil => 0 }[winner]
-    @game_piece == GamePlay.new(board).winner_of ? 2520 : -2520
+    winner = GamePlay.new(board).winner_of
+    { @game_piece => 2520, @enemy_piece => -2520, nil => 0 }[winner]
+    # @game_piece == GamePlay.new(board).winner_of ? 2520 : -2520
   end
 
 end

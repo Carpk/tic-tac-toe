@@ -3,7 +3,7 @@ class ComputerAi
   def initialize(params)
     @game_piece = params[:symbol]
     @enemy_piece = params[:opponent]
-    @@efficent_value ||= -2520
+    @efficent_value ||= 504
   end
 
   def assert_values(board)
@@ -18,15 +18,14 @@ class ComputerAi
   end
 
   def inefficient_return_from(depth)
-    (2520 / depth) < @@efficent_value
+    @efficent_value >= (2520 / depth)
   end
 
   def assign_efficency_value(value)
-    @@efficent_value = value if value > @@efficent_value
+    @efficent_value = value if value > @efficent_value
   end
 
   def evaluate_board(board, current_player, passing_player, depth=1)
-    puts "ev: #{@@efficent_value} cd: #{depth} possible_v: #{create_value(board) / depth}"
     return create_value(board) / depth if gameover?(board) || inefficient_return_from(depth)
 
     board_values = []
@@ -60,8 +59,9 @@ class ComputerAi
   end
 
   def create_value(board)
-    winner = GamePlay.new(board).winner_of
-    { @game_piece => 2520, @enemy_piece => -2520, nil => 0 }[winner]
+    # winner = GamePlay.new(board).winner_of
+    # { @game_piece => 2520, @enemy_piece => -2520, nil => 0 }[winner]
+    @game_piece == GamePlay.new(board).winner_of ? 2520 : -2520
   end
 
 end

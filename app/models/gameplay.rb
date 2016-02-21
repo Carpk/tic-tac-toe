@@ -2,7 +2,7 @@ class GamePlay
 
   def initialize(board)
     @board = board
-    @ai = ComputerAi.new({symbol: "O", opponent: "X"})
+    @ai = ComputerAi.new({symbol: "O", opponent: "X", board: board})
   end
 
   def gameover?

@@ -21,6 +21,14 @@ class TicTacToeBoard
     Math.sqrt(@grid.length).to_i
   end
 
+  def size
+    @grid.length
+  end
+
+  def clone
+    @grid.clone
+  end
+
   def indexes_of_available_spaces
     @grid.each_index.select {|e| @grid[e].strip.empty? }
   end

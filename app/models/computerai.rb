@@ -3,7 +3,7 @@ class ComputerAi
   def initialize(params)
     @game_piece = params[:symbol]
     @enemy_piece = params[:opponent]
-    @value_matrix = (1..params[:board].size).reduce(:*)
+    @value_matrix = (2..params[:board].size).reduce(:*)
     @efficent_value = -@value_matrix
   end
 
@@ -62,7 +62,7 @@ class ComputerAi
   end
 
   def create_value(board)
-    winner = GamePlay.new(board).winner_of
+    winner = GamePlay.new(board).symbol_of_winner
     { @game_piece => @value_matrix, @enemy_piece => -@value_matrix}[winner] || 0
   end
 end

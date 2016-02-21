@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe ComputerAi do
 
-  let(:computer)  {ComputerAi.new({symbol: "x", opponent: "o"})}
+  let(:computer)  {ComputerAi.new({symbol: "x", opponent: "o", board: Array.new(9)})}
 
   it "should take win instead of block" do
     grid = ["x", "x", " ",
@@ -109,7 +109,7 @@ describe ComputerAi do
             "x", " ", "x",
             " ", " ", " "]
     board = TicTacToeBoard.new(grid)
-    expect(computer.create_value(board)).to eq(-2520)
+    expect(computer.create_value(board)).to eq(-362880)
   end
 
   it "should create a positive value based on incomplete board win" do
@@ -117,7 +117,7 @@ describe ComputerAi do
             "o", "x", "o",
             " ", " ", "x"]
     board = TicTacToeBoard.new(grid)
-    expect(computer.create_value(board)).to eq(2520)
+    expect(computer.create_value(board)).to eq(362880)
   end
 
   it "returns correct value of last position winning move" do
@@ -125,7 +125,7 @@ describe ComputerAi do
             "x", "x", "x",
             "o", "o", "x"]
     board = TicTacToeBoard.new(grid)
-    expect(computer.create_value(board)).to eq(2520)
+    expect(computer.create_value(board)).to eq(362880)
   end
 
   it "returns zero value when board is incomplete" do

@@ -129,7 +129,7 @@ describe GamePlay do
             "x", "x", " ",
             "x", "o", " "]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    expect(game.winner_of).to eq("x")
+    expect(game.symbol_of_winner).to eq("x")
   end
 
   it "should return correct winner of board" do
@@ -137,7 +137,7 @@ describe GamePlay do
             "o", "o", " ",
             "x", "o", " "]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    expect(game.winner_of).to eq("o")
+    expect(game.symbol_of_winner).to eq("o")
   end
 
   it "should return correct winner of board" do
@@ -145,7 +145,7 @@ describe GamePlay do
             "o", "x", "o",
             "x", "o", "o"]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    expect(game.winner_of).to eq("o")
+    expect(game.symbol_of_winner).to eq("o")
   end
 
   it "should return winner of a winning board" do
@@ -153,7 +153,7 @@ describe GamePlay do
             "o", " ", "o",
             "x", "x", "x"]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    expect(game.winner_of).to eq("x")
+    expect(game.symbol_of_winner).to eq("x")
   end
 
   it "should return winner of a winning board" do
@@ -161,7 +161,7 @@ describe GamePlay do
             "o", "o", "o",
             "x", " ", "x"]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    expect(game.winner_of).to eq("o")
+    expect(game.symbol_of_winner).to eq("o")
   end
 
   it "should return true if there is a matching array" do
@@ -169,7 +169,7 @@ describe GamePlay do
             "o", "x", "o",
             "x", "o", "x"]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    expect(game.winner_of).to eq("o")
+    expect(game.symbol_of_winner).to eq("o")
   end
 
     it "should return true if there is a matching array" do
@@ -177,7 +177,7 @@ describe GamePlay do
             "o", "o", "o",
             "x", "o", "x"]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    expect(game.winner_of).to eq("o")
+    expect(game.symbol_of_winner).to eq("o")
   end
 
   it "should return true if there is a matching array" do
@@ -185,7 +185,7 @@ describe GamePlay do
             "o", "x", "o",
             "x", "x", "x"]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    expect(game.winner_of).to eq("x")
+    expect(game.symbol_of_winner).to eq("x")
   end
 
   it "should return false if only matches are empty cells" do
@@ -193,7 +193,7 @@ describe GamePlay do
             "o", "x", " ",
             "x", "o", "x"]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    expect(game.winner_of).to eq("x")
+    expect(game.symbol_of_winner).to eq("x")
   end
 
   it "should return false if only matches are empty cells" do
@@ -201,7 +201,7 @@ describe GamePlay do
             "o", "x", " ",
             "x", "x", "o"]
     game = GamePlay.new(TicTacToeBoard.new(grid))
-    expect(game.winner_of).to eq("x")
+    expect(game.symbol_of_winner).to eq("x")
   end
 
   it "should return true if board is tied" do

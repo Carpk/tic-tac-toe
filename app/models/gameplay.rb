@@ -21,7 +21,7 @@ class GamePlay
     list_of_matches.include?(true)
   end
 
-  def winner_of
+  def symbol_of_winner
     matches = list_of_matches
 
     @board.possible_wins[matches.index(true)].sample if matches.include?(true)

@@ -6,13 +6,13 @@ class TicTacToe
     gameover = game.gameover?
 
     if gameover
-      winning_player = game.winner_of
+      winning_player = game.symbol_of_winner
       {:board => submitted_raw_board,:gameover => gameover, :winner => winning_player}
     else
       game.computer_turn
       finished_raw_board = game.display_board
       status = game.gameover?
-      winning_player = game.winner_of
+      winning_player = game.symbol_of_winner
 
       {:board => finished_raw_board,:gameover => status, :winner => winning_player }
     end

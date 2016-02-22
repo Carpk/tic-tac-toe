@@ -14,11 +14,10 @@ class ComputerAi
       possible_board.assign_token_to(@game_piece, empty_position)
       position_values[empty_position] = evaluate_board(possible_board, @enemy_piece, @game_piece)
     end
-    puts "#{position_values}"
     select_random_index(position_values)
   end
 
-  def inefficient_return_from(depth)
+  def inefficient_return_from?(depth)
     @efficent_value >= (@value_matrix / depth)
   end
 
@@ -27,8 +26,7 @@ class ComputerAi
   end
 
   def evaluate_board(board, current_player, passing_player, depth=1)
-    puts "ev: #{@efficent_value}, cv: #{create_value(board)/depth}, dp: #{depth}, #{gameover?(board) || inefficient_return_from(depth)}"
-    return create_value(board) / depth if gameover?(board) || inefficient_return_from(depth)
+    return create_value(board) / depth if gameover?(board) || inefficient_return_from?(depth)
 
     board_values = []
 
@@ -41,7 +39,6 @@ class ComputerAi
       assign_efficency_value(new_value)
 
       board_values << new_value
-      puts "#{current_player}, #{board_values}"
     end
 
     min_or_max(board_values, current_player)

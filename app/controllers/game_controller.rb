@@ -1,7 +1,7 @@
 class GameController < ApplicationController
 
   def new
-    data = TicTacToe.play(Array.new(9, " "))
+    data = TicTacToe.play(Board.new_board)
     render :json => data, :status => :ok
   end
 

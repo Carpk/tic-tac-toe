@@ -8,6 +8,11 @@ describe Board do
     expect(board.grid.length).to eq(9)
   end
 
+  it "should return a blank array" do
+    blank_array = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+    expect(Board.new_board).to eq(blank_array)
+  end
+
   it "should return the correct length when initialized with large board" do
     board = Board.new(Array.new(20))
     expect(board.grid.length).to eq(20)

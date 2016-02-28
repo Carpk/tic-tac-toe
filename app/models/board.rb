@@ -5,6 +5,10 @@ class Board
     @grid = board
   end
 
+  def self.new_board
+    Array.new(9, " ")
+  end
+
   def unassigned_positions?
     @grid.map {|e| e.strip.empty? }.include?(true)
   end

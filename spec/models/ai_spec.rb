@@ -8,7 +8,7 @@ describe ComputerAi do
     grid = ["x", "x", " ",
             "o", " ", "o",
             " ", " ", " "]
-    board = TicTacToeBoard.new(grid)
+    board = Board.new(grid)
     expect(computer.assert_values(board)).to eq(2)
   end
 
@@ -16,7 +16,7 @@ describe ComputerAi do
     grid = ["x", "x", " ",
             "o", "o", "x",
             " ", "o", "o"]
-    board = TicTacToeBoard.new(grid)
+    board = Board.new(grid)
     expect(computer.assert_values(board)).to eq(2)
   end
 
@@ -24,7 +24,7 @@ describe ComputerAi do
     grid = ["o", "x", "o",
             "x", " ", "x",
             "o", "o", "x"]
-    board = TicTacToeBoard.new(grid)
+    board = Board.new(grid)
     expect(computer.assert_values(board)).to eq(4)
   end
 
@@ -32,7 +32,7 @@ describe ComputerAi do
     grid = ["o", "x", " ",
             "o", " ", "o",
             "x", " ", " "]
-    board = TicTacToeBoard.new(grid)
+    board = Board.new(grid)
     expect(computer.assert_values(board)).to eq(4)
   end
 
@@ -40,7 +40,7 @@ describe ComputerAi do
     grid = ["o", " ", "x",
             " ", " ", "o",
             "x", " ", " "]
-    board = TicTacToeBoard.new(grid)
+    board = Board.new(grid)
     expect(computer.assert_values(board)).to eq(4)
   end
 
@@ -48,7 +48,7 @@ describe ComputerAi do
     grid = [" ", " ", " ",
             " ", "x", "o",
             " ", " ", " "]
-    board = TicTacToeBoard.new(grid)
+    board = Board.new(grid)
     expect(computer.evaluate_board(board, "x", "o")).to eq(0)
   end
 
@@ -76,7 +76,7 @@ describe ComputerAi do
     grid = ["o", "x", "o",
             "x", "o", "x",
             "x", "o", "x"]
-    board = TicTacToeBoard.new(grid)
+    board = Board.new(grid)
     expect(computer.gameover?(board)).to eq(true)
   end
 
@@ -84,7 +84,7 @@ describe ComputerAi do
     grid = ["o", "x", "o",
             "x", "o", "x",
             " ", " ", "o"]
-    board = TicTacToeBoard.new(grid)
+    board = Board.new(grid)
     expect(computer.gameover?(board)).to eq(true)
   end
 
@@ -92,7 +92,7 @@ describe ComputerAi do
     grid = ["x", "x", "o",
             "x", "o", "x",
             " ", " ", "o"]
-    board = TicTacToeBoard.new(grid)
+    board = Board.new(grid)
     expect(computer.gameover?(board)).to eq(false)
   end
 
@@ -100,39 +100,39 @@ describe ComputerAi do
     grid = ["o", "x", "o",
             "x", "o", "x",
             "x", "o", "x"]
-    board = TicTacToeBoard.new(grid)
-    expect(computer.create_value(board)).to eq(0)
+    board = Board.new(grid)
+    expect(computer.value_of(board)).to eq(0)
   end
 
   it "should create a negitve value based on board lose" do
     grid = ["o", "o", "o",
             "x", " ", "x",
             " ", " ", " "]
-    board = TicTacToeBoard.new(grid)
-    expect(computer.create_value(board)).to eq(-362880)
+    board = Board.new(grid)
+    expect(computer.value_of(board)).to eq(-362880)
   end
 
   it "should create a positive value based on incomplete board win" do
     grid = ["x", " ", " ",
             "o", "x", "o",
             " ", " ", "x"]
-    board = TicTacToeBoard.new(grid)
-    expect(computer.create_value(board)).to eq(362880)
+    board = Board.new(grid)
+    expect(computer.value_of(board)).to eq(362880)
   end
 
   it "returns correct value of last position winning move" do
     grid = ["o", "x", "o",
             "x", "x", "x",
             "o", "o", "x"]
-    board = TicTacToeBoard.new(grid)
-    expect(computer.create_value(board)).to eq(362880)
+    board = Board.new(grid)
+    expect(computer.value_of(board)).to eq(362880)
   end
 
   it "returns zero value when board is incomplete" do
     grid = ["o", "x", "o",
             " ", "x", "x",
             "o", "o", "x"]
-    board = TicTacToeBoard.new(grid)
-    expect(computer.create_value(board)).to eq(0)
+    board = Board.new(grid)
+    expect(computer.value_of(board)).to eq(0)
   end
 end

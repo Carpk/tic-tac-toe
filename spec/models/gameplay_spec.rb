@@ -2,13 +2,13 @@ require 'rails_helper'
 
 describe GamePlay do
 
-  let(:game)      {GamePlay.new(TicTacToeBoard.new(Array.new(9," ")))}
+  let(:game)      {GamePlay.new(Board.new(Array.new(9," ")))}
 
   it "should know that a game is over from a full board" do
     grid = ["x", "o", "x",
             "o", "x", "o",
             "o", "x", "o"]
-    game = GamePlay.new(TicTacToeBoard.new(grid))
+    game = GamePlay.new(Board.new(grid))
     expect(game.gameover?).to eq(true)
   end
 
@@ -16,7 +16,7 @@ describe GamePlay do
     grid = ["x", "o", " ",
             "o", "x", "o",
             "o", "x", "x"]
-    game = GamePlay.new(TicTacToeBoard.new(grid))
+    game = GamePlay.new(Board.new(grid))
     expect(game.gameover?).to eq(true)
   end
 
@@ -24,7 +24,7 @@ describe GamePlay do
     grid = ["x", "o", " ",
             "o", "x", "o",
             "o", "x", " "]
-    game = GamePlay.new(TicTacToeBoard.new(grid))
+    game = GamePlay.new(Board.new(grid))
     expect(game.gameover?).to eq(false)
   end
 
@@ -32,7 +32,7 @@ describe GamePlay do
     grid = [" ", " ", " ",
             " ", " ", " ",
             " ", " ", " "]
-    game = GamePlay.new(TicTacToeBoard.new(grid))
+    game = GamePlay.new(Board.new(grid))
     expect(game.gameover?).to eq(false)
   end
 
@@ -40,7 +40,7 @@ describe GamePlay do
     grid = ["x", "o", " ",
             "o", "x", "o",
             "o", "x", " "]
-    game = GamePlay.new(TicTacToeBoard.new(grid))
+    game = GamePlay.new(Board.new(grid))
     expect(game.board_has_winner?).to eq(false)
   end
 
@@ -48,7 +48,7 @@ describe GamePlay do
     grid = ["x", "o", " ",
             "o", "x", "o",
             "x", "x", "x"]
-    game = GamePlay.new(TicTacToeBoard.new(grid))
+    game = GamePlay.new(Board.new(grid))
     expect(game.board_has_winner?).to eq(true)
   end
 
@@ -56,7 +56,7 @@ describe GamePlay do
     grid = ["o", "o", "o",
             "o", "x", "o",
             "x", "o", "x"]
-    game = GamePlay.new(TicTacToeBoard.new(grid))
+    game = GamePlay.new(Board.new(grid))
     expect(game.board_has_winner?).to eq(true)
   end
 
@@ -64,7 +64,7 @@ describe GamePlay do
     grid = ["x", "x", " ",
             "o", "o", "o",
             "x", "o", "x"]
-    game = GamePlay.new(TicTacToeBoard.new(grid))
+    game = GamePlay.new(Board.new(grid))
     expect(game.board_has_winner?).to eq(true)
   end
 
@@ -72,7 +72,7 @@ describe GamePlay do
     grid = ["x", "o", " ",
             "o", "x", " ",
             "x", "x", " "]
-    game = GamePlay.new(TicTacToeBoard.new(grid))
+    game = GamePlay.new(Board.new(grid))
     expect(game.board_has_winner?).to eq(false)
   end
 
@@ -80,7 +80,7 @@ describe GamePlay do
     grid = [" ", " ", " ",
             " ", " ", " ",
             " ", " ", " "]
-    game = GamePlay.new(TicTacToeBoard.new(grid))
+    game = GamePlay.new(Board.new(grid))
     expect(game.board_has_winner?).to eq(false)
   end
 
@@ -88,7 +88,7 @@ describe GamePlay do
     grid = ["x", "o", " ",
             "x", "x", " ",
             "x", "o", " "]
-    game = GamePlay.new(TicTacToeBoard.new(grid))
+    game = GamePlay.new(Board.new(grid))
     expect(game.board_has_winner?).to eq(true)
   end
 
@@ -96,7 +96,7 @@ describe GamePlay do
     grid = ["x", "o", " ",
             "o", "o", " ",
             "x", "o", " "]
-    game = GamePlay.new(TicTacToeBoard.new(grid))
+    game = GamePlay.new(Board.new(grid))
     expect(game.board_has_winner?).to eq(true)
   end
 
@@ -104,7 +104,7 @@ describe GamePlay do
     grid = ["x", "o", "o",
             "o", "x", "o",
             "x", "o", "o"]
-    game = GamePlay.new(TicTacToeBoard.new(grid))
+    game = GamePlay.new(Board.new(grid))
     expect(game.board_has_winner?).to eq(true)
   end
 
@@ -112,7 +112,7 @@ describe GamePlay do
     grid = ["x", "o", " ",
             "o", "x", " ",
             "x", "o", "x"]
-    game = GamePlay.new(TicTacToeBoard.new(grid))
+    game = GamePlay.new(Board.new(grid))
     expect(game.board_has_winner?).to eq(true)
   end
 
@@ -120,7 +120,7 @@ describe GamePlay do
     grid = ["o", "o", "x",
             "o", "x", " ",
             "x", "x", "o"]
-    game = GamePlay.new(TicTacToeBoard.new(grid))
+    game = GamePlay.new(Board.new(grid))
     expect(game.board_has_winner?).to eq(true)
   end
 
@@ -128,7 +128,7 @@ describe GamePlay do
     grid = ["x", "o", " ",
             "x", "x", " ",
             "x", "o", " "]
-    game = GamePlay.new(TicTacToeBoard.new(grid))
+    game = GamePlay.new(Board.new(grid))
     expect(game.symbol_of_winner).to eq("x")
   end
 
@@ -136,7 +136,7 @@ describe GamePlay do
     grid = ["x", "o", " ",
             "o", "o", " ",
             "x", "o", " "]
-    game = GamePlay.new(TicTacToeBoard.new(grid))
+    game = GamePlay.new(Board.new(grid))
     expect(game.symbol_of_winner).to eq("o")
   end
 
@@ -144,7 +144,7 @@ describe GamePlay do
     grid = ["x", "o", "o",
             "o", "x", "o",
             "x", "o", "o"]
-    game = GamePlay.new(TicTacToeBoard.new(grid))
+    game = GamePlay.new(Board.new(grid))
     expect(game.symbol_of_winner).to eq("o")
   end
 
@@ -152,7 +152,7 @@ describe GamePlay do
     grid = ["x", "o", " ",
             "o", " ", "o",
             "x", "x", "x"]
-    game = GamePlay.new(TicTacToeBoard.new(grid))
+    game = GamePlay.new(Board.new(grid))
     expect(game.symbol_of_winner).to eq("x")
   end
 
@@ -160,7 +160,7 @@ describe GamePlay do
     grid = ["x", "o", " ",
             "o", "o", "o",
             "x", " ", "x"]
-    game = GamePlay.new(TicTacToeBoard.new(grid))
+    game = GamePlay.new(Board.new(grid))
     expect(game.symbol_of_winner).to eq("o")
   end
 
@@ -168,7 +168,7 @@ describe GamePlay do
     grid = ["o", "o", "o",
             "o", "x", "o",
             "x", "o", "x"]
-    game = GamePlay.new(TicTacToeBoard.new(grid))
+    game = GamePlay.new(Board.new(grid))
     expect(game.symbol_of_winner).to eq("o")
   end
 
@@ -176,7 +176,7 @@ describe GamePlay do
     grid = ["x", "x", " ",
             "o", "o", "o",
             "x", "o", "x"]
-    game = GamePlay.new(TicTacToeBoard.new(grid))
+    game = GamePlay.new(Board.new(grid))
     expect(game.symbol_of_winner).to eq("o")
   end
 
@@ -184,7 +184,7 @@ describe GamePlay do
     grid = ["x", "o", " ",
             "o", "x", "o",
             "x", "x", "x"]
-    game = GamePlay.new(TicTacToeBoard.new(grid))
+    game = GamePlay.new(Board.new(grid))
     expect(game.symbol_of_winner).to eq("x")
   end
 
@@ -192,7 +192,7 @@ describe GamePlay do
     grid = ["x", "o", " ",
             "o", "x", " ",
             "x", "o", "x"]
-    game = GamePlay.new(TicTacToeBoard.new(grid))
+    game = GamePlay.new(Board.new(grid))
     expect(game.symbol_of_winner).to eq("x")
   end
 
@@ -200,7 +200,7 @@ describe GamePlay do
     grid = ["o", "o", "x",
             "o", "x", " ",
             "x", "x", "o"]
-    game = GamePlay.new(TicTacToeBoard.new(grid))
+    game = GamePlay.new(Board.new(grid))
     expect(game.symbol_of_winner).to eq("x")
   end
 
@@ -208,7 +208,7 @@ describe GamePlay do
     grid = ["x", "o", "x",
             "x", "o", "x",
             "o", "x", "o"]
-    game = GamePlay.new(TicTacToeBoard.new(grid))
+    game = GamePlay.new(Board.new(grid))
     expect(game.tie_game?).to eq(true)
   end
 
@@ -216,7 +216,7 @@ describe GamePlay do
     grid = ["x", "o", " ",
             "x", "o", "x",
             "o", "x", "o"]
-    game = GamePlay.new(TicTacToeBoard.new(grid))
+    game = GamePlay.new(Board.new(grid))
     expect(game.tie_game?).to eq(false)
   end
 
@@ -224,7 +224,7 @@ describe GamePlay do
     grid = ["o", "o", " ",
             "x", "o", "x",
             "o", "x", "o"]
-    game = GamePlay.new(TicTacToeBoard.new(grid))
+    game = GamePlay.new(Board.new(grid))
     expect(game.tie_game?).to eq(false)
   end
 
@@ -271,7 +271,7 @@ describe GamePlay do
     board = [" ", "o", " ",
              " ", "o", " ",
              " ", "o", " "]
-    game = GamePlay.new(TicTacToeBoard.new(board))
+    game = GamePlay.new(Board.new(board))
     expect(game.gameover?).to eq(true)
   end
 
@@ -279,7 +279,7 @@ describe GamePlay do
     board = ["x", "o", "x",
              "o", "x", "o",
              "o", "x", "o"]
-    game = GamePlay.new(TicTacToeBoard.new(board))
+    game = GamePlay.new(Board.new(board))
     expect(game.gameover?).to eq(true)
   end
 
@@ -287,7 +287,7 @@ describe GamePlay do
     board = [" ", "o", "x",
              "o", "x", "o",
              "o", "x", "o"]
-    game = GamePlay.new(TicTacToeBoard.new(board))
+    game = GamePlay.new(Board.new(board))
     expect(game.gameover?).to eq(false)
   end
 
@@ -299,7 +299,7 @@ describe GamePlay do
     board = [" ", " ", " ",
              " ", "o", " ",
              " ", " ", " "]
-    game = GamePlay.new(TicTacToeBoard.new(board))
+    game = GamePlay.new(Board.new(board))
     expect(game.display_board[4]).to eq("o")
   end
 
@@ -307,7 +307,7 @@ describe GamePlay do
     board = ["x", " ", "x",
              " ", "o", " ",
              " ", " ", "o"]
-    game = GamePlay.new(TicTacToeBoard.new(board))
+    game = GamePlay.new(Board.new(board))
     expect(game.computer_turn.class).to eq(String)
   end
 end

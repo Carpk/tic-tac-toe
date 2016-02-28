@@ -4,7 +4,7 @@ require File.expand_path('../boot', __FILE__)
 require_relative '../app/models/computerai'
 require_relative '../app/models/gameplay'
 require_relative '../app/models/tictactoe'
-require_relative '../app/models/tictactoeboard'
+require_relative '../app/models/board'
 
 # require 'computerai'
 # require 'gameplay'

@@ -1,4 +1,4 @@
-class TicTacToeBoard
+class Board
   attr_reader :grid
 
   def initialize(board)

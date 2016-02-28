@@ -1,20 +1,20 @@
 require 'rails_helper'
 
-describe TicTacToeBoard do
+describe Board do
 
-  let(:board)  {TicTacToeBoard.new(Array.new(9," "))}
+  let(:board)  {Board.new(Array.new(9," "))}
 
   it "should return the correct length of board" do
     expect(board.grid.length).to eq(9)
   end
 
   it "should return the correct length when initialized with large board" do
-    board = TicTacToeBoard.new(Array.new(20))
+    board = Board.new(Array.new(20))
     expect(board.grid.length).to eq(20)
   end
 
   it "should return the correct length when initialized with small board" do
-    board = TicTacToeBoard.new(Array.new(4))
+    board = Board.new(Array.new(4))
     expect(board.grid.length).to eq(4)
   end
 
@@ -26,7 +26,7 @@ describe TicTacToeBoard do
     grid = ["o", "x", "o",
             "x", "o", "x",
             "x", "o", "x"]
-    board = TicTacToeBoard.new(grid)
+    board = Board.new(grid)
     expect(board.unassigned_positions?).to eq(false)
   end
 
@@ -34,7 +34,7 @@ describe TicTacToeBoard do
     grid = ["o", "x", "o",
             "x", " ", "x",
             "x", "o", "x"]
-    board = TicTacToeBoard.new(grid)
+    board = Board.new(grid)
     expect(board.unassigned_positions?).to eq(true)
   end
 
@@ -46,7 +46,7 @@ describe TicTacToeBoard do
     grid = ["o", "x", "o",
             "x", " ", "x",
             "x", "o", "x"]
-    board = TicTacToeBoard.new(grid)
+    board = Board.new(grid)
     expect(board.board_full?).to eq(false)
   end
 
@@ -54,7 +54,7 @@ describe TicTacToeBoard do
     grid = ["o", "x", "o",
             "x", "o", "x",
             "x", "o", "x"]
-    board = TicTacToeBoard.new(grid)
+    board = Board.new(grid)
     expect(board.board_full?).to eq(true)
   end
 
@@ -80,7 +80,7 @@ describe TicTacToeBoard do
             "x", "o", "x", " ",
             "x", "o", "x", " ",
             " ", " ", " ", " "]
-    board = TicTacToeBoard.new(grid)
+    board = Board.new(grid)
     expect(board.board_side_length).to eq(4)
   end
 
@@ -88,7 +88,7 @@ describe TicTacToeBoard do
     grid = ['f','f','f',
             "g"," "," ",
             " ","g"," "]
-    board = TicTacToeBoard.new(grid)
+    board = Board.new(grid)
     expect(board.indexes_of_available_spaces).to eq([4,5,6,8])
   end
 
@@ -96,7 +96,7 @@ describe TicTacToeBoard do
     grid = ["f"," ","f",
             "g"," ","f",
             " ","g","f"]
-    board = TicTacToeBoard.new(grid)
+    board = Board.new(grid)
     expect(board.indexes_of_available_spaces).to eq([1,4,6])
   end
 
@@ -104,7 +104,7 @@ describe TicTacToeBoard do
     grid = ["f","g","f",
             "g","g","f",
             "f","g","f"]
-    board = TicTacToeBoard.new(grid)
+    board = Board.new(grid)
     expect(board.indexes_of_available_spaces).to eq([])
   end
 
@@ -112,7 +112,7 @@ describe TicTacToeBoard do
     grid = [" "," "," ",
             " "," "," ",
             " "," "," "]
-    board = TicTacToeBoard.new(grid)
+    board = Board.new(grid)
     expect(board.indexes_of_available_spaces).to eq([0,1,2,3,4,5,6,7,8])
   end
 

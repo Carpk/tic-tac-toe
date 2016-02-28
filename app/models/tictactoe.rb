@@ -1,7 +1,7 @@
 class TicTacToe
 
   def self.play(submitted_raw_board)
-    board = TicTacToeBoard.new(submitted_raw_board)
+    board = Board.new(submitted_raw_board)
     game = GamePlay.new(board)
     gameover = game.gameover?
 

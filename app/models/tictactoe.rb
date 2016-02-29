@@ -1,21 +1,13 @@
-class TicTacToe
+module TicTacToe
 
-  def self.play(submitted_raw_board)
-    board = Board.new(submitted_raw_board)
+  def self.play(submitted_board)
+    board = Board.new(submitted_board)
     game = GamePlay.new(board)
     gameover = game.gameover?
 
-    if gameover
-      winning_player = game.symbol_of_winner
-      {:board => submitted_raw_board,:gameover => gameover, :winner => winning_player}
-    else
-      game.computer_turn
-      finished_raw_board = game.display_board
-      status = game.gameover?
-      winning_player = game.symbol_of_winner
+    game.computer_turn unless gameover
 
-      {:board => finished_raw_board,:gameover => status, :winner => winning_player }
-    end
+    {:board => game.display_board, :gameover => game.gameover?, :winner => game.symbol_of_winner}
   end
 
 end

@@ -6,7 +6,7 @@ class Board
   end
 
   def self.new_board
-    Array.new(9, " ")
+    Array.new(9, Appdata::TOKENS[:blank])
   end
 
   def unassigned_positions?

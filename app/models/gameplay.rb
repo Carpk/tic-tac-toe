@@ -2,7 +2,7 @@ class GamePlay
 
   def initialize(board)
     @board = board
-    @ai = ComputerAi.new({symbol: "O", opponent: "X", board: board})
+    @ai = ComputerAi.new({symbol: Appdata::TOKENS[:computer], opponent: Appdata::TOKENS[:player], board: board})
   end
 
   def gameover?
@@ -41,7 +41,7 @@ class GamePlay
 
   def computer_turn
     position = @ai.assert_values(@board)
-    @board.assign_token_to("O", position)
+    @board.assign_token_to(Appdata::TOKENS[:computer], position)
   end
 
   def display_board

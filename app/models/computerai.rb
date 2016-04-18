@@ -1,10 +1,10 @@
 class ComputerAi
-
+  attr_reader :game_piece, :enemy_piece, :value_matrix, :efficent_value
   def initialize(params)
     @game_piece = params[:symbol]
     @enemy_piece = params[:opponent]
     @value_matrix = matrix_value(params[:board].size)
-    @efficent_value = -@value_matrix
+    @efficent_value = -value_matrix
   end
 
   def matrix_value(board_size)
@@ -15,18 +15,18 @@ class ComputerAi
     position_values = {}
     board.indexes_of_available_spaces.each do |empty_position|
       possible_board = Board.new(board.clone)
-      possible_board.assign_token_to(@game_piece, empty_position)
-      position_values[empty_position] = evaluate_board(possible_board, @enemy_piece, @game_piece)
+      possible_board.assign_token_to(game_piece, empty_position)
+      position_values[empty_position] = evaluate_board(possible_board, enemy_piece, game_piece)
     end
     select_random_index(position_values)
   end
 
   def inefficient_return_from?(depth)
-    @efficent_value >= (@value_matrix / depth)
+    efficent_value >= (value_matrix / depth)
   end
 
   def assign_efficency_value(value)
-    @efficent_value = value if value > @efficent_value
+    @efficent_value = value if value > efficent_value
   end
 
   def evaluate_board(board, current_player, passing_player, depth=1)
@@ -49,7 +49,7 @@ class ComputerAi
   end
 
   def min_or_max(board_values, player)
-    player == @game_piece ? board_values.compact.max : board_values.compact.min
+    player == game_piece ? board_values.compact.max : board_values.compact.min
   end
 
   def select_random_index(position_values)
@@ -64,7 +64,7 @@ class ComputerAi
 
   def value_of(board)
     winner = GamePlay.new(board).symbol_of_winner
-    { @game_piece => @value_matrix, @enemy_piece => -@value_matrix}[winner] || 0
+    { game_piece => value_matrix, enemy_piece => -value_matrix}[winner] || 0
   end
 end
 

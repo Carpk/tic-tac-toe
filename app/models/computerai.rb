@@ -1,10 +1,10 @@
 class ComputerAi
-  attr_reader :game_piece, :enemy_piece, :value_matrix, :efficent_value
+  attr_reader :game_piece, :enemy_piece, :value_matrix, :efficient_value
   def initialize(params)
     @game_piece = params[:symbol]
     @enemy_piece = params[:opponent]
     @value_matrix = matrix_value(params[:board].size)
-    @efficent_value = -value_matrix
+    @efficient_value = -value_matrix
   end
 
   def matrix_value(board_size)
@@ -22,11 +22,15 @@ class ComputerAi
   end
 
   def inefficient_return_from?(depth)
-    efficent_value >= (value_matrix / depth)
+    efficient_value >= (value_matrix / depth)
+  end
+  
+  def check_efficiency_for(new_value)
+    set_efficiency_with new_value if new_value > efficient_value 
   end
 
-  def assign_efficency_value(value)
-    @efficent_value = value if value > efficent_value
+  def set_efficiency_with(value)
+    @efficient_value = value
   end
 
   def evaluate_board(board, current_player, passing_player, depth=1)
@@ -40,7 +44,7 @@ class ComputerAi
 
       new_value = evaluate_board(played_board, passing_player, current_player, depth +1)
 
-      assign_efficency_value(new_value)
+      check_efficiency_for(new_value)
 
       board_values << new_value
     end

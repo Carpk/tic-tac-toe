@@ -1,16 +1,16 @@
 class GamePlay
-
+  attr_reader :board, :ai
   def initialize(board)
     @board = board
     @ai = ComputerAi.new({symbol: Appdata::TOKENS[:computer], opponent: Appdata::TOKENS[:player], board: board})
   end
 
   def gameover?
-    @board.board_full? || board_has_winner?
+    board.board_full? || board_has_winner?
   end
 
   def tie_game?
-    @board.board_full? && board_has_no_winner?
+    board.board_full? && board_has_no_winner?
   end
 
   def board_has_no_winner?
@@ -24,11 +24,11 @@ class GamePlay
   def symbol_of_winner
     matches = list_of_matches
 
-    @board.possible_wins[matches.index(true)].sample if matches.include?(true)
+    board.possible_wins[matches.index(true)].sample if matches.include?(true)
   end
 
   def list_of_matches
-    @board.possible_wins.map {|section| self.group_match?(section)}
+    board.possible_wins.map {|section| self.group_match?(section)}
   end
 
   def group_match?(section)
@@ -36,15 +36,15 @@ class GamePlay
   end
 
   def available_spaces
-    @board.indexes_of_available_spaces
+    board.indexes_of_available_spaces
   end
 
   def computer_turn
-    position = @ai.assert_values(@board)
-    @board.assign_token_to(Appdata::TOKENS[:computer], position)
+    position = ai.assert_values(board)
+    board.assign_token_to(Appdata::TOKENS[:computer], position)
   end
 
   def display_board
-    @board.grid
+    board.grid
   end
 end

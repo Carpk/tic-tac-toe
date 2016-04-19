@@ -1,5 +1,7 @@
 class ComputerAi
-  attr_reader :game_piece, :enemy_piece, :value_matrix, :efficient_value
+  attr_reader :game_piece, :enemy_piece, :value_matrix
+  attr_accessor :efficient_value
+
   def initialize(params)
     @game_piece = params[:symbol]
     @enemy_piece = params[:opponent]
@@ -26,11 +28,7 @@ class ComputerAi
   end
   
   def check_efficiency_for(new_value)
-    set_efficiency_with new_value if new_value > efficient_value 
-  end
-
-  def set_efficiency_with(value)
-    @efficient_value = value
+    self.efficient_value= new_value if new_value > efficient_value 
   end
 
   def evaluate_board(board, current_player, passing_player, depth=1)

@@ -9,6 +9,14 @@ class ComputerAi
     @efficient_value = -value_matrix
   end
 
+  def create_board(params)
+    Board.new(params)
+  end
+
+  def create_game(params)
+    GamePlay.new(params)
+  end
+
   def calculate_matrix_value(board_size)
     (2..board_size).reduce(:*)
   end
@@ -16,7 +24,7 @@ class ComputerAi
   def assert_values(board)
     position_values = {}
     board.indexes_of_available_spaces.each do |empty_position|
-      possible_board = Board.new(board.clone)
+      possible_board = create_board(board.clone)
       possible_board.assign_token_to(game_piece, empty_position)
       position_values[empty_position] = evaluate_board(possible_board, enemy_piece, game_piece)
     end
@@ -37,7 +45,7 @@ class ComputerAi
     board_values = []
 
     board.indexes_of_available_spaces.each do |empty_position|
-      played_board = Board.new(board.clone)
+      played_board = create_board(board.clone)
       played_board.assign_token_to(current_player, empty_position)
 
       new_value = evaluate_board(played_board, passing_player, current_player, depth +1)
@@ -61,11 +69,11 @@ class ComputerAi
   end
 
   def gameover?(board)
-    GamePlay.new(board).gameover?
+    create_game(board).gameover?
   end
 
   def value_of(board)
-    winner = GamePlay.new(board).symbol_of_winner
+    winner = create_game(board).symbol_of_winner
     { game_piece => value_matrix, enemy_piece => -value_matrix}[winner] || 0
   end
 end

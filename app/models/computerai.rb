@@ -3,13 +3,13 @@ class ComputerAi
   attr_accessor :efficient_value
 
   def initialize(params)
-    @game_piece = params[:symbol]
-    @enemy_piece = params[:opponent]
-    @value_matrix = matrix_value(params[:board].size)
+    @game_piece = params[:current_symbol]
+    @enemy_piece = params[:opponent_symbol]
+    @value_matrix = calculate_matrix_value(params[:board].size)
     @efficient_value = -value_matrix
   end
 
-  def matrix_value(board_size)
+  def calculate_matrix_value(board_size)
     (2..board_size).reduce(:*)
   end
 

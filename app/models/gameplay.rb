@@ -2,7 +2,9 @@ class GamePlay
   attr_reader :board, :ai
   def initialize(board)
     @board = board
-    @ai = ComputerAi.new({symbol: Appdata::TOKENS[:computer], opponent: Appdata::TOKENS[:player], board: board})
+    @ai = ComputerAi.new({current_symbol: Appdata::TOKENS[:computer], 
+                          opponent_symbol: Appdata::TOKENS[:player], 
+                          board: board})
   end
 
   def gameover?

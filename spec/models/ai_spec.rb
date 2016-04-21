@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe ComputerAi do
 
-  let(:computer)  {ComputerAi.new({symbol: "x", opponent: "o", board: Array.new(9)})}
+  let(:computer)  {ComputerAi.new({current_symbol: "x", opponent_symbol: "o", board: Array.new(9)})}
 
   it "should take win instead of block" do
     grid = ["x", "x", " ",

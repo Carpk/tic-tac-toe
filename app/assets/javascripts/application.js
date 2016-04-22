@@ -12,7 +12,7 @@
 //= require turbolinks
 //= require_tree .
 
-
+/*
 $( document ).ready(function() {
   humanTurn = true;
   boardArray = [ " ", " ", " ", " ", " ", " ", " ", " ", " "]
@@ -80,3 +80,4 @@ $( document ).ready(function() {
   }
 
 });
+*/

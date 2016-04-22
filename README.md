@@ -18,6 +18,10 @@ Download master branch, and run the following commands:
 
 Open up your browser and navigate to [http://0.0.0.0:3000/](http://0.0.0.0:3000/)
 
+To run test:
+
+`rspec`
+
 ## Screenshots
 
 ![game shown as colorful app](https://raw.githubusercontent.com/Carpk/tic-tac-toe/master/app/assets/images/Screenshot%20from%202014-04-20%2018:38:09.png)
@@ -38,7 +42,7 @@ Managed to shave of 3 seconds of the AI's initial counter move. From 4.5s down t
 
 The MIT License (MIT)
 
->Copyright (c) [2014] [Contact@ShawnKlein.net]
+>Copyright (c) [2014] [ShawnKlein202@gmail.com]
 >
 >Permission is hereby granted, free of charge, to any person obtaining a copy
 >of this software and associated documentation files (the "Software"), to deal

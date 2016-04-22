@@ -21,12 +21,12 @@ class ComputerAi
     (2..board_size).reduce(:*)
   end
 
-  def assert_values(board)
+  def next_position_for(board)
     position_values = {}
     board.indexes_of_available_spaces.each do |empty_position|
       possible_board = create_board(board.clone)
       possible_board.assign_token_to(game_piece, empty_position)
-      position_values[empty_position] = evaluate_board(possible_board, enemy_piece, game_piece)
+      position_values[empty_position] = position_value(possible_board, enemy_piece, game_piece)
     end
     select_random_index(position_values)
   end
@@ -39,7 +39,7 @@ class ComputerAi
     self.efficient_value= new_value if new_value > efficient_value 
   end
 
-  def evaluate_board(board, current_player, passing_player, depth=1)
+  def position_value(board, current_player, passing_player, depth=1)
     return value_of(board) / depth if gameover?(board) || inefficient_return_from?(depth)
 
     board_values = []
@@ -48,7 +48,7 @@ class ComputerAi
       played_board = create_board(board.clone)
       played_board.assign_token_to(current_player, empty_position)
 
-      new_value = evaluate_board(played_board, passing_player, current_player, depth +1)
+      new_value = position_value(played_board, passing_player, current_player, depth +1)
 
       check_efficiency_for(new_value)
 
@@ -73,8 +73,8 @@ class ComputerAi
   end
 
   def value_of(board)
-    winner = create_game(board).symbol_of_winner
-    { game_piece => value_matrix, enemy_piece => -value_matrix}[winner] || 0
+    winning_token = create_game(board).symbol_of_winner
+    { game_piece => value_matrix, enemy_piece => -value_matrix}[winning_token] || 0
   end
 end
 

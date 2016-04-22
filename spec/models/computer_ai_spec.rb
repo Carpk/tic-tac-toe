@@ -12,7 +12,7 @@ describe ComputerAi do
             o, b, o,
             b, b, b]
     board = Board.new(grid)
-    expect(computer.assert_values(board)).to eq(2)
+    expect(computer.next_position_for(board)).to eq(2)
   end
 
   it "should take win instead of block as last move" do
@@ -20,7 +20,7 @@ describe ComputerAi do
             o, o, x,
             b, o, o]
     board = Board.new(grid)
-    expect(computer.assert_values(board)).to eq(2)
+    expect(computer.next_position_for(board)).to eq(2)
   end
 
   it "takes only spot on board" do
@@ -28,7 +28,7 @@ describe ComputerAi do
             x, b, x,
             o, o, x]
     board = Board.new(grid)
-    expect(computer.assert_values(board)).to eq(4)
+    expect(computer.next_position_for(board)).to eq(4)
   end
 
   it "should block player from win" do
@@ -36,7 +36,7 @@ describe ComputerAi do
             o, b, o,
             x, b, b]
     board = Board.new(grid)
-    expect(computer.assert_values(board)).to eq(4)
+    expect(computer.next_position_for(board)).to eq(4)
   end
 
   it "should take win when available" do
@@ -44,7 +44,7 @@ describe ComputerAi do
             b, b, o,
             x, b, b]
     board = Board.new(grid)
-    expect(computer.assert_values(board)).to eq(4)
+    expect(computer.next_position_for(board)).to eq(4)
   end
 
   it "should evaluate the board and return an number" do
@@ -52,7 +52,7 @@ describe ComputerAi do
             b, x, o,
             b, b, b]
     board = Board.new(grid)
-    expect(computer.evaluate_board(board, x, o)).to eq(0)
+    expect(computer.position_value(board, x, o)).to eq(0)
   end
 
   it "should choose the hash with the highest value" do

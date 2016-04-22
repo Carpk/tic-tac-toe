@@ -42,7 +42,7 @@ class GamePlay
   end
 
   def computer_turn
-    position = ai.assert_values(board)
+    position = ai.next_position_for(board)
     board.assign_token_to(Appdata::TOKENS[:computer], position)
   end
 

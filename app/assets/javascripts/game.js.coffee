@@ -19,8 +19,8 @@ $(document).ready ->
         boardArray = data.board
         displayDataToBoard()
 
-        if data.gameover is true
-          if data.winnner is "X"
+        if data.gameover is yes
+          if data.winner is "X"
             $("#player-win").show "slow"
           else if data.winner is "O"
             $("#computer-win").show "slow"
@@ -28,9 +28,10 @@ $(document).ready ->
             $("#tie-game").show "slow"
           $(".new-game").show "slow"
         else
-          humanTurn = true
+          humanTurn = yes
 
   $(".button").click (e) ->
+    humanTurn = false
     e.preventDefault()
     $(this).fadeOut "fast"
     $.get "/game/new", (data) =>

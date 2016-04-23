@@ -5,12 +5,12 @@ class Board
     @grid = board
   end
 
-  def self.new_board
-    Array.new(9, Appdata::TOKENS[:blank])
+  def self.new_board(size=9)
+    Array.new(size, Appdata::TOKENS[:blank])
   end
 
-  def unassigned_positions?
-    grid.map {|e| e.strip.empty? }.include?(true)
+  def valid?
+    grid.class == Array && !invalid_elements?
   end
 
   def board_full?
@@ -19,10 +19,6 @@ class Board
 
   def assign_token_to(token, position)
     grid[position] = token
-  end
-
-  def board_side_length
-    Math.sqrt(grid.length).to_i
   end
 
   def size
@@ -39,6 +35,20 @@ class Board
 
   def possible_wins
     row_sections + column_sections << forwardslash_section << backslash_section
+  end
+
+  private
+
+  def invalid_elements? 
+    grid.map {|e| e.class == String && e.length == 1}.include?(false)     
+  end 
+
+  def unassigned_positions?
+    grid.map {|e| e.strip.empty? }.include?(true)
+  end
+
+  def board_side_length
+    Math.sqrt(grid.length).to_i
   end
 
   def row_sections

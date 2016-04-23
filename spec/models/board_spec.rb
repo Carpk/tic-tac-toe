@@ -7,13 +7,39 @@ describe Board do
   let(:x) {Appdata::TOKENS[:player]}
   let(:n) {Appdata::TOKENS[:blank]}
 
-  it "should return the correct length of board" do
+  it "should return the correct default length of board" do
     expect(board.grid.length).to eq(9)
   end
 
   it "should return a blank array" do
     blank_array = [n, n, n, n, n, n, n, n, n]
     expect(Board.new_board).to eq(blank_array)
+  end
+
+  it "should validate proper array" do
+    expect(board.valid?).to eq(true)
+  end
+
+  it "should not validate an improper array" do
+    grid = [n, n, n,
+            n, "Hi", n,
+            n, n, n]
+    board = Board.new(grid)
+    expect(board.valid?).to eq(false)
+  end
+
+  it "should not validate an improper array" do
+    grid = [n, n, n,
+            n, n, n,
+            true, n, n]
+    board = Board.new(grid)
+    expect(board.valid?).to eq(false)
+  end
+
+  it "should not validate an improper array" do
+    grid = Object.new
+    board = Board.new(grid)
+    expect(board.valid?).to eq(false)
   end
 
   it "should return the correct length when initialized with large board" do
@@ -26,11 +52,11 @@ describe Board do
     expect(board.grid.length).to eq(4)
   end
 
-  it "should return true for having multiple unassigned positions on board" do
+  xit "should return true for having multiple unassigned positions on board" do
     expect(board.unassigned_positions?).to eq(true)
   end
 
-  it "should return false for not having unassigned positions on board" do
+  xit "should return false for not having unassigned positions on board" do
     grid = [o, x, o,
             x, o, x,
             x, o, x]
@@ -38,7 +64,7 @@ describe Board do
     expect(board.unassigned_positions?).to eq(false)
   end
 
-  it "should return true for having a unassigned position on board" do
+  xit "should return true for having a unassigned position on board" do
     grid = [o, x, o,
             x, n, x,
             x, o, x]
@@ -78,12 +104,12 @@ describe Board do
     expect(board.grid[3]).to eq(x)
   end
 
-  it "should return the square root for board of 9" do
+  xit "should return the square root for board of 9" do
 
     expect(board.board_side_length).to eq(3)
   end
 
-  it "should return the square root for board of 12" do
+  xit "should return the square root for board of 12" do
     grid = [o, x, o, n,
             x, o, x, n,
             x, o, x, n,
@@ -128,19 +154,19 @@ describe Board do
     expect(board.possible_wins.length).to eq(8)
   end
 
-  it "should return nested array for rows" do
+  xit "should return nested array for rows" do
     expect(board.row_sections[2].class).to eq(Array)
   end
 
-  it "should return nested array for columns" do
+  xit "should return nested array for columns" do
     expect(board.column_sections[2].class).to eq(Array)
   end
 
-  it "should return nested array for forwardslash " do
+  xit "should return nested array for forwardslash " do
     expect(board.forwardslash_section.class).to eq(Array)
   end
 
-  it "should return nested array for backslash " do
+  xit "should return nested array for backslash " do
     expect(board.backslash_section.class).to eq(Array)
   end
 end

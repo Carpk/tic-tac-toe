@@ -39,94 +39,6 @@ describe GamePlay do
     expect(game.gameover?).to eq(false)
   end
 
-  xit "should return false if there is no winner" do
-    grid = [x, o, n,
-            o, x, o,
-            o, x, n]
-    game = GamePlay.new(Board.new(grid))
-    expect(game.board_has_winner?).to eq(false)
-  end
-
-  xit "should return true if there is a matching array" do
-    grid = [x, o, n,
-            o, x, o,
-            x, x, x]
-    game = GamePlay.new(Board.new(grid))
-    expect(game.board_has_winner?).to eq(true)
-  end
-
-  xit "should return true if there is a matching array" do
-    grid = [o, o, o,
-            o, x, o,
-            x, o, x]
-    game = GamePlay.new(Board.new(grid))
-    expect(game.board_has_winner?).to eq(true)
-  end
-
-  xit "should return true if there is a matching array" do
-    grid = [x, x, n,
-            o, o, o,
-            x, o, x]
-    game = GamePlay.new(Board.new(grid))
-    expect(game.board_has_winner?).to eq(true)
-  end
-
-  xit "should return false if only matches are empty cells" do
-    grid = [x, o, n,
-            o, x, n,
-            x, x, n]
-    game = GamePlay.new(Board.new(grid))
-    expect(game.board_has_winner?).to eq(false)
-  end
-
-  xit "should return false if only matches are empty cells" do
-    grid = [n, n, n,
-            n, n, n,
-            n, n, n]
-    game = GamePlay.new(Board.new(grid))
-    expect(game.board_has_winner?).to eq(false)
-  end
-
-  xit "should return false if only matches are empty cells" do
-    grid = [x, o, n,
-            x, x, n,
-            x, o, n]
-    game = GamePlay.new(Board.new(grid))
-    expect(game.board_has_winner?).to eq(true)
-  end
-
-  xit "should return false if only matches are empty cells" do
-    grid = [x, o, n,
-            o, o, n,
-            x, o, n]
-    game = GamePlay.new(Board.new(grid))
-    expect(game.board_has_winner?).to eq(true)
-  end
-
-  xit "should return false if only matches are empty cells" do
-    grid = [x, o, o,
-            o, x, o,
-            x, o, o]
-    game = GamePlay.new(Board.new(grid))
-    expect(game.board_has_winner?).to eq(true)
-  end
-
-  xit "should return false if only matches are empty cells" do
-    grid = [x, o, n,
-            o, x, n,
-            x, o, x]
-    game = GamePlay.new(Board.new(grid))
-    expect(game.board_has_winner?).to eq(true)
-  end
-
-  xit "should return false if only matches are empty cells" do
-    grid = [o, o, x,
-            o, x, n,
-            x, x, o]
-    game = GamePlay.new(Board.new(grid))
-    expect(game.board_has_winner?).to eq(true)
-  end
-
   it "should return correct winner of board" do
     grid = [x, o, n,
             x, x, n,
@@ -207,63 +119,29 @@ describe GamePlay do
     expect(game.symbol_of_winner).to eq(x)
   end
 
-  xit "should return true if board is tied" do
-    grid = [x, o, x,
-            x, o, x,
-            o, x, o]
-    game = GamePlay.new(Board.new(grid))
-    expect(game.tie_game?).to eq(true)
-  end
-
-  xit "should return false if board is not full" do
-    grid = [x, o, n,
-            x, o, x,
-            o, x, o]
-    game = GamePlay.new(Board.new(grid))
-    expect(game.tie_game?).to eq(false)
-  end
-
-  xit "should return false if board has a winner" do
-    grid = [o, o, n,
-            x, o, x,
-            o, x, o]
-    game = GamePlay.new(Board.new(grid))
-    expect(game.tie_game?).to eq(false)
-  end
-
-  xit "should be false if first cell is empty" do
+  it "should be false if a cell is empty" do
     section = [n, o, o]
-    expect(game.group_match?(section)).to eq(false)
+    expect(game.send(:group_match?, section)).to eq(false)
   end
 
-  xit "should be false if second cell is empty" do
+  it "should be false if second cell is empty" do
     section = [o, n, o]
-    expect(game.group_match?(section)).to eq(false)
+    expect(game.send(:group_match?, section)).to eq(false)
   end
 
-  xit "should be false if last cell is empty" do
-    section = [o, o, n]
-    expect(game.group_match?(section)).to eq(false)
-  end
-
-  xit "should be false if argument contains only 2 the same character" do
-    section = [o, x, o]
-    expect(game.group_match?(section)).to eq(false)
-  end
-
-  xit "should be false if argument contains only 2 the same character" do
+  it "should be false if argument contains only 2 the same character" do
     section = [o, o, x]
-    expect(game.group_match?(section)).to eq(false)
+    expect(game.send(:group_match?, section)).to eq(false)
   end
 
-  xit "should be false if section is completely empty" do
+  it "should be false if section is completely empty" do
     section = [n, n, n]
-    expect(game.group_match?(section)).to eq(false)
+    expect(game.send(:group_match?, section)).to eq(false)
   end
 
-  xit "should be true if argument contains the same character" do
+  it "should be true if argument contains the same character" do
     section = [o, o, o]
-    expect(game.group_match?(section)).to eq(true)
+    expect(game.send(:group_match?, section)).to eq(true)
   end
 
   it "should know game is not over at start of game" do

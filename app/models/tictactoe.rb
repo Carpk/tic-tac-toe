@@ -2,7 +2,7 @@ module TicTacToe
 
   def self.play(submitted_board)
     board = Board.new(submitted_board)
-    # board = Board.new_board unless board.valid?
+    board = Board.new_board unless board.valid?
     
     game = GamePlay.new(board)
 

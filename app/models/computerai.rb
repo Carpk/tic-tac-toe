@@ -1,6 +1,4 @@
 class ComputerAi
-  attr_reader :game_piece, :enemy_piece, :value_matrix
-  attr_accessor :efficient_value
 
   def initialize(params)
     @game_piece = params[:current_symbol]
@@ -20,7 +18,9 @@ class ComputerAi
   end
 
   private
-
+  attr_reader :game_piece, :enemy_piece, :value_matrix
+  attr_accessor :efficient_value
+  
   def create_board(params)
     Board.new(params)
   end

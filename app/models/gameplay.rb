@@ -1,5 +1,5 @@
 class GamePlay
-  attr_reader :board, :ai
+  
   def initialize(board)
     @board = board
     @ai = ComputerAi.new({current_symbol: Appdata::TOKENS[:computer], 
@@ -27,6 +27,7 @@ class GamePlay
   end
 
   private
+  attr_reader :board, :ai
 
   def group_match?(section)
     section.rotate == section.delete_if {|e| e.strip.empty?}

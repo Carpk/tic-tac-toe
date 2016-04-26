@@ -9,14 +9,14 @@ class BoardValidator
   end
     
   def valid?
-    board.class == Array && !invalid_elements?
+    board.grid.class == Array && !invalid_elements?
   end
 
   private
   attr_reader :board
   
   def invalid_elements?
-    board.map {|e| correct_klass?(e) && correct_length?(e)}.include?(false)
+    board.grid.map {|e| correct_klass?(e) && correct_length?(e)}.include?(false)
   end
 
   def correct_klass?(element)

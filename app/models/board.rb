@@ -5,8 +5,8 @@ class Board
     @grid = board
   end
 
-  def self.new_board(size=9)
-    Array.new(size, Appdata::TOKENS[:blank])
+  def self.new_board(size= 9)
+    self.new(Array.new(size, Appdata::TOKENS[:blank]))
   end
 
   def board_full?

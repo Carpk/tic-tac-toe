@@ -11,9 +11,8 @@ describe Board do
     expect(board.grid.length).to eq(9)
   end
 
-  it "should return a blank array" do
-    blank_array = [n, n, n, n, n, n, n, n, n]
-    expect(Board.new_board).to eq(blank_array)
+  it "should return a board object" do
+    expect(Board.new_board.class).to eq(Board)
   end
 
   it "should return the correct length when initialized with large board" do

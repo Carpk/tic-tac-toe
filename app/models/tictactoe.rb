@@ -1,7 +1,7 @@
 module TicTacToe
 
-  def self.play(raw_board)
-    board = BoardValidator.validates?(raw_board) ? Board.new(raw_board) : Board.new(Board.new_board)
+  def self.play(board)
+    board = Board.new_board unless BoardValidator.validates?(board)
 
     game = GamePlay.new(board)
 

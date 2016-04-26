@@ -9,10 +9,6 @@ class Board
     Array.new(size, Appdata::TOKENS[:blank])
   end
 
-  def valid?
-    grid.class == Array && !invalid_elements?
-  end
-
   def board_full?
     !unassigned_positions?
   end
@@ -38,10 +34,6 @@ class Board
   end
 
   private
-
-  def invalid_elements? 
-    grid.map {|e| e.class == String && e.length == 1}.include?(false)     
-  end 
 
   def unassigned_positions?
     grid.map {|e| e.strip.empty? }.include?(true)

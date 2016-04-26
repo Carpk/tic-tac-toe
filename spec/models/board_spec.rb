@@ -16,32 +16,6 @@ describe Board do
     expect(Board.new_board).to eq(blank_array)
   end
 
-  it "should validate proper array" do
-    expect(board.valid?).to eq(true)
-  end
-
-  it "should not validate an array with a long string" do
-    grid = [n, n, n,
-            n, "Hi", n,
-            n, n, n]
-    board = Board.new(grid)
-    expect(board.valid?).to eq(false)
-  end
-
-  it "should not validate an array with a boolean" do
-    grid = [n, n, n,
-            n, n, n,
-            true, n, n]
-    board = Board.new(grid)
-    expect(board.valid?).to eq(false)
-  end
-
-  it "should not validate a non-array object" do
-    grid = Object.new
-    board = Board.new(grid)
-    expect(board.valid?).to eq(false)
-  end
-
   it "should return the correct length when initialized with large board" do
     board = Board.new(Array.new(20))
     expect(board.grid.length).to eq(20)

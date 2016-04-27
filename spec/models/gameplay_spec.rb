@@ -3,10 +3,10 @@ require 'rails_helper'
 describe GamePlay do
 
   let(:game)      {GamePlay.new(Board.new(Array.new(9,n)))}
-  let(:o) {Appdata::TOKENS[:computer]}  
+  let(:o) {Appdata::TOKENS[:computer]}
   let(:x) {Appdata::TOKENS[:player]}
   let(:n) {Appdata::TOKENS[:blank]}
-  
+
   it "should know that a game is over from a full board" do
     grid = [x, o, x,
             o, x, o,
@@ -119,31 +119,6 @@ describe GamePlay do
     expect(game.symbol_of_winner).to eq(x)
   end
 
-  it "should be false if a cell is empty" do
-    section = [n, o, o]
-    expect(game.send(:group_match?, section)).to eq(false)
-  end
-
-  it "should be false if second cell is empty" do
-    section = [o, n, o]
-    expect(game.send(:group_match?, section)).to eq(false)
-  end
-
-  it "should be false if argument contains only 2 the same character" do
-    section = [o, o, x]
-    expect(game.send(:group_match?, section)).to eq(false)
-  end
-
-  it "should be false if section is completely empty" do
-    section = [n, n, n]
-    expect(game.send(:group_match?, section)).to eq(false)
-  end
-
-  it "should be true if argument contains the same character" do
-    section = [o, o, o]
-    expect(game.send(:group_match?, section)).to eq(true)
-  end
-
   it "should know game is not over at start of game" do
     expect(game.gameover?).to eq(false)
   end
@@ -190,5 +165,33 @@ describe GamePlay do
              n, n, o]
     game = GamePlay.new(Board.new(board))
     expect(game.computer_turn.class).to eq(String)
+  end
+
+  describe "private method" do
+
+    it "should be false if a cell is empty" do
+      section = [n, o, o]
+      expect(game.send(:group_match?, section)).to eq(false)
+    end
+
+    it "should be false if second cell is empty" do
+      section = [o, n, o]
+      expect(game.send(:group_match?, section)).to eq(false)
+    end
+
+    it "should be false if argument contains only 2 the same character" do
+      section = [o, o, x]
+      expect(game.send(:group_match?, section)).to eq(false)
+    end
+
+    it "should be false if section is completely empty" do
+      section = [n, n, n]
+      expect(game.send(:group_match?, section)).to eq(false)
+    end
+
+    it "should be true if argument contains the same character" do
+      section = [o, o, o]
+      expect(game.send(:group_match?, section)).to eq(true)
+    end
   end
 end

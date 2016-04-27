@@ -3,7 +3,7 @@ require 'rails_helper'
 describe Board do
 
   let(:board)  {Board.new(Array.new(9,n))}
-  let(:o) {Appdata::TOKENS[:computer]}  
+  let(:o) {Appdata::TOKENS[:computer]}
   let(:x) {Appdata::TOKENS[:player]}
   let(:n) {Appdata::TOKENS[:blank]}
 
@@ -23,22 +23,6 @@ describe Board do
   it "should return the correct length when initialized with small board" do
     board = Board.new(Array.new(4))
     expect(board.grid.length).to eq(4)
-  end
-
-  it "should return false for not having unassigned positions on board" do
-    grid = [o, x, o,
-            x, o, x,
-            x, o, x]
-    board = Board.new(grid)
-    expect(board.send(:unassigned_positions?)).to eq(false)
-  end
-
-  it "should return true for having a unassigned position on board" do
-    grid = [o, x, o,
-            x, n, x,
-            x, o, x]
-    board = Board.new(grid)
-    expect(board.send(:unassigned_positions?)).to eq(true)
   end
 
   it "should return false for empty board" do
@@ -71,19 +55,6 @@ describe Board do
     token, position = x, 3
     board.assign_token_to(token, position)
     expect(board.grid[3]).to eq(x)
-  end
-
-  it "should return the square root for board of 9" do
-    expect(board.send(:board_side_length)).to eq(3)
-  end
-
-  it "should return the square root for board of 12" do
-    grid = [o, x, o, n,
-            x, o, x, n,
-            x, o, x, n,
-            n, n, n, n]
-    board = Board.new(grid)
-    expect(board.send(:board_side_length)).to eq(4)
   end
 
   it "should return the index positions of availible board positions" do
@@ -128,5 +99,38 @@ describe Board do
 
   it "should return 3 cell count for win combination" do
     expect(board.possible_wins.last.length).to eq(3)
+
+  end
+
+  describe "private method" do
+
+    it "should return false for not having unassigned positions on board" do
+      grid = [o, x, o,
+              x, o, x,
+              x, o, x]
+      board = Board.new(grid)
+      expect(board.send(:unassigned_positions?)).to eq(false)
+    end
+
+    it "should return true for having a unassigned position on board" do
+      grid = [o, x, o,
+              x, n, x,
+              x, o, x]
+      board = Board.new(grid)
+      expect(board.send(:unassigned_positions?)).to eq(true)
+    end
+
+    it "should return the square root for board of 9" do
+      expect(board.send(:board_side_length)).to eq(3)
+    end
+
+    it "should return the square root for board of 12" do
+      grid = [o, x, o, n,
+              x, o, x, n,
+              x, o, x, n,
+              n, n, n, n]
+      board = Board.new(grid)
+      expect(board.send(:board_side_length)).to eq(4)
+    end
   end
 end

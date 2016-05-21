@@ -1,16 +1,10 @@
 require File.expand_path('../boot', __FILE__)
 
 # require 'rails/all'
-require_relative '../app/models/computerai'
-require_relative '../app/models/gameplay'
-require_relative '../app/models/tictactoe'
-require_relative '../app/models/board'
-
-# require 'computerai'
-# require 'gameplay'
-# require 'player'
-# require 'tictactoe'
-# require 'tictactoeboard'
+require_relative '../lib/computerai'
+require_relative '../lib/gameplay'
+require_relative '../lib/tictactoe'
+require_relative '../lib/board'
 
 require "action_controller/railtie"
 require "action_mailer/railtie"
@@ -27,6 +21,7 @@ module Sample
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
+    config.autoload_paths << Rails.root.join('lib')
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
     # config.time_zone = 'Central Time (US & Canada)'

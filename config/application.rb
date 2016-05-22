@@ -1,10 +1,6 @@
 require File.expand_path('../boot', __FILE__)
 
 # require 'rails/all'
-require_relative '../lib/computerai'
-require_relative '../lib/gameplay'
-require_relative '../lib/tictactoe'
-require_relative '../lib/board'
 
 require "action_controller/railtie"
 require "action_mailer/railtie"

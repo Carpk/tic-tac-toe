@@ -24,3 +24,4 @@ describe BoardValidator do
     expect(BoardValidator.new(board).valid?).to eq(true)
   end
 end
+

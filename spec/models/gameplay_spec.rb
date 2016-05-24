@@ -166,32 +166,5 @@ describe GamePlay do
     game = GamePlay.new(Board.new(board))
     expect(game.computer_turn.class).to eq(String)
   end
-
-  describe "private method" do
-
-    it "should be false if a cell is empty" do
-      section = [n, o, o]
-      expect(game.send(:group_match?, section)).to eq(false)
-    end
-
-    it "should be false if second cell is empty" do
-      section = [o, n, o]
-      expect(game.send(:group_match?, section)).to eq(false)
-    end
-
-    it "should be false if argument contains only 2 the same character" do
-      section = [o, o, x]
-      expect(game.send(:group_match?, section)).to eq(false)
-    end
-
-    it "should be false if section is completely empty" do
-      section = [n, n, n]
-      expect(game.send(:group_match?, section)).to eq(false)
-    end
-
-    it "should be true if argument contains the same character" do
-      section = [o, o, o]
-      expect(game.send(:group_match?, section)).to eq(true)
-    end
-  end
 end
+

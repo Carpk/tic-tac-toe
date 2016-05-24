@@ -12,3 +12,4 @@ describe TicTacToe do
     expect(TicTacToe.play(board)).to have_key(:winner)
   end
 end
+

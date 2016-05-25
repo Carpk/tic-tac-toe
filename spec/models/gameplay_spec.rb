@@ -147,18 +147,6 @@ describe GamePlay do
     expect(game.gameover?).to eq(false)
   end
 
-  it "display board should be of the correct length" do
-    expect(game.display_board.length).to eq(9)
-  end
-
-  it "should correctly set player position" do
-    board = [n, n, n,
-             n, o, n,
-             n, n, n]
-    game = GamePlay.new(Board.new(board))
-    expect(game.display_board[4]).to eq(o)
-  end
-
   it "should get a number response from the ai" do
     board = [x, n, x,
              n, o, n,

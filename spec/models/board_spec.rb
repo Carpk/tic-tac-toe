@@ -15,14 +15,9 @@ describe Board do
     expect(Board.new_board.class).to eq(Board)
   end
 
-  it "should return the correct length when initialized with large board" do
-    board = Board.new(Array.new(20))
-    expect(board.grid.length).to eq(20)
-  end
-
-  it "should return the correct length when initialized with small board" do
-    board = Board.new(Array.new(4))
-    expect(board.grid.length).to eq(4)
+  it "should return the correct length when initialized with specific board size" do
+    board = Board.new(Array.new(16))
+    expect(board.grid.length).to eq(16)
   end
 
   it "should return false for empty board" do
@@ -99,7 +94,6 @@ describe Board do
 
   it "should return 3 cell count for win combination" do
     expect(board.possible_wins.last.length).to eq(3)
-
   end
 end
 

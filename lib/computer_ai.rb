@@ -34,7 +34,7 @@ class ComputerAi
   end
 
   def inefficient_return_from?(depth)
-    efficient_value >= (value_matrix / depth)
+    efficient_value >= (value_matrix / depth) + 1
   end
   
   def check_efficiency_for(new_value)
@@ -50,7 +50,7 @@ class ComputerAi
       played_board = create_board(board.clone)
       played_board.assign_token_to(current_player, empty_position)
 
-      new_value = position_value(played_board, passing_player, current_player, depth +1)
+      new_value = position_value(played_board, passing_player, current_player, depth + 1)
 
       check_efficiency_for(new_value)
 

@@ -1,4 +1,5 @@
 # Tic-Tac-Toe
+![Animated screen capture of Tic Tac Toe game in action](https://github.com/dandydanny/tic-tac-toe/blob/master/tictactoe.gif)
 
 [![Build Status](https://travis-ci.org/Carpk/tic-tac-toe.svg?branch=master)](https://travis-ci.org/Carpk/tic-tac-toe)
 
